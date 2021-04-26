@@ -4,13 +4,19 @@
   
     
     <entry>
-      <title>瑾年的第一篇博客</title>
-      <link href="2021/04/24/hello-world/"/>
-      <url>2021/04/24/hello-world/</url>
+      <title>HTML的单词缩写</title>
+      <link href="2021/04/26/html-yu-fa-suo-xie/"/>
+      <url>2021/04/26/html-yu-fa-suo-xie/</url>
       
-        <content type="html"><![CDATA[<p>你知道的越多，不知道的也越多</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ println（“hello my blog”）&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="语言缩写"><a href="#语言缩写" class="headerlink" title="语言缩写"></a>语言缩写</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>Greater than=gt<br>less than=lt<br>nav=navigation<br>div=division<br>dt=definition term的缩写 (自定义列表组)<br>dd=definition description的缩写（自定义列表描述）<br>href=Hypertext Reference<br>hr=horizontal rule<br>alt=alternative供替换的<br>embed嵌入<br> rel属性(relation),描述了当前页面与href所指定文档的关系<br>vspave=vertical space<br>hspace=height space<br>rel=relationship<br><img src="https://ae01.alicdn.com/kf/U36fa3471091d4aaf8bebc1fcb60470050.jpg"></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 缩写 </tag>
+            
+        </tags>
       
     </entry>
     
