@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>HTML+CSS入门复习</title>
+      <link href="2021/05/15/html-css-ru-men-fu-xi/"/>
+      <url>2021/05/15/html-css-ru-men-fu-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTML5-CSS入门复习"><a href="#HTML5-CSS入门复习" class="headerlink" title="HTML5+CSS入门复习"></a>HTML5+CSS入门复习</h1><h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><p>1-网站为CS结构，相较于BS结构，具有跨平台，无需安装等优势。<br>2-万维网之父博纳斯李，w3c指定了统一的规范规则<br>3-游览器负责渲染<br>4-网页为纯文本编写，word等为富文本<br>5-html全称为hyper text markup language，超文本标记语言，超文本即超链接<br>6-学习html5就等于学习各种标签</p><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--html的基本格式--></span><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token name">doctype</span> <span class="token name">html5</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>            demo        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML+CSS入门复习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>请假模拟</title>
       <link href="2021/05/15/qing-jia-mo-ni/"/>
       <url>2021/05/15/qing-jia-mo-ni/</url>
