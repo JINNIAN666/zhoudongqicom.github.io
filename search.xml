@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>浅谈社工</title>
+      <link href="2021/07/20/yi-ci-qian-de-she-gong/"/>
+      <url>2021/07/20/yi-ci-qian-de-she-gong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="查询接口已提交相关部门"><a href="#查询接口已提交相关部门" class="headerlink" title="查询接口已提交相关部门"></a>查询接口已提交相关部门</h2><p>视频中库的信息量已是黑产中的九牛一毛，为了规避审查，大部分业务通过vpn翻墙外网聊天软件，如telegram等传播，遵循法律法规，切勿以身试法，逆天而行。Privacy is gone</p><p><video src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/shegongku.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 社工 </category>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 社工 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DNS污染</title>
       <link href="2021/07/18/dns-ti-huan/"/>
       <url>2021/07/18/dns-ti-huan/</url>
@@ -22,9 +51,9 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
             <tag> ctf </tag>
+            
+            <tag> 学习 </tag>
             
         </tags>
       
@@ -78,9 +107,9 @@
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> JAVA </tag>
             
         </tags>
       
@@ -110,35 +139,6 @@
             <tag> 学习 </tag>
             
             <tag> JAVASCRIPT </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数据库基础</title>
-      <link href="2021/07/14/shu-ju-ku-ji-chu/"/>
-      <url>2021/07/14/shu-ju-ku-ji-chu/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据库 </category>
-          
-          <category> 学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 学习 </tag>
-            
-            <tag> 数据库 </tag>
             
         </tags>
       
@@ -197,6 +197,35 @@
             <tag> 学习 </tag>
             
             <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据库基础</title>
+      <link href="2021/07/14/shu-ju-ku-ji-chu/"/>
+      <url>2021/07/14/shu-ju-ku-ji-chu/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
       
