@@ -42,8 +42,6 @@
           
           <category> 社工 </category>
           
-          <category> 学习 </category>
-          
       </categories>
       
       
@@ -79,8 +77,6 @@
         <tags>
             
             <tag> ctf </tag>
-            
-            <tag> 学习 </tag>
             
         </tags>
       
@@ -127,8 +123,6 @@
           
           <category> JAVA </category>
           
-          <category> 学习 </category>
-          
       </categories>
       
       
@@ -155,8 +149,6 @@
       <categories>
           
           <category> JAVASCRIPT </category>
-          
-          <category> 学习 </category>
           
       </categories>
       
@@ -185,8 +177,6 @@
           
           <category> python </category>
           
-          <category> 学习 </category>
-          
       </categories>
       
       
@@ -214,8 +204,6 @@
           
           <category> 操作系统 </category>
           
-          <category> 学习 </category>
-          
       </categories>
       
       
@@ -242,8 +230,6 @@
       <categories>
           
           <category> 数据库 </category>
-          
-          <category> 学习 </category>
           
       </categories>
       
@@ -372,7 +358,7 @@
       
       <categories>
           
-          <category> 学习 </category>
+          <category> 前端 </category>
           
       </categories>
       
