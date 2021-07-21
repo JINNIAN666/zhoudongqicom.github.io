@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>如何获取他人位置</title>
+      <link href="2021/07/21/ru-he-huo-qu-ip-wei-zhi/"/>
+      <url>2021/07/21/ru-he-huo-qu-ip-wei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-打QQ电话"><a href="#1-打QQ电话" class="headerlink" title="1-打QQ电话"></a>1-打QQ电话</h2><p>如果你有对方QQ，对方也在线，给他打一个QQ电话，再用fd或wireshark或火绒剑（火绒安全提供的安全分析工具），进行抓包，选中tcp流，即可看到对方ip地址（QQ电话的tcp未通过腾讯服务器中转），记得添加过滤，不然信息流太多，无法判断。</p><p>ps：无需接通</p><h2 id="2-点击网站"><a href="#2-点击网站" class="headerlink" title="2-点击网站"></a>2-点击网站</h2><p>让他点击你的网站，你从后台看下记录就成，简单明了。</p><h2 id="3-精准ip地址查询"><a href="#3-精准ip地址查询" class="headerlink" title="3-精准ip地址查询"></a>3-精准ip地址查询</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html">https://www.sojson.com/ip/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 定位 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 定位 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浅谈社工</title>
       <link href="2021/07/20/yi-ci-qian-de-she-gong/"/>
       <url>2021/07/20/yi-ci-qian-de-she-gong/</url>
