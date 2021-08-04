@@ -480,14 +480,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-21
+                    2021-08-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    464
                 </div>
                 
 
@@ -517,7 +517,70 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="1-JAVA介绍"><a href="#1-JAVA介绍" class="headerlink" title="1-JAVA介绍"></a>1-JAVA介绍</h2><p><strong>java发展史</strong></p>
+<p>2004年JAVA1.5的更新力度最大，所以也叫做JAVA5.0</p>
+<p><strong>java跨平台原理</strong></p>
+<p>在相应平台如windows，mac安装一个翻译员jvm就行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/j1.png"></p>
+<p><strong>jre与jdk</strong></p>
+<p>jre=java runtime environment</p>
+<p>jdk包含jre与开发工具javac.exe（编译）与java.exe（运行），jre又包括jvm虚拟机（翻译作业）和核心类库。</p>
+<p>安装jdk后运行开发java都可以，安装jre只能运行java程序。</p>
+<p><font color="red">安装路径不要有空格和中文</font></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/j2.png"></p>
+<h2 id="2-JAVA环境的准备"><a href="#2-JAVA环境的准备" class="headerlink" title="2-JAVA环境的准备"></a>2-JAVA环境的准备</h2><p><strong>常用dos命令</strong></p>
+<p>按win+r</p>
+<p>输入cmd回车</p>
+<p>键盘上的箭头可以切换回使用过的命令</p>
+<p>tab键可以补齐命令</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/j3.png"></p>
+<p>cmd中，执行java命令与javac命令的区别：</p>
+<p>javac：是编译命令，将java源文件编译成.class字节码文件。</p>
+<p>例如：javac hello.java</p>
+<p>将生成hello.class文件。</p>
+<p> java：是运行字节码文件；由java虚拟机对字节码进行解释和运行。</p>
+<p>例如：java hello</p>
+<p><strong>配置path环境变量</strong></p>
+<p>此环境用途是能在cmd中直接使用java与javac两个程序，而不需要选择java.exe所在路径</p>
+<p>控制面板-系统和安全-系统-高级系统设置</p>
+<p>第一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/j4.png"></p>
+<p>第二步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/j5.png"></p>
+<p><strong>hello案例</strong></p>
+<p>System的S记得大写，;是英文状态下的分号</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class HelloWorld&#123;
+	public static void main (String[] args)&#123;
+		System.out.println(&quot;HelloWorld&quot;);
+		
+	&#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3-JAVA的基本语法"><a href="#3-JAVA的基本语法" class="headerlink" title="3-JAVA的基本语法"></a>3-JAVA的基本语法</h2><h3 id="3-1注释"><a href="#3-1注释" class="headerlink" title="3.1注释"></a>3.1注释</h3><p>单行//</p>
+<p>多行/*  */</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;* java程序中最基本的组成单位是类
+	类的定义格式
+		public class 类名&#123;
+		
+		&#125;
+		下面是我定义的helloworld类*&#x2F;
+public class HelloWorld&#123;
+    &#x2F;*这是mian方法，是程序的入口方法，代码从这里开始执行*&#x2F;	
+    public static void main (String[] args)&#123;
+        &#x2F;&#x2F;这是输出语句，注意s要大写哦
+		System.out.println(&quot;瑾年java，HelloWorld&quot;);
+		
+	&#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>黑马程序员全套java教程<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18J411W7cE">https://www.bilibili.com/video/BV18J411W7cE</a></p>
+
                 
             </div>
             <hr/>
@@ -1356,7 +1419,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.2k</span>&nbsp;字
+                class="white-color">7.6k</span>&nbsp;字
             
             
             
