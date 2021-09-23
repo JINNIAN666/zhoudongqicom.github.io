@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>AxureRP8.0</title>
+      <link href="2021/09/23/axurerp/"/>
+      <url>2021/09/23/axurerp/</url>
+      
+        <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>bili：<a href="https://www.bilibili.com/video/BV1SZ4y1378t?p=1">https://www.bilibili.com/video/BV1SZ4y1378t?p=1</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> axurerp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> axurerp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络</title>
       <link href="2021/09/21/ji-suan-ji-wang-luo/"/>
       <url>2021/09/21/ji-suan-ji-wang-luo/</url>
@@ -62,7 +87,7 @@
       <link href="2021/09/21/jsp/"/>
       <url>2021/09/21/jsp/</url>
       
-        <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>B站<a href="https://www.bilibili.com/video/BV1W64y1C7N8?p=2">https://www.bilibili.com/video/BV1W64y1C7N8?p=2</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1-基础语法"></a>1-基础语法</h2><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>哈哈<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">></span></span>&lt;%--jsp自己的隐藏注释，客户端看不到--%>java中的注释，客户端也看不到/*   java的多行注释，客户端看不到*/<span class="token comment">&lt;!-- 能看到--></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="三种scriptlet代码"><a href="#三种scriptlet代码" class="headerlink" title="三种scriptlet代码"></a>三种scriptlet代码</h3><p>一般情况下不在jsp中写java代码，因为耦合度太高，现在都追求高内聚，低耦合。</p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109212231006.png"></p><h3 id="include动静态包含"><a href="#include动静态包含" class="headerlink" title="include动静态包含"></a>include动静态包含</h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>B站<a href="https://www.bilibili.com/video/BV1W64y1C7N8?p=2">https://www.bilibili.com/video/BV1W64y1C7N8?p=2</a></p>]]></content>
       
       
       <categories>
