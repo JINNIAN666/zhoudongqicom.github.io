@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    724
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -561,6 +561,38 @@ ctrl+z也可返回上一步操作
 <p>4-添加热区在最上层，点击热区（添加交互，点击则选中对应文字矩形，文字矩形中字体也就变红，再添加让滑块移动到指定位置）</p>
 <p>5-将三个矩形设置选中项</p>
 <p>ps：第一个矩形开始即要在属性栏设置为选中状态，不然无法变色。</p>
+<h2 id="二级菜单"><a href="#二级菜单" class="headerlink" title="二级菜单"></a>二级菜单</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271551686.png"></p>
+<p>1-创造两个矩形，一个作为menue一个作为submenu</p>
+<p>2-将矩形打成一个组合</p>
+<p>3-给组合添加事件，鼠标移入显示子菜单矩形，移出隐藏即可。</p>
+<h2 id="广告载入"><a href="#广告载入" class="headerlink" title="广告载入"></a>广告载入</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271556916.png"></p>
+<p><mark>case中的动作是分步执行的，先执行最先添加的，再执行后面的</mark></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271606956.png"></p>
+<p>步骤</p>
+<p>1-设置主页面，也就是软件页面（设置元件载入，主页面载入自动弹出广告元件）</p>
+<p>2-设置遮挡，纯黑色，透明的调成百分之50（起到软件弹广告主页面一般会变暗作用）</p>
+<p>3-设置广告</p>
+<p>4-设置关闭广告按键（设置点击事件，点击将广告，遮挡，与关闭广告键全部隐藏）</p>
+<h2 id="广告轮播"><a href="#广告轮播" class="headerlink" title="广告轮播"></a>广告轮播</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271641107.png"></p>
+<p>1-设置广告图片三张并命名好识别</p>
+<p>2-设置三个圆点（用元件椭圆形，按住shift可以等比缩小，就不会变成椭圆）</p>
+<p>3-圆点设置初始颜色，第一个默认选中，设置选中交互变色（用于区分当前选中那个圆点）</p>
+<p>4-设置圆点点击事件（将对应图片至于顶层，再将三个圆点置顶）</p>
+<p>5-把三个圆点设置选项组（作用是选中一个圆点，另外两个圆点默认不选中）</p>
+<h2 id="path展开与收缩"><a href="#path展开与收缩" class="headerlink" title="path展开与收缩"></a>path展开与收缩</h2><p><img src="C:\Users\smores\AppData\Roaming\Typora\typora-user-images\image-20210927164821171.png" alt="image-20210927164821171"></p>
+<p>这里可以自己创建一个初始模板，类似idea的代码初始模板，一打开自动生成这个初始页面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271920417.png"></p>
+<p>1-将主页面图片拉上去</p>
+<p>2-将五个图标移动到主页面图层下面</p>
+<p>3-用椭圆元件制作主菜单，椭圆内打一个+号，点击主菜单弹出那五个图标，用鼠标点击移动事件即可（提前记录好坐标）</p>
+<p>4-椭圆设置点击旋转45度，达到识别效果，再复制一个椭圆2点击椭圆1则将椭圆2置顶，点椭圆2则将椭圆1置顶，点击椭圆2则五个图标移动收回到原坐标</p>
+<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271936268.png"></p>
+<p>当有判断条件，可以出现多个case</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271948497.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202109271948039.png"></p>
+<p>1-使用表单元件，下拉列表框</p>
+<p>2-添加三个选项</p>
+<p>3-给下拉列表框添加点击事件，三个case分别将对应图片置顶图层即可</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>bili：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SZ4y1378t?p=1">https://www.bilibili.com/video/BV1SZ4y1378t?p=1</a></p>
 <p>软件下载网盘：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA">https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA</a> 密码：xg80</p>
 
@@ -1396,7 +1428,7 @@ ctrl+z也可返回上一步操作
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.3k</span>&nbsp;字
+                class="white-color">13.8k</span>&nbsp;字
             
             
             
