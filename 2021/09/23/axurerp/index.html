@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-11
+                    2021-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    13 分
                 </div>
                 
 
@@ -673,6 +673,44 @@ ctrl+z也可返回上一步操作
 <p>1-设置一个文本框（只有文本框有文字改变时事件）</p>
 <p>2-设置载入获取事件赋予文本框</p>
 <p>3-设置文本改变时事件，再获取赋予，形成循环。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><pre class="line-numbers language-py" data-language="py"><code class="language-py">https:&#x2F;&#x2F;www.axure.com.cn&#x2F;5068函数指南大全<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="元件函数"><a href="#元件函数" class="headerlink" title="元件函数"></a>元件函数</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141915177.png"></p>
+<p>1-创建一个元件</p>
+<p>2-设置点击事件</p>
+<p>3-点击fx选择函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141916573.png"></p>
+<p>4-设置你想要的，这里有很多，如上图的this.windth就是将元件文字设置为窗口宽度</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141917869.png"></p>
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141919102.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141919602.png"></p>
+<h3 id="进度条制作"><a href="#进度条制作" class="headerlink" title="进度条制作"></a>进度条制作</h3><p>利用病态效果</p>
+<p>1-设置一个矩形作为加载条</p>
+<p>2-设置上传按钮，设置点击事件，改变矩形尺寸<mark>因为设置数值的话，就固定了无法修改，所以利用函数设置，每次加1</mark></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141927419.png"></p>
+<p>3-设置矩形（加载条）尺寸改变时事件，和上传点击事件形成循环</p>
+<p>4-添加条件，当尺寸大于一定值就停止，防止出界。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141930747.png"></p>
+<p>5-病态效果循环记得设置等待，不然会出问题，毕竟axure不是全能</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141935852.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141936888.png"></p>
+<h3 id="动态面板的两个特性"><a href="#动态面板的两个特性" class="headerlink" title="动态面板的两个特性"></a>动态面板的两个特性</h3><p>滚动条与页面固定</p>
+<p>滚动条就是可以向下滑动显示为显示的文字等，固定就是此元件不会随页面滑动消失，一直是在顶层显示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141948153.png"></p>
+<p>1-此操作都需要将元件转为动态面板</p>
+<p>2-首先创造一个元件，打为动态面板，再右击选择固定到游览器即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141951184.png"></p>
+<p>3-滚动条，首先设置一个元件为动态面板，勾选掉动态面板自动调整页面大小（勾选的话超出的文字也会自动显示）</p>
+<p>4-在动态面板上加入段落控件（超出动态面板大小，为了看滚动条效果）</p>
+<p>5-右击选择滚动条为自动即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110141953105.png"></p>
+<h3 id="顶部固定条"><a href="#顶部固定条" class="headerlink" title="顶部固定条"></a>顶部固定条</h3><p>滑动到一定位置再弹出，和页面固定一样，就是加了个条件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110142045724.png"></p>
+<p>一定要选择显示动态面板，不要选择显示矩形，不然无效，因为动态面板才能固定和滚动滑轮。</p>
+<h3 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h3><p>设置点击事件，滚动到锚链接即可</p>
+<h3 id="替换敏感词"><a href="#替换敏感词" class="headerlink" title="替换敏感词"></a>替换敏感词</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110142055740.png"></p>
+<p>利用替换函数即可</p>
+<p><mark>此外还要数学函数如比较大小计算加减乘除，字符串函数字母变大，布尔函数等大同小异不演示</mark></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>bili：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SZ4y1378t?p=1">https://www.bilibili.com/video/BV1SZ4y1378t?p=1</a></p>
 <p>软件下载网盘：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA">https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA</a> 密码：xg80</p>
 <p>页面实现有多种方法，重在学会使用软件，灵活变通，找出最简单的方法。</p>
@@ -1509,7 +1547,7 @@ ctrl+z也可返回上一步操作
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.8k</span>&nbsp;字
+                class="white-color">16.3k</span>&nbsp;字
             
             
             
