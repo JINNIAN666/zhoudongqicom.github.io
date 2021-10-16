@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-14
+                    2021-10-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    4.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    15 分
                 </div>
                 
 
@@ -711,6 +711,42 @@ ctrl+z也可返回上一步操作
 <h3 id="替换敏感词"><a href="#替换敏感词" class="headerlink" title="替换敏感词"></a>替换敏感词</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110142055740.png"></p>
 <p>利用替换函数即可</p>
 <p><mark>此外还要数学函数如比较大小计算加减乘除，字符串函数字母变大，布尔函数等大同小异不演示</mark></p>
+<h2 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h2><p>中继器就是设置一个模板，然后有类似数据库表的东西，将表内数据自动填充到模板，设置了多少个值就会呈现多少相同的东西。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161438334.png"></p>
+<p>笔记</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161051259.png"></p>
+<p>步骤</p>
+<p>1-选择元件中继器，点击，添加数据</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161438615.png"></p>
+<p><mark>模板是垂直还是水平，有没有间隔等，在样式中可调</mark></p>
+<p>2-设置你需要显示的模板，如你设置了名字，和qq，就用两个标题元件接收，照片用图片接收</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161054195.png"></p>
+<p>3-设置事件，将对应值赋予模板，数据表内有四个数据，页面就输出了第一张图的四个模板</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161055083.png"></p>
+<h3 id="中继器排序"><a href="#中继器排序" class="headerlink" title="中继器排序"></a>中继器排序</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161439767.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161439374.png"></p>
+<p>1-设置点击元件，添加中继器事件即可</p>
+<h3 id="中继器筛选"><a href="#中继器筛选" class="headerlink" title="中继器筛选"></a>中继器筛选</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161439621.png"></p>
+<p>1-添加筛选条件即可，用给文本框一个变量给用户选择，也可以直接固定选择</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161440849.png"></p>
+<h3 id="中继器翻页"><a href="#中继器翻页" class="headerlink" title="中继器翻页"></a>中继器翻页</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161449073.png"></p>
+<p>设置现在页面即可，一页显示几个数据可以在case中调，也可以在中继器样式中调，我只有四个数据，每页选择1最多只能选择四页（用户选择页数跳转，与筛选同理用变量接收即可）</p>
+<h3 id="评论案例"><a href="#评论案例" class="headerlink" title="评论案例"></a>评论案例</h3><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161503278.png"></p>
+<p>1-通过数据集中的添加行为，中继器添加行数，增加中继器行数，即可以增加一个模板。</p>
+<p>2-当输入内容，名字，点击提交事件，评论增加一行，再从元件中取出（case事件，评论文本等于发布内容矩形的文本，或者在中继器中直接用变量接收）数据得以显示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161507711.png"></p>
+<p>还要删除行，更新行，都是大同小异。</p>
+<h2 id="其他知识点"><a href="#其他知识点" class="headerlink" title="其他知识点"></a>其他知识点</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/202110161550945.png"></p>
+<p>1-内联框架即在一个框架里，可包含其他网站，视频，图片等，axure不支持视频音乐，在前端中可以。</p>
+<p>如下</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;www.jinnian.life&#x2F;&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;800&quot; height&#x3D;&quot;600&quot;&gt;&lt;&#x2F;iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<iframe src="https://www.jinnian.life/" frameborder="0" width="800" height="600"></iframe>
+
+
+
+<p>2-本网站<a target="_blank" rel="noopener" href="http://www.jinnian.life即为响应式布局,手机与电脑访问布局不同,自适应布局就是根据游览器页面当前大小,选择布局,在工具栏的视图中可设置./">www.jinnian.life即为响应式布局，手机与电脑访问布局不同，自适应布局就是根据游览器页面当前大小，选择布局，在工具栏的视图中可设置。</a></p>
+<p>3-母版就相当于一个封装好的模块和函数，可直接被调用。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>bili：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SZ4y1378t?p=1">https://www.bilibili.com/video/BV1SZ4y1378t?p=1</a></p>
 <p>软件下载网盘：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA">https://pan.baidu.com/s/1SwWgJhoEGChjUTwJAuNPtA</a> 密码：xg80</p>
 <p>页面实现有多种方法，重在学会使用软件，灵活变通，找出最简单的方法。</p>
@@ -1547,7 +1583,7 @@ ctrl+z也可返回上一步操作
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.3k</span>&nbsp;字
+                class="white-color">16.9k</span>&nbsp;字
             
             
             
