@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>此站点日志</title>
+      <link href="2021/11/17/ben-wang-zhan-ri-zhi/"/>
+      <url>2021/11/17/ben-wang-zhan-ri-zhi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="2021-11-20"><a href="#2021-11-20" class="headerlink" title="2021.11.20"></a>2021.11.20</h3><p>因为误操作，导致在域名注册商godaddy上架了此域名jinnian.life的出售，注册商直接修改了此域名的dns服务器，进而无法连接到正确的ip地址，导致无法访问，于2021.11.21发现并更新dns服务器。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AxureRP8.0</title>
       <link href="2021/09/23/axurerp/"/>
       <url>2021/09/23/axurerp/</url>
@@ -114,7 +139,7 @@
       <link href="2021/08/02/github-da-bu-kai-he-yi-jie-you/"/>
       <url>2021/08/02/github-da-bu-kai-he-yi-jie-you/</url>
       
-        <content type="html"><![CDATA[<h2 id="打不开的原因"><a href="#打不开的原因" class="headerlink" title="打不开的原因"></a>打不开的原因</h2><p>GitHub的ip服务经常变化，当它变化后，与我们本机原先记录的解析ip不一样，自然就打不开了，以为本机记录没有走dns，所以无法获取现在的有效ip</p><p>使用站长工具获取ip在站长之家输入GitHub网址，查询到目前的有效ip用ip打开即可，也可以配置到本地hosts，就能用域名打开，不过ip再次变化又要修改。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p><p>2.找到TTL值最低的响应IP,复制ip。</p><p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/githubip.png"></p><p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p><p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="打不开的原因"><a href="#打不开的原因" class="headerlink" title="打不开的原因"></a>打不开的原因</h2><p>GitHub的ip服务经常变化，当它变化后，与我们本机原先记录的解析ip不一样，自然就打不开了，因为本机记录没有走dns，所以无法获取现在的有效ip</p><p>使用站长工具获取ip在站长之家输入GitHub网址，查询到目前的有效ip用ip打开即可，也可以配置到本地hosts，就能用域名打开，不过ip再次变化又要修改。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p><p>2.找到TTL值最低的响应IP,复制ip。</p><p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/githubip.png"></p><p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p><p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>]]></content>
       
       
       <categories>
