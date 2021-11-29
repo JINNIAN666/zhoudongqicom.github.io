@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="KALIDNS污染, 瑾年">
+    <meta name="keywords" content="GitHub打不开, 瑾年">
     <meta name="description" content="瑾年的学习记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>KALIDNS污染 | 瑾年</title>
+    <title>GitHub打不开 | 瑾年</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">KALIDNS污染</h1>
+                    <h1 class="description center-align post-title">GitHub打不开</h1>
                 </div>
             </div>
         </div>
@@ -444,8 +444,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ctf/">
-                                <span class="chip bg-color">ctf</span>
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -456,8 +456,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                学习
+                            <a href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" class="post-category">
+                                杂七杂八
                             </a>
                         
                     </div>
@@ -469,21 +469,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-18
+                    2021-08-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-17
+                    2021-11-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    19
+                    274
                 </div>
                 
 
@@ -513,9 +513,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>虚拟机的网络记得配置好，不然扫不到host主机。</strong></p>
-<iframe src="//player.bilibili.com/player.html?aid=716641342&bvid=BV1FX4y1A7Z2&cid=372071089&page=1" allowfullscreen="allowfullscreen" width="80%" height="600px" scrolling="no" frameborder="0" ></iframe>
-
+                <h2 id="打不开的原因"><a href="#打不开的原因" class="headerlink" title="打不开的原因"></a>打不开的原因</h2><p>GitHub的ip服务经常变化，当它变化后，与我们本机原先记录的解析ip不一样，自然就打不开了，因为本机记录没有走dns，所以无法获取现在的有效ip</p>
+<p>使用站长工具获取ip在站长之家输入GitHub网址，查询到目前的有效ip用ip打开即可，也可以配置到本地hosts，就能用域名打开，不过ip再次变化又要修改。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p>
+<p>2.找到TTL值最低的响应IP,复制ip。</p>
+<p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/githubip.png"></p>
+<p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p>
+<p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>
 
                 
             </div>
@@ -542,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://JINNIAN666.github.io/2021/07/18/DNS%E6%9B%BF%E6%8D%A2/">http://JINNIAN666.github.io/2021/07/18/DNS%E6%9B%BF%E6%8D%A2/</a>
+                    <a href="http://JINNIAN666.github.io/2021/08/02/github-da-bu-kai-he-yi-jie-you/">http://JINNIAN666.github.io/2021/08/02/github-da-bu-kai-he-yi-jie-you/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -580,8 +585,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ctf/">
-                                    <span class="chip bg-color">ctf</span>
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -1023,31 +1028,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/20/%E4%B8%80%E6%AC%A1%E6%B5%85%E7%9A%84%E7%A4%BE%E5%B7%A5/">
+                <a href="/2021/09/21/jsp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="浅谈社工">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JSP实用教程">
                         
-                        <span class="card-title">浅谈社工</span>
+                        <span class="card-title">JSP实用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            遵循法律法规，切勿以身试法。
+                            小成功靠个人，大成功靠团队
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A4%BE%E5%B7%A5/" class="post-category">
-                                    社工
+                            <a href="/categories/JSP/" class="post-category">
+                                    JSP
                                 </a>
                             
                             
@@ -1057,12 +1062,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/tags/JSP/">
+                        <span class="chip bg-color">JSP</span>
                     </a>
                     
-                    <a href="/tags/%E7%A4%BE%E5%B7%A5/">
-                        <span class="chip bg-color">社工</span>
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">动态页面开发</span>
                     </a>
                     
                 </div>
@@ -1076,31 +1081,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/18/%E8%B5%84%E6%96%99/">
+                <a href="/2021/07/21/ru-he-huo-qu-ip-wei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="学习资料">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="如何获取他人位置">
                         
-                        <span class="card-title">学习资料</span>
+                        <span class="card-title">如何获取他人位置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一路走来，没有敌人，只看到朋友和师长。
+                            害人之心不可有，防人之心不可无。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="post-category">
-                                    学习资料
+                            <a href="/categories/%E5%AE%9A%E4%BD%8D/" class="post-category">
+                                    定位
                                 </a>
                             
                             
@@ -1110,12 +1115,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%91%BE%E5%B9%B4/">
-                        <span class="chip bg-color">瑾年</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
                     </a>
                     
-                    <a href="/tags/%E8%B5%84%E6%96%99/">
-                        <span class="chip bg-color">资料</span>
+                    <a href="/tags/%E5%AE%9A%E4%BD%8D/">
+                        <span class="chip bg-color">定位</span>
                     </a>
                     
                 </div>
