@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库Mysql基础, 瑾年">
+    <meta name="keywords" content="日志">
     <meta name="description" content="瑾年的学习记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库Mysql基础 | 瑾年</title>
+    <title>此站点日志 | 瑾年</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库Mysql基础</h1>
+                    <h1 class="description center-align post-title">此站点日志</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">学习</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/%E6%97%A5%E5%BF%97/">
+                                <span class="chip bg-color">日志</span>
                             </a>
                         
                     </div>
@@ -460,8 +456,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/%E6%97%A5%E5%BF%97/" class="post-category">
+                                日志
                             </a>
                         
                     </div>
@@ -473,28 +469,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-11-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-06
+                    2021-11-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    152
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
 
@@ -517,156 +513,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-mysql的安装"><a href="#1-mysql的安装" class="headerlink" title="1-mysql的安装"></a>1-mysql的安装</h2><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/20210805165116.png"></p>
-<p>安装包在参考资料的课件中有</p>
-<p>记住mysql的默认端口，默认用户名是root，环境变量可以不设置，它只是让你能使用dos mysql命令，作用不大。</p>
-<p>设置环境变量<a target="_blank" rel="noopener" href="https://blog.csdn.net/li93675/article/details/80700152">https://blog.csdn.net/li93675/article/details/80700152</a></p>
-<p>此电脑右击-管理-服务和应用程序-服务  可查看mysql的服务状态</p>
-<h2 id="2-如何彻底卸载mysql"><a href="#2-如何彻底卸载mysql" class="headerlink" title="2-如何彻底卸载mysql"></a>2-如何彻底卸载mysql</h2><p><mark>不彻底卸载，第二次安装会安装不上</mark></p>
-<p>首先关闭此电脑右击-管理-服务和应用程序-服务   中mysql的服务</p>
-<p>再从控制面板卸载mysql installer-community和mysql server 8.0两个软件（版本）</p>
-<p>再删除安装目录的文件（有时卸载不会自动删除），一般在c\program files\mysql</p>
-<p>再删除c\program files（x86）\mysql   ps：x86一般就是32位的软件</p>
-<p>再删除c\program data\mysql（在隐藏文件夹，记得勾选显示隐藏文件夹选项）</p>
-<p>再清理mysql注册表（不是必须的）</p>
-<p>再删除path环境变量中关于mysql的安装路径</p>
-<p>win7缺少插件，安装不了mysql就自行下载插件</p>
-<p>还安装不了，就是mysql的一些文件没有删感觉，你又不晓得这个文件在哪，建议重装系统。</p>
-<h2 id="3-Navicat"><a href="#3-Navicat" class="headerlink" title="3-Navicat"></a>3-Navicat</h2><p><mark>远程管理数据的图形化界面软件</mark></p>
-<p>与navicat相似的软件还有sqlyog</p>
-<p>安装包在参考资料的课件中</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/navicat.png"></p>
-<h2 id="4-数据库的一些基础知识"><a href="#4-数据库的一些基础知识" class="headerlink" title="4-数据库的一些基础知识"></a>4-数据库的一些基础知识</h2><h3 id="4-1-数据库分类"><a href="#4-1-数据库分类" class="headerlink" title="4.1-数据库分类"></a>4.1-数据库分类</h3><p>SQL 的全称是 Structured Query Language, 中文含义是:结构化查询语言. 它是个关系数据库的标准语言</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sql1.png"></p>
-<p>详细请阅读参考资料的课件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sql2.png"></p>
-<h3 id="4-2为什么用Mysql"><a href="#4-2为什么用Mysql" class="headerlink" title="4.2为什么用Mysql"></a>4.2为什么用Mysql</h3><p>因为mysql免费，操作简单，速度快，成本低，易安装卸载，Oracle性能更好，但运营成本太高，安装麻烦，小公司也用不起，维护难。其他数据库管理系统各有各的优缺点，见课件。</p>
-<h2 id="5-Mysql连接navicat遇到的问题"><a href="#5-Mysql连接navicat遇到的问题" class="headerlink" title="5-Mysql连接navicat遇到的问题"></a>5-Mysql连接navicat遇到的问题</h2><p>连接mysql提示<em><strong>*Authentication plugin ‘caching_sha2_password’ cannot be loaded*</strong></em></p>
-<p>这里是因为navicat12与mysql的密码加密规则不同导致</p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">解决方法参考csdn：https:&#x2F;&#x2F;blog.csdn.net&#x2F;u011182575&#x2F;article&#x2F;details&#x2F;80821418<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="6-入门"><a href="#6-入门" class="headerlink" title="6-入门"></a>6-入门</h2><p>sql也有很多版本标准，我们一般使用sql-92和sql：1999</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sql3.png"></p>
-<p>alter修改，manipulation操作，definition定义</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sql5.png"></p>
-<h2 id="7-DQL与DML与DDL"><a href="#7-DQL与DML与DDL" class="headerlink" title="7-DQL与DML与DDL"></a>7-DQL与DML与DDL</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 表的建立 ddl语言
-CREATE table student(
-		sno int(3),
-		name varchar(55),
-    	sex char(2),
-    age int,
-    dtdate date,
-    classname varchar(55),
-    email varchar(55)
-    -- 最后一条不需要“，”结尾
-)
--- 查询表中数据  dql语言
-select *from student
--- *代表全部的意思，查询来自student的全部信息
-
--- 查询表的结构信息，description，展示出表的数据类型并说明
-desc student
-
--- 查询完整的建表sql语句
-show create table student<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>int会自动扩充，所以不需要给长度，char是定长字符串，</p>
-<p>如char(100),大小（0-255）里面只放”瑾年“两个字，还是占100个字符</p>
-<p>varchar（0*65535）是变长字符串，varchar（100)放“瑾年”只占2个字符</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sqlzf.png"></p>
-<p>当数据很大就用text，存放音频视频就用blog，但不常用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/sqltime.png"></p>
-<p>时间戳与datetime的区别是，当不赋予时间，时间戳自动获取当前系统时间</p>
-<h3 id="7-1-DDL"><a href="#7-1-DDL" class="headerlink" title="7.1-DDL"></a>7.1-DDL</h3><p><strong>在表中添加一列ddl</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 默认添加在最后
-alter table student add score double（4，1）；
--- 添加到表开头
-alter table student add score double（5，1） first；
--- 在指定列后面添加一列
-alter table student add score double（5，2） after age；
-
--- ps：此语句跟随此博客前语句
--- double(4,1)表示四个长度，1个小数位，比如123.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>修改列信息</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">alter table student modify score int;
--- 把score的类型改成int，原先设置的是double
-alter table student change score sco double(4,3)
--- change既可以改变类型也能修改名字，此语句把列 名字score改为sco，类型改成double（4，3）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>删除列</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">alter table student drop sco；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>删除表</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">drop table student<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>修改表的名称</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">alter table student rename to teachers；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="7-2DML数据的增删改"><a href="#7-2DML数据的增删改" class="headerlink" title="7.2DML数据的增删改"></a>7.2DML数据的增删改</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 新增
-insert into student values（1，“瑾年”，“男”，12，5.2，“2021-08-06，“python人工智能”，“32671794@qq.com”）;
-
-
--- 不区分单双引号，上述语句字符串单引号也行，每个数据见用逗号隔开，系统按照values顺序赋值给相关列
--- 时间可以是2022-08-01也可以2022&#x2F;08&#x2F;01也可以2022.08.01
--- 时间可以用函数now（），CURRENT()，sysdate()代替，自动获取现在的时间
-
--- 指定列的添加
-insert into student（name） values（&#39;成成&#39;）；
-insert into student（sex，name） values（&quot;男&quot;，&quot;瑾年&quot;）
---指定了列，后面的数据按指定列顺序赋值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><mark>注意括号和引号都要用英文的，不然报错</mark></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 修改 把sno&#x3D;2的学生年纪 修改成19岁
-update student set age&#x3D;19 where sno&#x3D;2
--- set后面是修改的列，where后面是修改满足条件
-update student set age&#x3D;100,dtadate&#x3D;&quot;1921-06-03&quot; where sno&#x3D;2 sex&#x3D;&quot;男&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><mark>不管是修改还是删除记得加条件，不然会全部选中修改和删除</mark></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 删除
-delete from student where sno&#x3D;2；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="7-3DQL"><a href="#7-3DQL" class="headerlink" title="7.3DQL"></a>7.3DQL</h3><h2 id="8-表的完整性约束"><a href="#8-表的完整性约束" class="headerlink" title="8-表的完整性约束"></a>8-表的完整性约束</h2><p><strong>用途</strong>：<font  color="blue">如果没有约束，数据中就会出现许多相同数据，从而无法通过条件where精确选中一条数据，也会参杂很多不合法数据</font></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/20210806145205.png"></p>
-<p><strong>主键只有一个</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/20210806150350.png"></p>
-<p><strong>列级约束</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">create table student3(
-sno int primary key auto_increment,
-    name varchar(20) not null,
-    sex char(1) not null default&#39;男&#39; check(sex&#x3D;&quot;男&quot;or sex&#x3D;&quot;女&quot;),
-    age int check(age&gt;&#x3D;0 and age&lt;&#x3D;130),
-    dtdate date not null,
-    calssname varchar(50) not null,
-    email varchar(55) unique
-     
-)
-SELECT * FROM student3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>表级约束</strong></p>
-<p><mark>constraint约束，notnull和default只能写在列级约束</mark></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">create table student4(
-sno int  auto_increment,
-    name varchar(20) not null,
-    sex char(1) not null default&#39;男&#39; ,
-    age int ,
-    dtdate date not null,
-    calssname varchar(50) not null,
-    email varchar(55),
-    
-    constraint pk_stu4_sno PRIMARY KEY(sno),
-    constraint uk_stu4_email unique(email),
-    constraint ck_stu4_sex check(sex&#x3D;&quot;男&quot; or sex&#x3D;&quot;女&quot;)
-    -- 格式为constraint +你想设置的约束名（方便自己识别）+约束（约束对象）
-     
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><mark>自增auto_increment必须是主键才有</mark></p>
-<p><strong>表建立完成后如何添加约束以及如何删除约束</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture@master/JINNIAN666/picture/tuchuang/20210806180737.png"></p>
-<p><strong>外键约束</strong></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>尚学堂<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19K4y1P7vq?p=1">https://www.bilibili.com/video/BV19K4y1P7vq?p=1</a></p>
-<p>课件【尚学堂】MySQL数据库零基础入门到精通全套教程链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1hTVI1awirnhO99_XSywz9A">https://pan.baidu.com/s/1hTVI1awirnhO99_XSywz9A</a> 提取码: e9g7</p>
+                <h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>1-云产品，不管是服务器，数据库，储存空间还是域名一定要货比三家，寻找折扣，不要原价购买。</p>
+<h3 id="2021-11-20"><a href="#2021-11-20" class="headerlink" title="2021.11.20"></a>2021.11.20</h3><p>因为误操作，导致在域名注册商godaddy上架了此域名jinnian.life的出售，注册商直接修改了此域名的dns服务器，进而无法连接到正确的ip地址，导致无法访问，于2021.11.21发现并更新dns服务器。</p>
+<h3 id="2021-11-22"><a href="#2021-11-22" class="headerlink" title="2021.11.22"></a>2021.11.22</h3><p>将域名 jinnian.life 从godaddy注册商转出到阿里云，并购买域名jinnian.online  , jinian.live ,zhoudongqi.com , jinnianx.com与2g四核8m轻量服务器。</p>
 
                 
             </div>
@@ -693,7 +542,7 @@ sno int  auto_increment,
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://JINNIAN666.github.io/2021/07/14/shu-ju-ku-mysql-ji-chu/">http://JINNIAN666.github.io/2021/07/14/shu-ju-ku-mysql-ji-chu/</a>
+                    <a href="http://JINNIAN666.github.io/2021/11/17/%E6%9C%AC%E7%BD%91%E7%AB%99%E6%97%A5%E5%BF%97/">http://JINNIAN666.github.io/2021/11/17/%E6%9C%AC%E7%BD%91%E7%AB%99%E6%97%A5%E5%BF%97/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -731,12 +580,8 @@ sno int  auto_increment,
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">学习</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/%E6%97%A5%E5%BF%97/">
+                                    <span class="chip bg-color">日志</span>
                                 </a>
                             
                         </div>
@@ -1174,50 +1019,48 @@ sno int  auto_increment,
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/14/javascript/">
+                <a href="/2021/11/17/%E6%9C%AC%E7%BD%91%E7%AB%99%E6%97%A5%E5%BF%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JS基础">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="此站点日志">
                         
-                        <span class="card-title">JS基础</span>
+                        <span class="card-title">此站点日志</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            智者互持，愚者互撕。
+                            出现的一些问题和更新
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JAVASCRIPT/" class="post-category">
-                                    JAVASCRIPT
+                            <a href="/categories/%E6%97%A5%E5%BF%97/" class="post-category">
+                                    日志
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
-                    </a>
-                    
-                    <a href="/tags/JAVASCRIPT/">
-                        <span class="chip bg-color">JAVASCRIPT</span>
+                    <a href="/tags/%E6%97%A5%E5%BF%97/">
+                        <span class="chip bg-color">日志</span>
                     </a>
                     
                 </div>
@@ -1231,31 +1074,31 @@ sno int  auto_increment,
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/14/python/">
+                <a href="/2021/09/23/axurerp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="AxureRP8.0">
                         
-                        <span class="card-title">python</span>
+                        <span class="card-title">AxureRP8.0</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            日日无事，事复日日，忙忙亦茫茫
+                            为了你不敢懈怠，再累也伪装起来。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/axurerp/" class="post-category">
+                                    axurerp
                                 </a>
                             
                             
@@ -1265,12 +1108,8 @@ sno int  auto_increment,
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/axurerp/">
+                        <span class="chip bg-color">axurerp</span>
                     </a>
                     
                 </div>
