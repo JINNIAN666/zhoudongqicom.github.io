@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>静态注入网页请假</title>
+      <link href="2021/12/01/jing-tai-zhu-ru-wang-ye-qing-jia/"/>
+      <url>2021/12/01/jing-tai-zhu-ru-wang-ye-qing-jia/</url>
+      
+        <content type="html"><![CDATA[<p>网站为学校请假页面，只是本地的静态抓包注入，没有进行任何风险性操作</p><p>本人建议措施：网站将报文全部进行加密处理</p><p><video src="http://101.43.76.102/video/vocation.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 注入 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 修改网页请假 </tag>
+            
+            <tag> 静态注入 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>此站点日志</title>
       <link href="2021/11/17/ben-wang-zhan-ri-zhi/"/>
       <url>2021/11/17/ben-wang-zhan-ri-zhi/</url>
