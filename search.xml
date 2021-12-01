@@ -8,7 +8,7 @@
       <link href="2021/12/01/jing-tai-zhu-ru-wang-ye-qing-jia/"/>
       <url>2021/12/01/jing-tai-zhu-ru-wang-ye-qing-jia/</url>
       
-        <content type="html"><![CDATA[<p>网站为学校请假页面，只是本地的静态抓包注入，没有进行任何风险性操作</p><p>本人建议措施：网站将报文全部进行加密处理</p><p><video src="http://101.43.76.102/video/vocation.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
+        <content type="html"><![CDATA[<p>网站为学校请假页面，只是本地的静态抓包注入，没有进行任何风险性操作</p><p>此方法可骗门卫伪装请假出校，请金智尽快修复。</p><p>本人建议措施：网站将报文全部进行加密处理和加入时间戳验证。</p><p>1-设置抓包域名，打开canary抓包<br>2-访问请假页面<br>3-返回canary找到请假页面的包，长按注入，修改响应体（请假理由，时间什么的）<br>4-开启抓包，再次访问，已注入</p><p><video src="http://101.43.76.102/video/vocation.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
       
       
       <categories>
