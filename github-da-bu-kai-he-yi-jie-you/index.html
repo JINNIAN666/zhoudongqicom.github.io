@@ -518,7 +518,7 @@
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p>
 <p>2.找到TTL值最低的响应IP,复制ip。</p>
 <p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p>
-<p><img src="https://www.zhoudongqi.com//picture/tuchuang/githubip.png"></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/githubip.png"></p>
 <p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p>
 <p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>
 
