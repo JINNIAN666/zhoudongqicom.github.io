@@ -282,13 +282,6 @@
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/tags/JAVA/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://zhoudongqi.com/tags/JSP/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -297,6 +290,13 @@
   
   <url>
     <loc>http://zhoudongqi.com/tags/%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2021-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhoudongqi.com/tags/JAVA/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -324,6 +324,13 @@
   </url>
   
   <url>
+    <loc>http://zhoudongqi.com/tags/%E7%BC%A9%E5%86%99/</loc>
+    <lastmod>2021-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://zhoudongqi.com/tags/idea/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -338,6 +345,13 @@
   </url>
   
   <url>
+    <loc>http://zhoudongqi.com/tags/%E5%AE%9A%E4%BD%8D/</loc>
+    <lastmod>2021-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://zhoudongqi.com/tags/python/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -345,21 +359,7 @@
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/tags/%E7%BC%A9%E5%86%99/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://zhoudongqi.com/tags/%E7%A4%BE%E5%B7%A5/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhoudongqi.com/tags/%E5%AE%9A%E4%BD%8D/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -429,14 +429,14 @@
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/tags/HTML5-CSS3/</loc>
+    <loc>http://zhoudongqi.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
+    <loc>http://zhoudongqi.com/tags/HTML5-CSS3/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -473,14 +473,14 @@
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/categories/JAVA/</loc>
+    <loc>http://zhoudongqi.com/categories/JSP/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zhoudongqi.com/categories/JSP/</loc>
+    <loc>http://zhoudongqi.com/categories/JAVA/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -508,6 +508,13 @@
   </url>
   
   <url>
+    <loc>http://zhoudongqi.com/categories/%E5%AE%9A%E4%BD%8D/</loc>
+    <lastmod>2021-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://zhoudongqi.com/categories/python/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -516,13 +523,6 @@
   
   <url>
     <loc>http://zhoudongqi.com/categories/%E7%A4%BE%E5%B7%A5/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhoudongqi.com/categories/%E5%AE%9A%E4%BD%8D/</loc>
     <lastmod>2021-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
