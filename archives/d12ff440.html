@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>学习资料 | 瑾年</title>
+    <title>GitHub打不开 | 瑾年</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -234,7 +234,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/JINNIAN666" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -310,7 +310,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'e1b9c8731585bef2f9226397155c207bddc584d1664772da3c66d9d07b0b042e';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">学习资料</h1>
+                    <h1 class="description center-align post-title">GitHub打不开</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%91%BE%E5%B9%B4/">
-                                <span class="chip bg-color">瑾年</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%B5%84%E6%96%99/">
-                                <span class="chip bg-color">资料</span>
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -460,8 +456,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="post-category">
-                                学习资料
+                            <a href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" class="post-category">
+                                杂七杂八
                             </a>
                         
                     </div>
@@ -473,7 +469,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-18
+                    2021-08-02
                 </div>
                 
 
@@ -487,7 +483,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    39
+                    274
                 </div>
                 
 
@@ -517,13 +513,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a>学习视频</h2><p>1-<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1D7411J71b">英语语法全程</a></p>
-<p>2- <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YB4y1N76a">JS李立超</a></p>
-<p>3- <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1R7411F7JV">千峰python700集</a></p>
-<p>4- <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">操作系统</a></p>
-<p>5- <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fx411X7BD">MYSQL基础</a></p>
-<p>6-   <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18J411W7cE">JAVA基础知识</a></p>
-<p>7- <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XJ411X7Ud">HTML%CSS</a></p>
+                <h2 id="打不开的原因"><a href="#打不开的原因" class="headerlink" title="打不开的原因"></a>打不开的原因</h2><p>GitHub的ip服务经常变化，当它变化后，与我们本机原先记录的解析ip不一样，自然就打不开了，因为本机记录没有走dns，所以无法获取现在的有效ip</p>
+<p>使用站长工具获取ip在站长之家输入GitHub网址，查询到目前的有效ip用ip打开即可，也可以配置到本地hosts，就能用域名打开，不过ip再次变化又要修改。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a target="_blank" rel="noopener external nofollow noreferrer" href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p>
+<p>2.找到TTL值最低的响应IP,复制ip。</p>
+<p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/githubip.png"></p>
+<p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p>
+<p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>
 
                 
             </div>
@@ -550,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhoudongqi.com/zi-liao/">http://zhoudongqi.com/zi-liao/</a>
+                    <a href="http://zhoudongqi.com/archives/d12ff440.html">http://zhoudongqi.com/archives/d12ff440.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -588,12 +585,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%91%BE%E5%B9%B4/">
-                                    <span class="chip bg-color">瑾年</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%B5%84%E6%96%99/">
-                                    <span class="chip bg-color">资料</span>
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -1035,31 +1028,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/dns-ti-huan/">
+                <a href="/archives/e8bb5609.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="KALIDNS污染">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="idea教学">
                         
-                        <span class="card-title">KALIDNS污染</span>
+                        <span class="card-title">idea教学</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我只在需要勇敢时勇敢
+                            我只在该勇敢时勇敢
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-category">
+                                    编辑器
                                 </a>
                             
                             
@@ -1069,8 +1062,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ctf/">
-                        <span class="chip bg-color">ctf</span>
+                    <a href="/tags/idea/">
+                        <span class="chip bg-color">idea</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%99%E5%AD%A6/">
+                        <span class="chip bg-color">教学</span>
                     </a>
                     
                 </div>
@@ -1084,31 +1081,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/javascript/">
+                <a href="/archives/ca1f9928.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="JS">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="如何获取他人位置">
                         
-                        <span class="card-title">JS</span>
+                        <span class="card-title">如何获取他人位置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            智者互持，愚者互撕。
+                            害人之心不可有，防人之心不可无。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E5%AE%9A%E4%BD%8D/" class="post-category">
+                                    定位
                                 </a>
                             
                             
@@ -1118,12 +1115,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JAVASCRIPT/">
-                        <span class="chip bg-color">JAVASCRIPT</span>
-                    </a>
-                    
                     <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9A%E4%BD%8D/">
+                        <span class="chip bg-color">定位</span>
                     </a>
                     
                 </div>
@@ -1354,8 +1351,8 @@
             
             
            <a href="/about" target="_blank">瑾年</a>
-            |&nbsp;Powered by&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" target="_blank">JINNIAN</a>
-           |&nbsp;Theme&nbsp;<a href="https://baike.baidu.com/item/%E7%8B%97%E5%B8%81/4026751?fr=aladdin" target="_blank">dogecoin</a>
+            |&nbsp;Powered by&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" rel="external nofollow noreferrer" target="_blank">JINNIAN</a>
+           |&nbsp;Theme&nbsp;<a href="https://baike.baidu.com/item/%E7%8B%97%E5%B8%81/4026751?fr=aladdin" rel="external nofollow noreferrer" target="_blank">dogecoin</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
@@ -1382,18 +1379,18 @@
             <br>
             
             <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
-                <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2021020184号</a>
+                <a href="https://beian.miit.gov.cn" rel="external nofollow noreferrer" target="_blank">湘ICP备2021020184号</a>
             </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/JINNIAN666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=32671794@qq.com" class="tooltipped" target="_blank" data-tooltip="我的邮箱" data-position="top" data-delay="50">
+    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=32671794@qq.com" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="我的邮箱" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1403,7 +1400,7 @@
 
 
 
-    <a href="https://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="QQ：32671794" data-position="top" data-delay="50">
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="QQ：32671794" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1413,7 +1410,7 @@
 
 
 
-    <a href="http://user.qzone.qq.com/32671794/infocenter" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
+    <a href="http://user.qzone.qq.com/32671794/infocenter" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
         <i class="fas fa-home"></i>
     </a>
 

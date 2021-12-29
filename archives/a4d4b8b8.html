@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SECRET | 瑾年</title>
+    <title>python | 瑾年</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -234,7 +234,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/JINNIAN666" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -310,7 +310,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'dbae772db29058a88f9bd830e957c695347c41b6162a7eb9a9ea13def34be56b';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SECRET</h1>
+                    <h1 class="description center-align post-title">python</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SECRET/">
-                                <span class="chip bg-color">SECRET</span>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
                             </a>
                         
-                            <a href="/tags/%E7%91%BE%E5%B9%B4/">
-                                <span class="chip bg-color">瑾年</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -460,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SECRET/" class="post-category">
-                                SECRET
+                            <a href="/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -473,7 +473,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-08
+                    2021-07-14
                 </div>
                 
 
@@ -487,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    15 分
                 </div>
                 
 
@@ -517,7 +517,388 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SECRET"><a href="#SECRET" class="headerlink" title="SECRET"></a>SECRET</h1><p>好久不见</p>
+                <h2 id="p1-Python的介绍"><a href="#p1-Python的介绍" class="headerlink" title="p1-Python的介绍"></a>p1-Python的介绍</h2><p>python的特点<a target="_blank" rel="noopener external nofollow noreferrer" href="http://c.biancheng.net/view/7748.html">http://c.biancheng.net/view/7748.html</a></p>
+<p><mark>可移植性，各个平台能运行，运行快（基于c语言），简单易学，面向对象也能面向过程，可扩展性（能用c和c++编写，然后在python程序中使用，让运行速度更快隐藏算法），可嵌入性能把python嵌入c程序中当脚本使用，非常丰富的库（在libs中)</mark></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#输入成绩判断等级：</span>
+ 
+cj<span class="token operator">=</span><span class="token builtin">float</span> <span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"请输入你的成绩："</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> cj<span class="token operator">>=</span><span class="token number">90</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"优秀"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> cj<span class="token operator">>=</span><span class="token number">70</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;</span><span class="token number">90</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"良好"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> cj<span class="token operator">>=</span><span class="token number">60</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;</span><span class="token number">70</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"及格"</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"你要努力了"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+<h2 id="p2-环境pycharm等安装"><a href="#p2-环境pycharm等安装" class="headerlink" title="p2-环境pycharm等安装"></a>p2-环境pycharm等安装</h2><h3 id="p2-Python安装"><a href="#p2-Python安装" class="headerlink" title="p2-Python安装"></a>p2-Python安装</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://mp.weixin.qq.com/s/4oWzRIn0sasfrxwpli_4hw">https://mp.weixin.qq.com/s/4oWzRIn0sasfrxwpli_4hw</a></p>
+<p>尽量不要中文路径。</p>
+<p>pip使用教程（下载标准库外的库）</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/songzhixue/p/11296720.html">https://www.cnblogs.com/songzhixue/p/11296720.html</a></p>
+<p>也可以直接在设置-项目-python解释器中点+安装库</p>
+<h3 id="Pycharm安装"><a href="#Pycharm安装" class="headerlink" title="Pycharm安装"></a>Pycharm安装</h3><pre class="line-numbers language-py" data-language="py"><code class="language-py">https<span class="token punctuation">:</span><span class="token operator">//</span>mp<span class="token punctuation">.</span>weixin<span class="token punctuation">.</span>qq<span class="token punctuation">.</span>com<span class="token operator">/</span>s?__biz<span class="token operator">=</span>MzI3NzI1MzY4Mw<span class="token operator">==</span><span class="token operator">&amp;</span>mid<span class="token operator">=</span><span class="token number">2247492904</span><span class="token operator">&amp;</span>idx<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>sn<span class="token operator">=</span><span class="token number">0970650063d724b9c251848a2e5789ad</span><span class="token operator">&amp;</span>chksm<span class="token operator">=</span>eb6bbe74dc1c3762518dbeb3bc2813ca8da339bfc014bf897fc2450d431f5a29343ceccfbbe4<span class="token operator">&amp;</span>scene<span class="token operator">=</span><span class="token number">178</span><span class="token operator">&amp;</span>cur_album_id<span class="token operator">=</span><span class="token number">1786174076420472834</span><span class="token comment">#rd</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>cd命令</strong></p>
+<pre class="line-numbers language-ht" data-language="ht"><code class="language-ht">https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;6079ad0ec0145b28ff86db88.html
+输入cd..为返回上一级
+输入d：为进入d盘，其他盘同理
+输入cd d：1\2\3即进入d盘的1文件夹中的2文件夹中的3文件夹，主要不可以直接跳盘，比如现在在c盘，直接cd d：&#x2F;1&#x2F;2&#x2F;3，必须先到d盘
+输入dir可显示当前级有的文件和文件夹（有dir的是文件夹，文件会直接显示大小）
+输入文件夹部分名字，再按tab键可补全文件名
+按上数字键盘旁边的上箭头，可以出现原先输入的命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###开发环境介绍</p>
+<p><strong>venv与直接建立项目的区别</strong></p>
+<p>venv建立项目是创造一个新的环境，库与标准库等是分开的，如当你接私活爬虫的requests库需要用2.0版本，而公司项目用的是1.0版本，如果不用venv虚拟隔开，就会冲突。</p>
+<p>第三方库可以在文件，设置，venv项目中添加</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/p1.png"></p>
+<h3 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h3><p><strong>快捷键</strong></p>
+<p><mark>快捷键失效，可能是与其他软件冲突，或者安装了vim的插件，在设置中的插件中给vim卸载了就行了，或是是键盘被锁定，按fn+win解开</mark></p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">https<span class="token punctuation">:</span><span class="token operator">//</span>blog<span class="token punctuation">.</span>csdn<span class="token punctuation">.</span>net<span class="token operator">/</span>cuomer<span class="token operator">/</span>article<span class="token operator">/</span>details<span class="token operator">/</span><span class="token number">81534140</span>
+
+https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>cnblogs<span class="token punctuation">.</span>com<span class="token operator">/</span>sui776265233<span class="token operator">/</span>p<span class="token operator">/</span><span class="token number">10200809.</span>html
+
+可以在设置里面下载设置你习惯的编辑器快捷键，本人用windows选项
+crtl<span class="token operator">+</span><span class="token operator">/</span>注释
+ctrl<span class="token operator">+</span>alt<span class="token operator">+</span>l格式化代码
+ctrl<span class="token operator">+</span>d复制当前行到下一行
+ctrl<span class="token operator">+</span>y删除当前行
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注释shift+/，#为注释，···  ···前后三个点多行注释。</p>
+<p>明白venv与普通建立项目的区别，vene重新虚拟了一个环境，一般项目使用，学习阶段不用勾选，因为占用资源。</p>
+<p>文件重命名在refactor重构里面</p>
+<p>光标在函数上，按Ctrl再鼠标点击，可以看到函数底层定义</p>
+<p>win+r打开运行菜单，snippingtool系统截图工具</p>
+<p>mspaint是画图工具</p>
+<p><mark>在文件（file）-&gt;设置（setting）-&gt;键盘映射(keymap)中也可以查找各种快捷键</mark></p>
+<h3 id="如何汉化"><a href="#如何汉化" class="headerlink" title="如何汉化"></a>如何汉化</h3><p>点击左上角file，找到设置settings 找打插件plugins，再右边的搜索框输入chinese 插件安装后，点击应用Apply，再重启软件即可</p>
+<h2 id="p3-基础"><a href="#p3-基础" class="headerlink" title="p3-基础"></a>p3-基础</h2><h3 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h3><pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+print(a,b,100)
+#结果为1 2 100，print可以多个输出，而且可以直接带已知数,下面是print函数定义
+print(&quot;-&quot;*20)
+#结果为二十个&quot;-&quot;号--------------------，别问为什么，就是这样设置的
+#如果是数字和字符串做乘法运算，会将这个字符串重复多次。
+print()中整形也不能与字符串拼接，字符串双引号和单引号都可以。
+end&#x3D;&quot;&#x2F;n&quot;即语句输出完最后加一个换行，sep&#x3D;&quot;:&quot;即每个输出间用&quot;:&quot;隔开
+如print(1,2,3,sep&#x3D;&quot;:&quot;),输出1:2:3
+&#96;&#96;&#96;def print(self, *args, sep&#x3D;&#39; &#39;, end&#x3D;&#39;\n&#39;, file&#x3D;None): # known special case of print
+    &quot;&quot;&quot;
+    print(value, ..., sep&#x3D;&#39; &#39;, end&#x3D;&#39;\n&#39;, file&#x3D;sys.stdout, flush&#x3D;False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+    &quot;&quot;&quot;
+    pass
+&#96;&#96;&#96;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>python中直接a = 100，A = ‘ABC’即可，不需要int和string什么的，会自动帮我们定义。</p>
+<pre class="line-numbers language-none"><code class="language-none">money &#x3D; 200
+type(money)#看money的类型
+print(type(money))#现在是int
+money &#x3D; 20.2
+print(type(money))#现在是float
+money &#x3D; &#39;1万&#39;
+print(type(money))#现在是str字符串，在引号里面就是字符串，单引号双引号都可以。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1-分大小写<br>2-由字母，数字，下划线，其他的特殊符号不行，不能数字开头。<br>3-格式错误可运行，有灰色波浪线，可用中文，但会黄色警告。<br>4-不能使用关键字。<br>5-最好见名知意<br>6-小驼峰开头第一个字母全部小写如getNameByLine,但python最好用下划线，如get_name_by_line<br>7-大驼峰，每个字母大写GetNameByLine（在面向对象的类名中使用）</p>
+<h3 id="数据类型与转换"><a href="#数据类型与转换" class="headerlink" title="数据类型与转换"></a>数据类型与转换</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181228282.png"></p>
+<p>单引号双引号三个引号就是字符串类型，小数就是float型等等</p>
+<p>三个引号可保留格式输出字符串，如鹅鹅鹅诗歌的格式都保留了</p>
+<p>当字符串中需要有引号可以这样</p>
+<pre class="line-numbers language-none"><code class="language-none">message &#x3D; &quot;&#39;abcdefg&#39;&quot;
+message &#x3D; &#39;&quot;abcdefg&quot;&#39;
+但是不能message &#x3D; &#39;ab“cd&#39;efg”这样efg”就没有与之对应，语法出错<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181251048.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入money等于10
+解决方法 print（int（money）+1000），即使money是字符也能准确转成对应的数字进行计算，结果为1010
+或者解决方法 print（money+str（1000））把1000变成字符串，进行拼接，结果为100010
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181256996.png"></p>
+<p>input输入的默认是字符串类型，赋值后变量是字符串。</p>
+<p>字符串可以转int但必须是整数，如果是浮点数如1.11就会报错，如果是int型如字符串“1”，就会转为整型1</p>
+<p>int型可随便转成str型</p>
+<p>浮点数和str可以互相随便转换</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181309222.png"></p>
+<p>布尔类型转int，true就是1，false就是0，int转布尔，除了0或者空字符串是false，其他都是true。</p>
+<h3 id="赋值与输出"><a href="#赋值与输出" class="headerlink" title="赋值与输出"></a>赋值与输出</h3><pre class="line-numbers language-none"><code class="language-none">a &#x3D; b &#x3D; c &#x3D; 5#可
+d&#x3D;&quot;dddd&quot;
+a,b,c,d&#x3D;5,5,5,&quot;ddd&quot;#可
+print(a,b,c,d)
+print(&quot;%daaaaaaaa      %d%d%s&quot; %(a,b,c,d))#这时输出后a和b相差aaaaaa和多个空格，print里面怎么写就输出什么<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181403385.png"></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181416364.png"></p>
+<p>除就是直接除，整除就是结果取整，如9//6结果为1</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181424820.png"></p>
+<p>先比较第一个,第一个大就大,不再比较后面的，如果第一个一样就依次比较后面的</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>and两边一边为0,结果就为0,即一侧为假就是假,如过无0,则取后面那个(and第一个判断处理后，还需要判断后一个条件，最后判断是谁就输出谁),如a=1 b=3 print(b and a),得到的是1</p>
+<p>or两边一个为真就是真</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+print(a or b)
+#结果为1，因为第一个1为真，就不再运行判断后面b是真是假，直接输出1
+a &#x3D; 0
+b &#x3D; 2
+print(a or b)
+#结果为2，因为第一个是0假，再判断后面的，后面为2，就输出2
+#这里是输出数字，在编辑器中已经定义了就是这样运行的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+c &#x3D; 3
+print(b &gt; a and b&lt;3)
+#结果为true，这里不是数字，而有关系运算符，就输出true或者false
+print(not (b &gt; a and b&lt;3)) 
+#结果为false，not逻辑就是取反
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181456230.png"></p>
+<p>%d digit数字数位，%s string ,%f float ,%o octal八进制</p>
+<pre class="line-numbers language-none"><code class="language-none">age &#x3D; 20
+name &#x3D; &quot;陈冠希&quot;
+money &#x3D; 2000000.99
+print(&#39;%d岁的%s一部电影赚了%.2f元&#39; % (age,name,money))
+#注意print里面有&#39;&#39;
+print(age+&quot;岁的&quot;+name+&quot;一部电影赚了&quot;+money+&quot;元&quot;)
+#或者print(str(age)+&#39;岁的&#39;+name+&#39;一部电影赚了&#39;+str(money)+&#39;元&#39;)
+#直接字符串拼接，但是因为age和money不是字符串类型，无法拼接，所以必须先强转。（拼接必须全是字符串类型）
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>%.2f即保留两位小数输出</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109181501663.png"></p>
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><p>前缀0b就是二进制，0o就是八进制，0x十六进制hexadecimal，默认十进制</p>
+<p>十六进制是0123456789abcdef </p>
+<p><mark>二进制计算</mark></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191143538.png"></p>
+<p>1，2，4，8，16，32，64，128，256 ，二进制哪一位有相加即可快速得到十进制。</p>
+<pre class="line-numbers language-none"><code class="language-none">a&#x3D;bin(20)
+#转二进制
+print(a)
+a&#x3D;oct(50)
+#转八进制
+print(a)
+a&#x3D;hex(150)
+#转十六进制
+print(a)
+#binary二进制，octal八进制，hex十六进制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>转十进制</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191316383.png"></p>
+<p>二进制转八与十六</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191321010.png"></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191329497.png"></p>
+<h2 id="位运算结果"><a href="#位运算结果" class="headerlink" title="位运算结果"></a>位运算结果</h2><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191355799.png"></p>
+<p>逻辑运算符print(5 and 20)与位运算print（5 &amp; 20）不同，前者只要没有0与空字符取最后数值，即20</p>
+<p>后者&amp;运算先将5与20二进制化为0b101与0b10100，然后前后&amp;运算得到0b100结果为4</p>
+<p>或运算与异或运算与‘与运算’相似，规则不同而已。</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191355799.png"></p>
+<p>运算符</p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191402977.png"></p>
+<p>1字节=1byte=8bit=三十二位</p>
+<p>所有位运算通过转换成二进制后运算</p>
+<p><mark>左右移计算</mark></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191432979.png"></p>
+<p><mark>难点取反运算</mark></p>
+<p>如何true与false参与运算，true是1，false为0，print（1+true）得到2</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202109191518985.png"></p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>简单的if，else</p>
+<pre class="line-numbers language-none"><code class="language-none">import random  # 引入随机数包
+
+ran &#x3D; random.randint(1, 10)  # random.randint(1，10)生成1到10的整数
+ran2 &#x3D; random.randint(1, 10)
+print(ran, ran2)
+abs(ran)  # abs()是将括号里面的数字绝对值
+if ran &gt; ran2:
+    print(&quot;yes&quot;)
+else:
+    print(&quot;no&quot;)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>if-elif-else</p>
+<pre class="line-numbers language-none"><code class="language-none">#当所有的elif都不成立，才运行else，一个成立则跳出此判断语句再向下运行
+sales &#x3D; int(input(&quot;请输入你的销售金额，不同金额有不同奖励&quot;))#注意int转换下类型，input是字符串类型，无法与整形比较
+if 10000 &lt; sales &lt;&#x3D;50000:
+	print(&quot;你得到了一辆tesla&quot;)
+elif 50000 &lt; sales &lt;&#x3D;100000:
+	print(&quot;你得到了两辆tesla&quot;)
+elif 150000 &lt; sales &lt;&#x3D;200000:
+	print(&quot;你得到了三辆tesla&quot;)
+else:
+	print(&quot;你被开除了&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>pass关键词</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+if a&#x3D;&#x3D;1 :
+	pass
+else :
+	pass
+#pass无意义，但可支撑这个语句，不填语句会报错，pass可当空占用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>三目运算符</p>
+<p>格式： <code>变量 = 值1 if 条件 else 值2</code> 当条件成立时把 值1 赋值给变量，条件不成立时把 值2 赋值给变量，其实就是对if…else 语句的一种简写。</p>
+<p>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 10
+b &#x3D; 30
+if a &gt; b:
+    c &#x3D; a
+else:
+    c &#x3D; b
+print(&#39;a和b两个数的较大值是%d&#39;%c)
+
+if a &gt; b:
+	print(&quot;a&gt;b&quot;)
+else:
+	print(&quot;a&lt;b&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上的 <code>if...else</code> 代码可以简写成以下格式:</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 10
+b &#x3D; 30
+c &#x3D; a if a&gt;b else b
+print(&#39;a和b两个数的较大值是%d&#39;%c)
+
+print(&quot;a&gt;b&quot;) if a&gt;b else print(&quot;a&lt;b&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>continue和break要在for,while等循环中使用,单独的if语句中不能使用break和continue.</p>
+<p>continue结束当前循环，break跳出整个循环</p>
+<pre class="line-numbers language-none"><code class="language-none"># i &#x3D; 0
+# next1 &#x3D; 0
+# num &#x3D; 0
+#
+# while i &lt; 100:
+#     next1 +&#x3D; 1
+#     i +&#x3D; 1
+#     num &#x3D; num +next1
+# print(num)
+
+# 猜数字
+# 因为不知道要猜多少次所以用死循环，然后判断加break，猜对就break跳出
+# import random
+#
+# while True:
+#     ran &#x3D; random.randint(1, 10)
+#     guess &#x3D; int(input(&quot;欢迎来到随机猜数字游戏(1-10)，请输入您猜的数字&quot;))
+#     # 记得把input转int不然永远是错
+#     if guess &#x3D;&#x3D; ran:
+#         print(&quot; 恭喜你猜对了&quot;)
+#         break
+#     else:
+#         print(&quot;你猜错了&quot;)
+
+
+# for循环
+# range(10),输出0-9，默认从0开始，sep为1，不包括最后一个
+# 输出0 1 2 3 4 5 6 7 8 9
+# for i in range(10):
+#     print(i)
+
+# 从1开始，间隔为2，输出1 3 5 7 9
+for i in range(1, 10, 2):
+    print(i)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="for-else-和-while-else"><a href="#for-else-和-while-else" class="headerlink" title="for- else  和 while -else"></a>for- else  和 while -else</h3><p>当没执行过break则执行else，执行过break则不执行else</p>
+<pre class="line-numbers language-none"><code class="language-none">for i in range(3):
+	if i &gt; 3:
+	break
+else:
+	print(&quot;if一直不成立，没执行过break，执行此else语句&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h3><pre class="line-numbers language-none"><code class="language-none"># 输出能不能被3整除的1-10的数
+# for i in range(10):
+#     if i % 3 !&#x3D; 0:
+#         print(i)
+#     else:
+#         pass
+
+
+# continue
+for i in range(10):
+    if i % 3 &#x3D;&#x3D; 0:
+        continue
+    else:
+        print(i)
+
+# break跳出整个循环，注意是最近的循环，不是跳出if，continue是跳出当前的一次循环
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h3><pre class="line-numbers language-none"><code class="language-none"># 打出倒立直角三角形
+*
+**
+***
+****
+*****
+# 方法一
+# n &#x3D; 0
+# while n &lt;&#x3D; 5:
+#     print(&quot;*&quot; * n)
+#     n +&#x3D; 1
+
+# 方法二
+n &#x3D; 1
+while n &lt;&#x3D; 5:
+    m &#x3D; 0
+    while m &lt; n:
+        print(&quot;*&quot;, end&#x3D;&quot;&quot;)#取消换行，因为这里的*需要连起来
+        m +&#x3D; 1
+    print()#加换行
+    n +&#x3D; 1
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202111061641014.png"></p>
+<p>首先把s1的hello创建到变量池，然后把s1赋予s2，那么他们两个的地址相同，自然结果也都是hello</p>
+<p>，s3=”hello”编辑器从变量池找hello，发现已经有了，就直接赋予，这么做是为了节省空间，所以s1和s2</p>
+<p>和s3的地址都是一样的，s4是hello1，在变量池没有，所以另外创建，地址与前三个不同。</p>
+<pre class="line-numbers language-none"><code class="language-none">#查看地址的函数 id()
+n &#x3D; 3
+print(id(n))
+
+#转绝对值的函数 abs()
+n &#x3D; -3
+print(abs(n))
+
+#查看类型type()
+n &#x3D; -3
+print(type(n))
+
+#获取ascll码ord()
+n &#x3D; &quot;A&quot;
+print(ord(n))
+#结果65
+
+#获取字符串长度len()
+n &#x3D; &quot;111&quot;
+print(len(n))
+#结果3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="字符串的截取"><a href="#字符串的截取" class="headerlink" title="字符串的截取"></a>字符串的截取</h3><p><img src="https://www.zhoudongqi.com/picture/tuchuang/202111071740109.png"></p>
+<p><img src="https://www.zhoudongqi.com/picture/tuchuang/202111071743698.png"></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>1-python不用{}包含语句，而是用缩进规划范围，所以在if等语句中一定要注意缩进。</p>
+<p>2-python里没有i++这种自增</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>千峰教育python700集从入门到精通<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1R7411F7JV">https://www.bilibili.com/video/BV1R7411F7JV</a></p>
+<p>千峰python专栏公众号 </p>
 
                 
             </div>
@@ -544,7 +925,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhoudongqi.com/secret/">http://zhoudongqi.com/secret/</a>
+                    <a href="http://zhoudongqi.com/archives/a4d4b8b8.html">http://zhoudongqi.com/archives/a4d4b8b8.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -582,12 +963,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SECRET/">
-                                    <span class="chip bg-color">SECRET</span>
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
                                 </a>
                             
-                                <a href="/tags/%E7%91%BE%E5%B9%B4/">
-                                    <span class="chip bg-color">瑾年</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -1029,7 +1410,60 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/cao-zuo-xi-tong/">
+                <a href="/archives/ed62168e.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="数据库Mysql">
+                        
+                        <span class="card-title">数据库Mysql</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            人穷别说话，位卑别劝人。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/d04bd5bc.html">
                     <div class="card-image">
                         
                         
@@ -1045,9 +1479,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1069,55 +1503,6 @@
                     
                     <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
                         <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/qing-jia-mo-ni/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="请假模拟">
-                        
-                        <span class="card-title">请假模拟</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            坚守岗位，好奇心害死猫。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9D%82%E9%A1%B9/" class="post-category">
-                                    杂项
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%AF%B7%E5%81%87%E6%A8%A1%E6%8B%9F/">
-                        <span class="chip bg-color">请假模拟</span>
                     </a>
                     
                 </div>
@@ -1348,8 +1733,8 @@
             
             
            <a href="/about" target="_blank">瑾年</a>
-            |&nbsp;Powered by&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" target="_blank">JINNIAN</a>
-           |&nbsp;Theme&nbsp;<a href="https://baike.baidu.com/item/%E7%8B%97%E5%B8%81/4026751?fr=aladdin" target="_blank">dogecoin</a>
+            |&nbsp;Powered by&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" rel="external nofollow noreferrer" target="_blank">JINNIAN</a>
+           |&nbsp;Theme&nbsp;<a href="https://baike.baidu.com/item/%E7%8B%97%E5%B8%81/4026751?fr=aladdin" rel="external nofollow noreferrer" target="_blank">dogecoin</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
@@ -1376,18 +1761,18 @@
             <br>
             
             <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
-                <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2021020184号</a>
+                <a href="https://beian.miit.gov.cn" rel="external nofollow noreferrer" target="_blank">湘ICP备2021020184号</a>
             </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/JINNIAN666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=32671794@qq.com" class="tooltipped" target="_blank" data-tooltip="我的邮箱" data-position="top" data-delay="50">
+    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=32671794@qq.com" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="我的邮箱" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1397,7 +1782,7 @@
 
 
 
-    <a href="https://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="QQ：32671794" data-position="top" data-delay="50">
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=32671794&site=qq&menu=yes" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="QQ：32671794" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1407,7 +1792,7 @@
 
 
 
-    <a href="http://user.qzone.qq.com/32671794/infocenter" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
+    <a href="http://user.qzone.qq.com/32671794/infocenter" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
         <i class="fas fa-home"></i>
     </a>
 
