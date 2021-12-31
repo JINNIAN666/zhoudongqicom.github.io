@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.zhoudongqi.com/sitemap.xml
 Sitemap: https://www.zhoudongqi.com/baidusitemap.xml
+Sitemap: https://www.zhoudongqi.com/sitemap.xml
+
 
