@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>HTML5&amp;CSS3_day08</title>
+      <link href="archives/4400a44a.html"/>
+      <url>archives/4400a44a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTML5-amp-CSS3-day08-定位装饰"><a href="#HTML5-amp-CSS3-day08-定位装饰" class="headerlink" title="HTML5&amp;CSS3_day08-定位装饰"></a>HTML5&amp;CSS3_day08-定位装饰</h1><p>有三种布局方式，一种标准流（文档流），一种浮动，一种就是定位。</p><p><img src="C:\Users\smores\Desktop\学习图片\122.png" alt="122"></p><h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><p><img src="C:\Users\smores\Desktop\学习图片\123.png" alt="123"></p><p><img src="C:\Users\smores\Desktop\学习图片\124.png" alt="124"></p><p><img src="C:\Users\smores\Desktop\学习图片\125.png" alt="125"></p><p><img src="C:\Users\smores\Desktop\学习图片\126.png" alt="126"></p><p><img src="C:\Users\smores\Desktop\学习图片\127.png" alt="127"></p><p>相对定位是基于本身来移动，而且移动后，原位置不脱标，移动后的位置照样</p><p>有原来的显示模式特点，如它是块元素，就完全占一行</p><p>移动left200px和top100px的意思是，移动后的div的左边距离原div200px，上面距离原div100px</p><p>如何只设置定位，不设置移动，元素标签位置不变</p><p>如果right和left，top和bottom都设置了，以left和top生效</p><p><img src="C:\Users\smores\Desktop\学习图片\128.png" alt="128"></p><h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><p><img src="C:\Users\smores\Desktop\学习图片\130.png" alt="130"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端工程师 </tag>
+            
+            <tag> HTML5&amp;CSS3 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML5&amp;CSS3_day07</title>
       <link href="archives/d4bfb9db.html"/>
       <url>archives/d4bfb9db.html</url>
