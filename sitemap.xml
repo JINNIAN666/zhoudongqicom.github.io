@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zhoudongqi.com/friends/index.html</loc>
+    <loc>https://www.zhoudongqi.com/archives/4400a44a.html</loc>
     
     <lastmod>2022-02-07</lastmod>
     
@@ -11,9 +11,27 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/archives/4400a44a.html</loc>
+    <loc>https://www.zhoudongqi.com/archives/a3b8894d.html</loc>
     
-    <lastmod>2022-02-06</lastmod>
+    <lastmod>2022-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhoudongqi.com/archives/810add95.html</loc>
+    
+    <lastmod>2022-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhoudongqi.com/friends/index.html</loc>
+    
+    <lastmod>2022-02-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -57,15 +75,6 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/archives/d3d27dc2.html</loc>
-    
-    <lastmod>2022-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhoudongqi.com/archives/a3b8894d.html</loc>
     
     <lastmod>2022-02-03</lastmod>
     
@@ -129,15 +138,6 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/archives/ca1f9928.html</loc>
-    
-    <lastmod>2022-01-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhoudongqi.com/archives/810add95.html</loc>
     
     <lastmod>2022-01-11</lastmod>
     
