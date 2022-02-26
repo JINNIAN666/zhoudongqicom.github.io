@@ -520,32 +520,32 @@
                 <p><strong>缺点</strong></p>
 <p>没写项目分析，选择器没有正确选择，小知识点没有自己写案例，导致知识点不牢固，综合项目不能独立完成。</p>
 <h1 id="HTML5-amp-CSS3-移动端开发"><a href="#HTML5-amp-CSS3-移动端开发" class="headerlink" title="HTML5&amp;CSS3_移动端开发"></a>HTML5&amp;CSS3_移动端开发</h1><p>空间转换在实际工作中不常用，动画更重要。</p>
-<h2 id="空间转换"><a href="#空间转换" class="headerlink" title="空间转换"></a>空间转换</h2><p><img src="C:\Users\smores\Desktop\学习图片\190.png" alt="190"></p>
+<h2 id="空间转换"><a href="#空间转换" class="headerlink" title="空间转换"></a>空间转换</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/190.png" alt="190"></p>
 <p>z轴就是我们看向电脑的那一条线，指向我们的方向是正值。</p>
 <p>空间转换和day01的平面转换一样，具有位移，旋转，缩放，属性也是transform，只是多了一个z轴。</p>
-<h3 id="空间位移"><a href="#空间位移" class="headerlink" title="空间位移"></a>空间位移</h3><p><img src="C:\Users\smores\Desktop\学习图片\191.png" alt="191"></p>
+<h3 id="空间位移"><a href="#空间位移" class="headerlink" title="空间位移"></a>空间位移</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/191.png" alt="191"></p>
 <p>这里如果xyz一起写，就需要将transilate改为translate3d，rotate和scale同理</p>
 <p>如果都分开写，不需要加3d</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\192.png" alt="192"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/192.png" alt="192"></p>
 <p>只书写以上代码，无法看到z轴的效果</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\193.png" alt="193"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/193.png" alt="193"></p>
 <p>因为屏幕是平面，所以无法观察到z轴的变化，只能通过近大远小和近清除远模糊来区分，所以需要用到<strong>透视属性</strong>perspective来实现，那么perspective需要加在哪里呢？</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\194.png" alt="194"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/194.png" alt="194"></p>
 <p>注意这里的属性添加给需要透视效果元素的父级，如下图需要给div的box透视效果，box的父级是body就给body加css，添加perspective属性</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\195.png" alt="195"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/195.png" alt="195"></p>
 <p><strong>透视的原理</strong></p>
 <p>translatez设置负值为缩小，设置正值为放大，因为近大远小</p>
 <p>transform：translatez（xpx），这里的x设置的越大，则变化越大，perspective（）设置的越小，变化越大，与translate相反</p>
 <p>如同时translatez（100px），perspective设置为10px则会让元素放大的超出游览器范围，设置为800-1200则在正常范围。为什么呢？</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\196.png" alt="196"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/196.png" alt="196"></p>
 <p>因为perspective设置的是视距，这是在在底层就设置好的，没有为什么，视距就是人的眼睛与屏幕的远近，设置的越小，通俗来说，你与屏幕靠的越近，东西自然越大。</p>
 <p>其中transform: translateZ(100px);perspective: 1000px;这两句代码，表示视距是1000px，translatez（100px）即让屏幕中的物体向外z轴走100px，在2d屏幕中的效果自然是物体放大。</p>
 <h3 id="空间旋转"><a href="#空间旋转" class="headerlink" title="空间旋转"></a>空间旋转</h3><p>rotateZ和rotate效果一样，Z是绕着Z轴转，rotate是绕着中心点转，效果相同。</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\197.png" alt="197"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/197.png" alt="197"></p>
 <p>rotate3d，现实中根本不用，你只需要知道有这个写法即可。</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\198.png" alt="198"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/198.png" alt="198"></p>
 <p><strong>立体呈现</strong></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\199.png" alt="199"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/199.png" alt="199"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -598,20 +598,20 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>3D导航</strong></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\200.png" alt="200"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\201.png" alt="201"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/200.png" alt="200"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/201.png" alt="201"></p>
 <p>因为x轴旋转后改变了坐标轴的位置，即黄色面的xyz方向发生了改变，所以想把上图黄色面移动到长方体的最上面，需要translateZ，而不是translateY</p>
 <h3 id="空间缩放"><a href="#空间缩放" class="headerlink" title="空间缩放"></a>空间缩放</h3><p>几乎也不用，因为现在网站追求简洁美观，没有这么老土的花哨</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\202.png" alt="202"></p>
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p><img src="C:\Users\smores\Desktop\学习图片\203.png" alt="201"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\204.png" alt="201"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\205.png" alt="205"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/202.png" alt="202"></p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/203.png" alt="201"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/204.png" alt="201"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/205.png" alt="205"></p>
 <p>先定义动画，再使用动画。</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\206.png" alt="206"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/206.png" alt="206"></p>
 <p>如果是两个状态就用from和to，如果是多个状态，就使用百分比。</p>
 <p>这里的百分比的意思是使用动画使用时长占比节点，如时间设置为10s，则10%就是在1s的时候什么状态，50%就是在5秒的时候什么状态。</p>
 <p>默认状态，动画结束后，返回原状态，如果想反复重复动画，需要用到复合属性里的重复次数值。</p>
-<h3 id="动画的复合属性"><a href="#动画的复合属性" class="headerlink" title="动画的复合属性"></a>动画的复合属性</h3><p><img src="C:\Users\smores\Desktop\学习图片\207.png" alt="207"></p>
+<h3 id="动画的复合属性"><a href="#动画的复合属性" class="headerlink" title="动画的复合属性"></a>动画的复合属性</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/207.png" alt="207"></p>
 <p><strong>动画名称和时长必须加否则无效，其他的可不写。</strong></p>
 <p><strong>速度曲线</strong></p>
 <p>一般工作中不使用速度曲线，因为时间太短，一般看不出来区别，它的意思是动画变化的速度快慢，有匀速，减速，加速变化这些。</p>
@@ -620,28 +620,28 @@
 <p>加秒数即可，但是两个时间值，第一个为动画时长，第二个为延迟时间，意思为延迟x秒后再出现动画。</p>
 <p><strong>重复次数</strong></p>
 <p>重复次数加数字即可，如果想一直重复动画，就写infinite，这是无穷的无限的意思</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\208.png" alt="208"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/208.png" alt="208"></p>
 <p><strong>动画方向</strong></p>
 <p>如from{width:200px}to{width:600px}这里是单方向的，200px到600px后，立马回到200px，而加入alternate属性值后，可以让200px到600px，再从600px慢慢返回到200px</p>
 <p><strong>执行完毕的状态</strong></p>
 <p>一般不设置，执行完毕就会回到原来的样子，但我们可以人为设置执行完毕的状态，但是如果设置这个，就不能加入infinite和alternate去除，因为他们是冲突的，无限循环自然不会执行完毕，相互代替动画方向，自然也没有开始与结束的概率点。</p>
 <p>有两个常用属性值，一个是backwards，状态停留在最初状态，是默认值，一个是forwards停留在结束状态。</p>
 <h3 id="animation属性拆分写法"><a href="#animation属性拆分写法" class="headerlink" title="animation属性拆分写法"></a>animation属性拆分写法</h3><p>了解即可，不用记。</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\210.png" alt="210"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\211.png" alt="211"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/210.png" alt="210"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/211.png" alt="211"></p>
 <p>其中有一个animation-play-state一般配合hover使用，让你鼠标移入，动画暂停，取值为paused</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\212.png" alt="212"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/212.png" alt="212"></p>
 <h3 id="逐帧动画"><a href="#逐帧动画" class="headerlink" title="逐帧动画"></a>逐帧动画</h3><p>动画有两种，一种是补间动画，工作中最常用，两个状态间非常平滑。</p>
 <p>一种是逐帧动画，一般配合精灵图使用，下一帧代替上一帧。</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\213.png" alt="213"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\214.png" alt="214"></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\215.png" alt="215"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/213.png" alt="213"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/214.png" alt="214"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/215.png" alt="215"></p>
 <p>这个动画只是在原地跑，如何让小人在跑的同时，在屏幕上移动呢，可以让小人的父级盒子移动即可。</p>
 <p>使用<strong>多组动画</strong>可以实现</p>
-<p><img src="C:\Users\smores\Desktop\学习图片\216.png" alt="216"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/216.png" alt="216"></p>
 <p>在animation里面的第一个动画后，加逗号隔开写第二个即可。</p>
 <h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p><strong>走马灯</strong></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\217.png" alt="217"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/217.png" alt="217"></p>
 <p>分析</p>
 <p>1-遵循由外到内，由上到下，还有css先写浮动定位，再盒子，最后字体等样式书写顺序</p>
 <p>2-将一个盒子，包含ul与li，li中放图片</p>
@@ -738,9 +738,9 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="全面出游案例"><a href="#全面出游案例" class="headerlink" title="全面出游案例"></a>全面出游案例</h3><p><img src="C:\Users\smores\Desktop\学习图片\218.png" alt="218"></p>
+<h3 id="全面出游案例"><a href="#全面出游案例" class="headerlink" title="全面出游案例"></a>全面出游案例</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/218.png" alt="218"></p>
 <p><strong>1-背景图片</strong></p>
-<p><img src="C:\Users\smores\Desktop\学习图片\219.png" alt="219"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/219.png" alt="219"></p>
 <p><em>注意，如果body想取屏幕大小的100%，只能再设置html的css取100%</em></p>
 <p><strong>重中之重，background-size可以连写，但是是按照positon/size的格式</strong></p>
 <p>如下：</p>
