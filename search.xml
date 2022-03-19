@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>抓包遇到的棘手问题</title>
+      <link href="archives/861493e5.html"/>
+      <url>archives/861493e5.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>抓安卓手机的一个app的数据包分析</p><h2 id="抓包app数据包"><a href="#抓包app数据包" class="headerlink" title="抓包app数据包"></a>抓包app数据包</h2><p>1-一般手机抓包用小黄鸟canary，给手机安装证书后即可抓取网页数据包</p><p><strong>问题一：如果抓app的话，有的app有防抓包检测，何解？</strong></p><p>单向认证的APP<br>单向认证和双向认证<br>•单向验证的情况是客户端校验证书，校验出错就无法访问•双向认证的情况是客户端校验证书的时候，服务端也要校验证书，有一端证书校验失败都无法访问数据。缺点是服务器的压力比较大</p><p>处理方法<br>一般是使用 JustTrustMe</p><p>原理是通过 Xpose Hook 校验的 API</p><p>APP不走代理<br>如何确定 APP 不走代理？<br>•关闭代理服务器（fiddler等代理抓包工具）•使用手机访问浏览器网页访问失败，确定代理失效•使用APP访问，正常访问确定 APP 不走代理访问网络</p><p>处理方法<br>•更换不基于代理类型的抓包工具（HTTP Analyzer V7–缺点没办法用在真机、HTTP Debug Pro、手机端的HttpCanary-基于VPN）•hook - 先反编译看看他是使用了那个框架，然后针对性的hook – 菜鸡劝退•iptables 强制拦截转发</p><p>代理检测的APP<br>挂上代理之前APP访问正常，挂上代理之后APP无法使用显示网络出错等情况</p><p>•代理检测（hook 代理检测的方法）•证书检测（用 JustTrustMe ）</p><p>双向认证的APP<br>双向认证的情况是客户端校验证书的时候，服务端也要校验证书，有一端证书校验失败都无法访问数据。</p><p>不过在双向认证的APP中要做到双向验证，在APP中一般要配置好服务器端验证的证书，所以在客户端中我们可以找到一个服务端的证书，我们只要在 Fiddler 中配置好这个证书就可以请求了。</p><p>ps：证书一般带有密码，需要反编译找到密码，之后导入至系统当中，再从系统中导出为 .cer 证书格式，之后在 FiddlerScript 中配置即可。</p><p><strong>这里的xp框架等都需要root，何解？</strong></p><p>使用电脑版的安装模拟器，如雷电，夜神等，自带root功能。</p><p><strong>问题二：fiddle抓包模拟器内的应用</strong></p><p>模拟器的wifi代理与端口都设置好了，证书也安装了？为什么抓不到包？</p><p>这里的模拟器就是模拟一个安卓手机，你自己的手机也能通过此方法抓包。</p><p>因为你使用的是安卓7.0以上的版本，安卓7.0及以上系统对于证书的安全策略做了修改，用户证书只能用于代理浏览器的流量，而应用是不会信任这些证书。【ios和安卓&lt;7.0的版本没有此问题】</p><p>　　解决方案：</p><p>　　　　1、root手机将证书导入到根证书目录下（百度）</p><p>　　　　2、换低版本安卓系统</p><p><strong>问题三：小黄鸟能抓应用，为什么fiddler不行？</strong></p><p>两者抓的原理不同，小黄鸟是vpn，fiddler是中间人，wireshark是网卡。</p><h2 id="如何抓包电脑客户端"><a href="#如何抓包电脑客户端" class="headerlink" title="如何抓包电脑客户端"></a>如何抓包电脑客户端</h2><p>C/S程序抓包需要借助Proxifer<br>Proxifier是一款功能非常强大的socks5客户端，可以让不支持通过代理服务器工作的网络程序能通过HTTPS或SOCKS代理或代理链。<br><strong>由于一般的C/S客户端不能设置代理，所以我们FIddler检测不到数据</strong>，我们可以通过Proxifer来实现把所有的请求抓发给Fiddler，这样我们就可以在Fiddler分析客户端请求。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抓包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML5&amp;CSS3_移动端day03</title>
       <link href="archives/b2eea9e3.html"/>
       <url>archives/b2eea9e3.html</url>
@@ -345,6 +370,33 @@
             <tag> 前端工程师 </tag>
             
             <tag> HTML5&amp;CSS3 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>静态注入网页请假</title>
+      <link href="archives/d62e487b.html"/>
+      <url>archives/d62e487b.html</url>
+      
+        <content type="html"><![CDATA[<p>网站为学校请假页面，只是本地的静态抓包注入，没有进行任何风险性操作</p><p>此方法可骗门卫伪装请假出校，请金智尽快修复。</p><p>本人建议措施：网站将报文全部进行加密处理和加入时间戳验证。</p><p>1-设置抓包域名，打开canary抓包<br>2-访问请假页面<br>3-返回canary找到请假页面的包，长按注入，修改响应体（请假理由，时间什么的）<br>4-开启抓包，再次访问，已注入</p><p><video src="https://www.zhoudongqi.com/video/vocation.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 注入 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 修改网页请假 </tag>
+            
+            <tag> 静态注入 </tag>
             
         </tags>
       
@@ -769,6 +821,31 @@
             <tag> 摘抄 </tag>
             
             <tag> 瑾年 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>请假模拟</title>
+      <link href="archives/f957c9c4.html"/>
+      <url>archives/f957c9c4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="看图和视频就完事了"><a href="#看图和视频就完事了" class="headerlink" title="# 看图和视频就完事了"></a># 看图和视频就完事了</h1><p><a href="https://pan.baidu.com/s/1dFNV01V6-G3_biiJpnWKvg">点我下载软件</a>  </p><p><font color=blue>本软件仅供开发学习交流，请勿用于非法违规用途与传播，违者必究，一切后果与作者无关。</font></p><p>视频在最下方，加载较慢。</p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/1.jpg" alt="我的照片"></p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/2.jpg" alt="我的照片"></p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/3.jpg" alt="我的照片"></p><p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/4.jpg" alt="我的照片"></p><h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><video src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/5mp.mp4" width="300px" height="600px" controls="controls"></video></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂项 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 请假模拟 </tag>
             
         </tags>
       
