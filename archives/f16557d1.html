@@ -487,7 +487,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    932
+                    979
                 </div>
                 
 
@@ -539,7 +539,7 @@
 <p><strong>步骤：</strong></p>
 <p>1-打开httpcanary（第一次打开会提示安装证书用于抓https协议的包，这里用不到，安装了也只是不提示网页证书不受信任，没有实际用处徒增麻烦，所以没必要安装，直接跳过）</p>
 <p>2-按照视频中，添加需要抓取的app与域名</p>
-<p>3-点击右下角图标，开启抓包，进入被抓包app后，数据可能无法正常加载，我们一直刷新即可，直到抓到包。（提示风险页面就抓到了，这个风险是必提示的，因为我们没有安装canary的证书，这里的域名又开启了https协议）</p>
+<p>3-点击右下角图标，开启抓包，进入被抓包app后，数据可能无法正常加载，我们按照视频点击右下角canary的悬浮窗，先关闭抓包，就会正常显示页面（这时是原页面），我们再一直刷新即可，直到抓到包，就出现了我们想要的页面（提示风险页面就抓到了，这个风险是必提示的，因为我们没有安装canary的证书，这里的域名又开启了https协议）</p>
 <p>4-在抓到的第一个包中（时间最早的在最下面），根据视频点击静态注入，修改响应包为以下简单的html代码。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">https://xxxxxxxxxxxxxx/microhome/homepage/index
 找到这个包即可，xxxxxxx是抓包域名，这里没写出来。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
