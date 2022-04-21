@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-12
+                    2022-04-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    12 分
                 </div>
                 
 
@@ -916,6 +916,26 @@
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/253.png" alt="253"></p>
 <p>当不设置处于默认值的时候，默认不换行，最外面的大盒子只有500px，但是8个li按道理有800px，这时候又不能换行，就会发挥弹性盒子的特点，压缩每个li为500/8px大小。</p>
 <p>当设置了flex-wrap：wrap；后就会换行排列（wrap的意思为换行）</p>
+<h2 id="小兔仙pc端"><a href="#小兔仙pc端" class="headerlink" title="小兔仙pc端"></a>小兔仙pc端</h2><p><img src="C:\Users\smores\Desktop\学习图片\260.png" alt="260"></p>
+<p>在这里是写一个二手项目，我们的任务是写中间的内容部分，header和footer已经写好了</p>
+<p><strong>需求分析：</strong></p>
+<p>1-先布局，遵循从外到内，从上到下，把内容分为侧边栏，和商品部分，再在这两部分中细分下去。</p>
+<p>2-设置好margin和padding</p>
+<p>3-设置白色外的背景色，分析它的作用范围。</p>
+<p><strong>侧边栏</strong></p>
+<p><strong>主内容</strong></p>
+<p><em>1-overview会员中心部分</em></p>
+<p>1.1分左右两个部分，其中中间有一个小分割线，使用border完成</p>
+<p>1.2使用flex完成两部分的精准分割</p>
+<p>1.3使用a嵌套img和p完成会员中心的图标和文字，设置好img的大小（因为p的存在，会导致三个a竖着排列，使用flex完成横向排列），再设置margin-bottom完成img和p的间距</p>
+<p>1.4使用span和p完成优惠券部分，其中不需要margin-bottom，因为span中的文字自带行高</p>
+<p>tip：左边三个img和p需要更改，因为没有特殊需求，每个用户基本上一样。右边的优惠券数量不用更改，因为后续前后端数据交互，每个人的数量是不一样的。</p>
+<p><em>2-我的订单部分</em></p>
+<p>2.1可以看到，不仅是我的订单部分，收藏商品部分都有一样的背景颜色，和padding，margin等，所以设置一个公共css类。</p>
+<p>2.2有几个订单，就用几个小li，li里面的内容包含四个部分。</p>
+<p><strong>新知识点</strong></p>
+<p>1-这里用到了一个min-height，表示最少设置多少px，超出会自动增加。</p>
+<p>2-<em>省略号如何实现？</em></p>
 
                 
             </div>
@@ -1751,7 +1771,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">50.5k</span>&nbsp;字
+                class="white-color">51k</span>&nbsp;字
             
             
             
