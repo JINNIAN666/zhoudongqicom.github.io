@@ -487,7 +487,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    2.9k
                 </div>
                 
 
@@ -936,6 +936,10 @@
 <p><strong>新知识点</strong></p>
 <p>1-这里用到了一个min-height，表示最少设置多少px，超出会自动增加。</p>
 <p>2-<em>省略号如何实现？</em></p>
+<p>text-overflow文字超出的部分，ellipsis省略号，white-space 属性设置如何处理元素内的空白，nowrap不换行，overflow：hideen隐藏</p>
+<p><img src="C:\Users\smores\Desktop\学习图片\261.png" alt="261"></p>
+<p>在一般盒子中，用以上代码可以实现省略号，但是在盒子display:flex后就是一个弹性盒子，你nowrap后，即不换行，但是他会挤压盒子在一行显示，不会出现省略号，那么怎么办呢？</p>
+<p>解决方法：我们给这个放文字的盒子规定一个宽度，那样就不会挤压，就能显示出省略号。（这里需要自己量盒子需要的宽度，比较麻烦，可以设置width:0px;flex:1 把剩余的宽度都给它，就不用自己量了）</p>
 
                 
             </div>
@@ -1771,7 +1775,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">51k</span>&nbsp;字
+                class="white-color">51.2k</span>&nbsp;字
             
             
             

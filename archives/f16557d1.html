@@ -524,7 +524,6 @@
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>抓到请假页面的返回包，进行静态注入修改时间地点即可</p>
 <p>缺点：操作繁杂，数据改错一个标点，前后端数据格式对不上等问题导致无显示，</p>
 <p>而且canary不能关闭，必须一直打开canary，否则退出再进页面又重置到原页面了。</p>
-<p>优点：时间地点等各种个人信息都是自己的，不怕盘问。</p>
 <p>此方法参考</p>
 <p><a href="https://zhoudongqi.com/archives/d62e487b.html" target=_blank>修改返回包</a></p>
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>直接通过参考原页面与相关资源代码，做一个页面出来</p>
@@ -534,12 +533,11 @@
 <p><strong>教程视频：</strong></p>
 <p><video src="https://www.zhoudongqi.com/heima/jiaochen.mp4" width="300px" height="500px" controls="controls"></video></p>
 <p>优点：操作简单，注入成功后，只要不关闭被修改注入的软件后台，不需要再开启canary。</p>
-<p>缺点：请假页面是由我修改，大家改不了，不喜欢的话可以按照方法一。</p>
 <p>原理：此app不全是原生安卓，主页其实就是一个网页，找到这个网址注入返回包，简单重定向到修改过后的页面。</p>
 <p>此注入方法是我感觉最简单的一种之一，其他操作可能会因为app在Android11上的新协议（不信任本地的代理证书），以及各种小插曲导致抓不到包，什么root框架绕过这里不讨论。</p>
 <p>今日校园同理，原理是一样的，改的东西不同罢了。</p>
 <p><strong>所需工具：</strong></p>
-<p>httpcanary <a href="http://m.2265.com/down/244552.html" rel="external nofollow noreferrer" target=_blank>点击下载</a></p>
+<p>httpcanary <a href="http://m.2265.com/down/244552.html" rel="external nofollow noreferrer" target=_blank>点我查看</a></p>
 <p><strong>步骤：</strong></p>
 <p>1-打开httpcanary（第一次打开会提示安装证书用于抓https协议的包，这里用不到，安装了也只是不提示网页证书不受信任，没有实际用处徒增麻烦，所以没必要安装，直接跳过）</p>
 <p>2-按照视频中，添加需要抓取的app与域名</p>
@@ -552,6 +550,7 @@
 <p><em>Tips：步骤看起来好像很麻烦，其实很简单，按照视频中一步一步来即可，</em>不会的地方可以在评论区留言，或者私信我。</p>
 <p><em>仅供学习交流，欢迎各大佬指正，提供更好思路进行学习~~~</em></p>
 <p><strong>视频中的代码</strong></p>
+<p>此页面你们无法使用，本方法仅供学习交流，不为大家提供任何页面支持。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -1418,7 +1417,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">51k</span>&nbsp;字
+                class="white-color">51.2k</span>&nbsp;字
             
             
             
