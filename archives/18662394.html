@@ -487,7 +487,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    114
+                    414
                 </div>
                 
 
@@ -522,6 +522,58 @@
 <p>1-遇到问题不要像无头苍蝇，找个前辈请教往往事半功倍。</p>
 <p>2-一定要自己独立完成每一个项目和案例，看懂和会做之间有一道鸿沟</p>
 <p>3-先看完教程，再自己独立完成，写不出来，再吸取经验。</p>
+<h2 id="H5和C3"><a href="#H5和C3" class="headerlink" title="H5和C3"></a>H5和C3</h2><p>1-没有理解align-self和align-items的区别</p>
+<p>这个css一般只有flex布局后才有。</p>
+<p><strong>align-items</strong>：align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。（对齐弹性<strong>盒</strong>的各项元素）</p>
+<p><strong>align-self</strong>：align-self 属性定义flex子项单独在侧轴（纵轴）方向上的对齐方式。（对齐弹性<strong>对象</strong>元素内的某个<strong>项</strong>）</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">https://www.jianshu.com/p/430097e8cabd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>测试</strong></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IE=edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">.main</span><span class="token punctuation">&#123;</span>
+            <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+          
+        <span class="token punctuation">&#125;</span>
+        <span class="token selector">.r</span><span class="token punctuation">&#123;</span>
+            <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+            <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+            
+        <span class="token punctuation">&#125;</span>
+        <span class="token selector">.l</span><span class="token punctuation">&#123;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>r<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>hah<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>cc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>l<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>l<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/263.png" alt="263"></p>
+<p><strong>总结：</strong></p>
+<p>简单来说，align-self是写给盒子自己的，当前盒子在父级大盒子中受到align-self的属性值影响。</p>
+<p>align-items是写给盒子内部元素的，此盒子内部所有元素，受到align-items的属性值影响。</p>
 
                 
             </div>
@@ -1361,7 +1413,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">51.2k</span>&nbsp;字
+                class="white-color">51.6k</span>&nbsp;字
             
             
             
