@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="GitHub打不开,瑾年的学习记录">
+    <meta name="keywords" content="HTML5&amp;CSS3移动端,瑾年的学习记录">
     <meta name="description" content="瑾年的学习记录，分享每天学到的各类前沿技术，与学习中遇到的问题，供大家在瑾年Blog中学习交流。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>GitHub打不开 | 瑾年-瑾年的学习记录-瑾年Blog</title>
+    <title>HTML5&amp;CSS3_移动端day06 | 瑾年-瑾年的学习记录-瑾年Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">GitHub打不开</h1>
+                    <h1 class="description center-align post-title">HTML5&amp;CSS3_移动端day06</h1>
                 </div>
             </div>
         </div>
@@ -444,8 +444,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+                                <span class="chip bg-color">前端工程师</span>
+                            </a>
+                        
+                            <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                                <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
                             </a>
                         
                     </div>
@@ -456,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" class="post-category">
-                                杂七杂八
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
                             </a>
                         
                     </div>
@@ -469,28 +473,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-02
+                    2022-04-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-11
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    281
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -513,14 +517,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Github打不开怎么办？"><a href="#Github打不开怎么办？" class="headerlink" title="Github打不开怎么办？"></a>Github打不开怎么办？</h1><h2 id="打不开的原因"><a href="#打不开的原因" class="headerlink" title="打不开的原因"></a>打不开的原因</h2><p>GitHub的ip服务经常变化，当它变化后，与我们本机原先记录的解析ip不一样，自然就打不开了，因为本机记录没有走dns，所以无法获取现在的有效ip</p>
-<p>使用站长工具获取ip在站长之家输入GitHub网址，查询到目前的有效ip用ip打开即可，也可以配置到本地hosts，就能用域名打开，不过ip再次变化又要修改。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.在<a target="_blank" rel="noopener external nofollow noreferrer" href="http://tool.chinaz.com/dns%E6%9F%A5%E8%AF%A2http://github.com">http://tool.chinaz.com/dns查询http://github.com</a></p>
-<p>2.找到TTL值最低的响应IP,复制ip。</p>
-<p>3.windows打开C:\Windows\System32\drivers\etc\hosts，在本机的hosts文件增加192.30.253.113 （你查询到的当前ttl最低的githubip）github.com</p>
-<p><img src="https://www.zhoudongqi.com/picture/tuchuang/githubip.png"></p>
-<p>ps：直接用ip打不开，是因为一个服务器可能绑定多个域名，它不知道你访问哪一个，而一个域名同一时间段只能有一个ip（可能有多个ip但是是轮流使用，同时间只有一个ip）</p>
-<p>4.保存hosts文件后，快捷键Win+X+A输入ipconfig /flushdns刷新DNS</p>
+                <h2 id="vh和vw的使用"><a href="#vh和vw的使用" class="headerlink" title="vh和vw的使用"></a>vh和vw的使用</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/299.png" alt="299"></p>
+<p>vh/vw和rem一样也是一种尺寸单位，而且现在大厂基本上在使用，小企业还没有普及。</p>
+<p>rem即根字体自己media设置，或引入flexible.js后默认是视口的十分之一，vh/vw不用引入设置任何东西，默认为视口的百分之一</p>
+<p><strong>计算方法</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/300.png" alt="300"></p>
+<p><strong>同一个元素，设置大小，vw和vh能混用吗？</strong></p>
+<p>不可以，因为虽然大部分手机的宽高比是相同的，但是如果一个手机与其他设备宽高比不同，如全面屏手机，则在这个手里里的控件显示大小就和设备的不一样。</p>
+<p>如一个设计稿设备是375x667，一个是200x1000，一个控件是37.5x66.7，那么我们计算出来就是10vh和10vw，但是这样到另一个设备就是20x100，明显控件变形了。</p>
+<h2 id="bili移动端静态页面（使用vh-vw）"><a href="#bili移动端静态页面（使用vh-vw）" class="headerlink" title="bili移动端静态页面（使用vh/vw）"></a>bili移动端静态页面（使用vh/vw）</h2><h3 id="如何拿素材"><a href="#如何拿素材" class="headerlink" title="如何拿素材"></a>如何拿素材</h3><p>f12控制台解决一切，如小图标在iconfont找不到一样的，选中查看类名，再进入s控制台tyle中此图标生效的css，复制即可。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/301.png" alt="301"></p>
+<p>open in new tab，复制压缩好的css，在我们需要这个图标时，引入此css，再赋予同样的类名即可。</p>
+<p>其中还有一些iconfont.woff/ttf/eot都是字体，可以不用下载保存。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/302.png" alt="302"></p>
+<p>尺寸和margin，padding在computed看盒子模型即可。</p>
+<p><em><strong>注意</strong></em></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/303.png" alt="303"></p>
+<p>1-less文件中。import没有冒号，但是声明变量有冒号</p>
+<p>2-justify-content属性值，如space-between/around等，需要父级有宽度，否则无法计算，自然无法给出间距。</p>
+<p><em>3-有时上下的一些间距，不需要用padding，marging，用align-items:center，或者设置一下行高就行了。</em></p>
+<p>4-最外的div，也就是页面的总大小，不需要设置高度，或者设置min-height（最少多少，没达到就留白）内容设置高度往下堆积即可，超出屏幕大小，用户可以滑动下去观看，宽度设置为100%和100vw都可以，也可以不设置，根据情况而定（如果需要用到子内容定位就得设置宽度）</p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>我们把这个页面，从上到下，从内到外，先分为三大部分，头部固定，内容，和按钮固定</p>
+<h3 id="头部固定"><a href="#头部固定" class="headerlink" title="头部固定"></a>头部固定</h3><p><strong>tips</strong></p>
+<p>1-行内块display:inline-block标签换行有间距</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">参考：https://blog.csdn.net/haodian666/article/details/121021889<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>步骤</strong></p>
+<p>1-头部我们再细分为上部分和下部分，如下图</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/304.png" alt="304"></p>
+<p>2-上部分再分为左右，左边的bili图标用a标签嵌套i实现，右边的放大镜也使用iconfont，登入与下载app引入图片即可，最后设置大小和样式（注意这里a标签无法直接设置大小，可以使用dispaly转行内块，但是这样标签间会有空隙，所以可以让right变为flex布局，flex后没有行内与块的区分，a也能设置大小）</p>
+<p>3-因为权重问题，iconfont调节大小，需要用.iconfont的类选择器，不能给父级样式来继承。</p>
+<p>4-菜单栏使用ul&gt;li&gt;a的结构即可</p>
+<h3 id="内容区域"><a href="#内容区域" class="headerlink" title="内容区域"></a>内容区域</h3><p>1-注意这个是tab栏，菜单个数和内容个数一定要相同，至于怎么换内容，在webapi会学到</p>
+<p>2-我们直接加内容，会发现内容直接在页面最上面，为什么呢，因为头部是fixed固定定位，脱标了，然而我们现在写的是标准流，所以需要给主页加一个padding，把我们要写的内容区域挤下来。</p>
+<p>3-内容即图片文字调节样式位置即可，注意这里用到了省略号ellipsis的类，还有多个图片，需要用到flex-wrap:no-wrap去除flex的不换行，否则会全部挤压到一行。</p>
+<h3 id="fotter区域"><a href="#fotter区域" class="headerlink" title="fotter区域"></a>fotter区域</h3><p>加一个图标，固定定位即可。</p>
+<p><strong>完成项目后发现问题</strong></p>
+<p>滑动内容区域，header固定定位消失了？是fixed不生效吗？</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/306.png" alt="306"></p>
+<p>​    其实固定定位还在，但是内容滑上去和header混到了一起，解决方法是给header加一个z-index:1，再加一个白色背景即可，让它时刻在最上层。</p>
 
                 
             </div>
@@ -547,7 +582,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.zhoudongqi.com/archives/d12ff440.html">https://www.zhoudongqi.com/archives/d12ff440.html</a>
+                    <a href="https://www.zhoudongqi.com/archives/c2845d6c.html">https://www.zhoudongqi.com/archives/c2845d6c.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,8 +620,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+                                    <span class="chip bg-color">前端工程师</span>
+                                </a>
+                            
+                                <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                                    <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
                                 </a>
                             
                         </div>
@@ -1024,50 +1063,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/e8bb5609.html">
+                <a href="/archives/c2845d6c.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="idea的基础使用方法--瑾年Blog">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="HTML5&amp;CSS3_移动端day06">
                         
-                        <span class="card-title">idea的基础使用方法--瑾年Blog</span>
+                        <span class="card-title">HTML5&amp;CSS3_移动端day06</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我只在该勇敢时勇敢
+                            木秀其林，风必摧之。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-category">
-                                    编辑器
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/idea/">
-                        <span class="chip bg-color">idea</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+                        <span class="chip bg-color">前端工程师</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E5%AD%A6/">
-                        <span class="chip bg-color">教学</span>
+                    <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                        <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
                     </a>
                     
                 </div>
@@ -1081,31 +1122,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/ca1f9928.html">
+                <a href="/archives/5b8d0cd6.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="如何获取他人位置ip">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML5&amp;CSS3_移动端day05">
                         
-                        <span class="card-title">如何获取他人位置ip</span>
+                        <span class="card-title">HTML5&amp;CSS3_移动端day05</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            害人之心不可有，防人之心不可无。
+                            闻道有先后，术业有专攻。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AE%9A%E4%BD%8D/" class="post-category">
-                                    定位
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
                             
@@ -1115,12 +1156,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+                        <span class="chip bg-color">前端工程师</span>
                     </a>
                     
-                    <a href="/tags/%E5%AE%9A%E4%BD%8D/">
-                        <span class="chip bg-color">定位</span>
+                    <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                        <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
                     </a>
                     
                 </div>
