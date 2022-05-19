@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zhoudongqi.com/archives/f3e69ffc.html</loc>
+    <loc>https://www.zhoudongqi.com/archives/4b5af899.html</loc>
     
     <lastmod>2022-05-19</lastmod>
     
@@ -468,6 +468,13 @@
   </url>
   
   <url>
+    <loc>https://www.zhoudongqi.com/tags/github/</loc>
+    <lastmod>2022-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.zhoudongqi.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -476,13 +483,6 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/tags/HTML5-CSS3/</loc>
-    <lastmod>2022-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhoudongqi.com/tags/github/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -538,6 +538,13 @@
   </url>
   
   <url>
+    <loc>https://www.zhoudongqi.com/tags/SEO/</loc>
+    <lastmod>2022-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.zhoudongqi.com/tags/SEO%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -546,13 +553,6 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8E%92%E5%90%8D%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2022-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhoudongqi.com/tags/SEO/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -573,13 +573,6 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E7%BC%A9%E5%86%99/</loc>
-    <lastmod>2022-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zhoudongqi.com/tags/idea/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -594,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/python/</loc>
+    <loc>https://www.zhoudongqi.com/tags/%E7%BC%A9%E5%86%99/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -602,6 +595,13 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/tags/%E7%A4%BE%E5%B7%A5/</loc>
+    <lastmod>2022-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhoudongqi.com/tags/python/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -699,14 +699,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E8%B5%84%E6%96%99/</loc>
+    <loc>https://www.zhoudongqi.com/tags/%E4%BF%AE%E6%94%B9%E7%BD%91%E9%A1%B5%E8%AF%B7%E5%81%87/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E4%BF%AE%E6%94%B9%E7%BD%91%E9%A1%B5%E8%AF%B7%E5%81%87/</loc>
+    <loc>https://www.zhoudongqi.com/tags/%E8%B5%84%E6%96%99/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -778,14 +778,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/python/</loc>
+    <loc>https://www.zhoudongqi.com/categories/%E7%A4%BE%E5%B7%A5/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/%E7%A4%BE%E5%B7%A5/</loc>
+    <loc>https://www.zhoudongqi.com/categories/python/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -848,14 +848,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</loc>
+    <loc>https://www.zhoudongqi.com/categories/%E6%B3%A8%E5%85%A5/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/%E6%B3%A8%E5%85%A5/</loc>
+    <loc>https://www.zhoudongqi.com/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
