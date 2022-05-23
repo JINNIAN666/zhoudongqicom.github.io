@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML5&amp;CSS3,瑾年的学习记录">
+    <meta name="keywords" content="HTML5&amp;CSS3移动端,瑾年的学习记录">
     <meta name="description" content="瑾年的学习记录，分享每天学到的各类前沿技术，与学习中遇到的问题，供大家在瑾年Blog中学习交流。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML5&amp;CSS3_day-小兔鲜项目 | 瑾年-瑾年的学习记录-瑾年Blog</title>
+    <title>JavaScript基础_04day | 瑾年-瑾年的学习记录-瑾年Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML5&amp;CSS3_day-小兔鲜项目</h1>
+                    <h1 class="description center-align post-title">JavaScript基础_04day</h1>
                 </div>
             </div>
         </div>
@@ -448,8 +448,8 @@
                                 <span class="chip bg-color">前端工程师</span>
                             </a>
                         
-                            <a href="/tags/HTML5-CSS3/">
-                                <span class="chip bg-color">HTML5&amp;CSS3</span>
+                            <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">JavaScript基础</span>
                             </a>
                         
                     </div>
@@ -473,28 +473,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-08
+                    2022-05-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-12
+                    2022-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    743
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    7 分
                 </div>
                 
 
@@ -517,95 +517,188 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>如有错误，各位大佬帮忙在评论区指正，感谢~~~</strong></p>
-<h1 id="小兔鲜项目-瑾年blog"><a href="#小兔鲜项目-瑾年blog" class="headerlink" title="小兔鲜项目-瑾年blog"></a>小兔鲜项目-瑾年blog</h1><p><strong>tips</strong></p>
-<p>1-当两个盒子浮动，第三个盒子不浮动，第三个盒子会去占前面盒子的位置，被覆盖</p>
-<p>但是如果第三个盒子换成文字，图片，input等有内容的东西，就不会过去占前面两个盒子腾出来的标准流，而是在后面显示。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
-  <span class="token selector">div.aa</span><span class="token punctuation">&#123;</span>
-	  <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
-	  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-	  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-	  <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+                <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>1-undefined+任意类型（除了字符串，字符串会拼接）=NaN </p>
+<p>2-声明了但是没有赋值或没有值的东西，如变量，数组，没有设置return值的函数 等，打印输出的是undefined</p>
+<p>3-数字类型可以直接输出，但是英文的话会被认为是变量，如果没有声明就会报错。</p>
+<p>4-Shift+Alt+鼠标左键可以同时选择多行操作</p>
+<h2 id="为什么学习函数"><a href="#为什么学习函数" class="headerlink" title="为什么学习函数"></a>为什么学习函数</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/457.png" alt="457"></p>
+<h2 id="函数的使用"><a href="#函数的使用" class="headerlink" title="函数的使用"></a>函数的使用</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/458.png" alt="458"></p>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p> <img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/459.png" alt="459"></p>
+<h3 id="函数的执行"><a href="#函数的执行" class="headerlink" title="函数的执行"></a>函数的执行</h3><p>函数只封装不会被执行，必须被调用才会被执行</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/460.png" alt="460"></p>
+<p>alert()和parseInt()也是函数的调用，只是环境中已经提前帮我们封装好了</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/461.png" alt="461"></p>
+<h2 id="函数传参"><a href="#函数传参" class="headerlink" title="函数传参"></a>函数传参</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/462.png" alt="462"></p>
+<p>调用中写的值是实际参与运算叫实参，function name（形参）{}，</p>
+<p><strong>形参相当于在函数体内声明了的东西（实参是一个变量它就是变量，实参是数组，它就算数组等等）</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/463.png" alt="463"></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/464.png" alt="464"></p>
+<p><strong>多个参数之间用逗号隔开，尽量做到形参和实参数量相同，如果实参多于形参，则前面的生效，后面的会存储在一个argument的伪数组中（有长度，但是不能pop，push等）</strong></p>
+<blockquote>
+<p>这个arguments在此函数内，在函数外用arguments是没有被声明的，这也很好理解，因为一个页面有很多个函数，不可能共用arguments</p>
+</blockquote>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/465.png" alt="465"></p>
+<p>利用逻辑中断，防止无实参传入，导致结果为undefined</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/466.png" alt="466"></p>
+<p>如图，当无实参，用或运算，就会把结果赋值为0</p>
+<p><strong>案例</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/467.png" alt="467"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+   <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">function</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token parameter">arry</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+   
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arry<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        sum<span class="token operator">+=</span>arry<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
-  <span class="token selector">div.bb</span><span class="token punctuation">&#123;</span>
-	  <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
-	  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-	  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-	  <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+  <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">92</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/468.png" alt="468"></p>
+<p><strong>函数有的有返回值，有的没有返回值。</strong></p>
+<p>有的函数除了处理完问题，应该还需要有返回值，就像厨师炒了菜，要返回出来给顾客吃，不能把菜烂在厨房，如pop()返回删除的元素值，unshift()返回新数组的长度，promt()返回用户输入的字符串等等。</p>
+<p>有的函数没有，如alert()它的作用就是一个警示框，不需要返回值。</p>
+<p><strong>那么返回值怎么返回呢？</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/469.png" alt="469"></p>
+<p><strong>使用return返回，且一个函数体内语句，执行return后，直接退出函数体，不再执行后续代码。</strong></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/470.png" alt="470"></p>
+<p>这个函数虽然返回值和那一句document.write()毫不相干，但是因为有 let re = getSum([100,99,92])这一句</p>
+<p>就等于函数被调用了，函数内的所有语句等于被执行了一遍。</p>
+<p><strong>返回数组最大值</strong></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">function</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token parameter">arry</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> max <span class="token operator">=</span> arry<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arry<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>max <span class="token operator">&lt;=</span> arry<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        max <span class="token operator">=</span> arry<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">最大值为</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>max<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> max
   <span class="token punctuation">&#125;</span>
-  <span class="token selector">div.cc</span><span class="token punctuation">&#123;</span>
-	  <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
-	  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-	  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-	 
+    <span class="token comment">// 你搁着重复声明呢？作用域不同，不冲突的。</span>
+  <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">99</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span><span class="token number">99999</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="函数返回多个值"><a href="#函数返回多个值" class="headerlink" title="函数返回多个值"></a>函数返回多个值</h3><p>1-return只能返回一个值，强行返回多个，取最后那一个。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/471.png" alt="471"></p>
+<p><strong>那我咋返回多个值呢</strong></p>
+<p>答：使用数组的形式返回出来，虽然返回的只有一个数组，但是可以有多个各种不同的数据。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">function</span> <span class="token function">manyDdata</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span>y</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    jia<span class="token operator">=</span>x<span class="token operator">+</span>y
+    jian<span class="token operator">=</span>x<span class="token operator">-</span>y
+    cheng<span class="token operator">=</span>x<span class="token operator">*</span>y
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>jia<span class="token punctuation">,</span>jian<span class="token punctuation">,</span>cheng<span class="token punctuation">]</span>
   <span class="token punctuation">&#125;</span>
-  <span class="token selector">img</span><span class="token punctuation">&#123;</span>
-	  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-	  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token function">manyDdata</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token function">manyDdata</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>aa<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bb<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cc<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.//picture/cgx.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<p><strong>三元表达式是有一个返回值的，如下图</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/472.png" alt="472"></p>
+<p><strong>断点调试的f10与f11区别</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/473.png" alt="473"></p>
+<p>f10对应半圆箭头的快捷键，遇到函数，直接完成进行下一条语句</p>
+<p>f11对应向下箭头的快捷键，遇到函数，会进入函数内部，分析函数内部的语句执行过程。</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/474.png" alt="474"></p>
+<p><strong>为什么我明明声明了变量，却用不了呢？</strong></p>
+<p>因为第一个是在for循环内声明的，for循环是块作用域，第二个num2是在函数内声明的，有函数作用域。</p>
+<p><strong>怎么简单区分到底能不能用？</strong></p>
+<p>一句话，被包含的能用包含它的，爹的儿子用，儿子的爹不能用。</p>
+<p><strong>为啥我随便用，没有这啥作用域的讲究？</strong></p>
+<p>1-你用的声明变量的关键词是var，var有变量提升，不规范现在一般不使用。</p>
+<p>2-如下图你根本没声明，直接使用了变量并赋值，那么这个变量会被当做全局变量，不建议使用，底层会有漏洞。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/476.png" alt="476"></p>
+<p><strong>Tips</strong></p>
+<p>1-函数中的形参可以看作是被声明了的一个具有函数作用域的局部变量</p>
+<p>2-global全局，local局部的，block块</p>
+<p><strong>作用域的概述</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/475.png" alt="475"></p>
+<p>注意如果有两个script标签，它们定义的变量一样是全局的</p>
+<p>如下，第一个标签内声明的变量，第二个script里面是可以用的。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">3</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>两个作用域声明了名字一样的变量，调用者在同时两个作用域内，到底执行谁呢？按照什么规则执行的？</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/477.png" alt="477"></p>
+<p>上图中，函数作用域的num和for块作用域的num都可以被console.log使用，那么使用谁？</p>
+<p>通过作用域链，简单来说就近原则，可以知道，执行的结果为20</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/478.png" alt="478"></p>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/479.png" alt="479"></p>
+<p>一般将匿名函数赋值给一个变量，并通过变量名称来调用，是高阶函数(包含函数表达式和回调函数)的一种，也叫函数表达式。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/480.png" alt="480"></p>
+<p>默认这个变量名称就是它的函数名了。</p>
+<p><strong>使用场景</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/481.png" alt="481"></p>
+<p>点击了这个按钮后，就会执行这个函数。（这种是老的写法，新写法是添加监听器）</p>
+<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/482.png" alt="482"></p>
+<p>一般函数不调用不会执行，但是这个函数可以立即执行。</p>
+<p><strong>第一种写法</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/483.png" alt="483"></p>
+<p>其实立即执行函数写出来，就已经等于调用了，如上图</p>
+<p>匿名函数的变量fn就等价于function(){}</p>
+<p>而立即执行函数是(function(){})  ()就等于fn()，其中xy是形参，1和2是实参。</p>
+<p><strong>第二种写法</strong></p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/484.png" alt="484"></p>
+<p>一种是把匿名函数的变量fn就等价于function(){}，把这个fn用小括号包起来，就等于(fn)()</p>
+<p>第二种写法是不包fn，把整个包起来，等于(fn ())</p>
+<blockquote>
+<p>如上图，立即执行函数写了一个函数名，其实立即执行执行函数和匿名函数也是可以写一个”假名字”的，用来区分它的作用。</p>
+</blockquote>
+<p><strong>使用场景</strong></p>
+<p>立即执行函数，不是为了复用，被反复调用，而是为了让这段js按顺序运行，但是怕写的变量和其他变量冲突，就有了立即执行函数，因为在函数内，变量的作用域不同，就不用担心<strong>变量冲突变量污染</strong>了。</p>
+<p><strong>注意</strong></p>
+<p>如果一个页面有多个立即执行函数，不想其他语句分号；可以省略（编辑器内换行等于分号），但立即执行函数一定要在函数后面加分号，否则会报错，为了防止上一个立即函数后面没写分号，通常在立即执行函数前再加一个分号。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/485.png" alt="485"></p>
+<p>这个分号不一定是立即执行函数的，但反正两个立即执行函数间的语句，至少有一个分号； 去隔开它们就行了。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+   <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">hah</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+      document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> num <span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+   <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">hah</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+      document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/173.png" alt="173"></p>
-<p>2-</p>
-<h2 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/157.png" alt="157"></p>
-<p>为什么精灵图要用背景图片，不用image插入，因为要使用position移动，这样更方便</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/158.png" alt="158"></p>
-<p><strong>背景图片大小</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/159.png" alt="159"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/160.png" alt="160"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/161.png" alt="161"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/164.png" alt="164"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/165.png" alt="165"></p>
-<p>水平正值阴影是往右移动，垂直正值阴影是往下移动</p>
-<p><strong>文字阴影</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/162.png" alt="162"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/163.png" alt="163"></p>
-<p><strong>过度</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/166.png" alt="166"></p>
-<p>一般过度配合hover使用</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/167.png" alt="167"></p>
-<p>注意，transition是写在要变化的盒子里面，不是写在hover里面，重中之重如果你单个写，不写all</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">transition: width 1s,background-color 5s;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这里用一个普通的let声明，后面有分号也行。</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/486.png" alt="486"></p>
+<h2 id="输入秒数转换为时分秒案例"><a href="#输入秒数转换为时分秒案例" class="headerlink" title="输入秒数转换为时分秒案例"></a>输入秒数转换为时分秒案例</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/487.png" alt="487"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+   <span class="token comment">// 用户输入秒数</span>
+   <span class="token keyword">let</span> seconds <span class="token operator">=</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">请输入秒数</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+   <span class="token comment">// 封装转换函数</span>
+   <span class="token keyword">function</span> <span class="token function">getResult</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+       <span class="token keyword">let</span> h <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">/</span><span class="token number">60</span><span class="token operator">/</span><span class="token number">60</span><span class="token operator">%</span><span class="token number">24</span><span class="token punctuation">)</span>
+       <span class="token keyword">let</span> m <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">/</span><span class="token number">60</span><span class="token operator">%</span><span class="token number">60</span><span class="token punctuation">)</span>
+       <span class="token keyword">let</span> s <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">%</span><span class="token number">60</span><span class="token punctuation">)</span>
+       h <span class="token operator">=</span> h<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>h<span class="token operator">:</span>h
+       m <span class="token operator">=</span> m<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>m<span class="token operator">:</span>m
+       s <span class="token operator">=</span> s<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>s<span class="token operator">:</span>s
+       <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">计算后的时间为</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>h<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">小时</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>m<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">分</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>s<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">秒</span><span class="token template-punctuation string">`</span></span>
+       
+   <span class="token punctuation">&#125;</span>
+   <span class="token comment">// 打印输出</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span><span class="token function">getResult</span><span class="token punctuation">(</span>seconds<span class="token punctuation">)</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+ </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>这里是加逗号隔开，而不是空格。</p>
-<p><strong>html骨架</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/168.png" alt="168"></p>
-<p><strong>网站图标</strong></p>
-<p>图标文件一般放到网站<img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/169.png" alt="169">根目录</p>
-<p>和引入css一样引入即可，三个属性，rel说明是什么关系，是这个页面的什么，如css就是stylesheet</p>
-<p>，href是超引用即填路径，type填资源类型/作用，css的是text/css</p>
-<h3 id="项目结构搭建"><a href="#项目结构搭建" class="headerlink" title="项目结构搭建"></a>项目结构搭建</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/170.png" alt="170"></p>
-<p>首页都得叫index</p>
-<p>一些多次使用的样式，各个页面都需要使用的css，比如清除默认边距等css放到base.css</p>
-<p>公共的样式，比如多个页面，都有一个固定的header，就可以放到common.css</p>
-<p>如：<img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/171.png" alt="171"></p>
-<p>这些公共样式都放到commom.css，common普通的，公共的。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/172.png" alt="172"></p>
-<p>引入css的时候，按照先base后commom最后index引入，因为后面的会覆盖前面的效果。</p>
-<h3 id="小兔仙"><a href="#小兔仙" class="headerlink" title="小兔仙"></a>小兔仙</h3><p>问题：</p>
-<p><strong>一定要按照正确的方法框架结构来写，不要自己瞎写，可能目标达到了，但是要浪费大量时间，代码凌乱不堪，可维护性极差</strong></p>
-<p><strong>遇到问题，样式效果与预期不同，结合所有知识，思考为什么会导致这样，有什么可能性，要有目的性的解决问题，不要没有方向，乱改。</strong></p>
-<p>1-伪元素是行内，想设置大小记得display</p>
-<p>2-要注意你设置的css选择器到底有没有选中，也可看控制台样式表，不然找十年找不到问题所在，为什么没生效？</p>
-<p>3-充分理解设置的到底是谁的margin，设置的是谁的样式。</p>
-<p>4-bgi中的url中的路径可以加引号也可以不加。</p>
+
+
+<p><strong>遇到错误</strong></p>
+<p>1-三元表达式是返回一个值，但我并没有给这个返回值去赋予变量。</p>
+<p>2-形参就相当于函数内声明的一个变量，不能再次声明</p>
+<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/488.png" alt="488"></p>
 
                 
             </div>
@@ -632,7 +725,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.zhoudongqi.com/archives/ac25a271.html">https://www.zhoudongqi.com/archives/ac25a271.html</a>
+                    <a href="https://www.zhoudongqi.com/archives/d68dc020.html">https://www.zhoudongqi.com/archives/d68dc020.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -674,8 +767,8 @@
                                     <span class="chip bg-color">前端工程师</span>
                                 </a>
                             
-                                <a href="/tags/HTML5-CSS3/">
-                                    <span class="chip bg-color">HTML5&amp;CSS3</span>
+                                <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">JavaScript基础</span>
                                 </a>
                             
                         </div>
@@ -1113,29 +1206,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/5ce0c8cf.html">
+                <a href="/archives/d68dc020.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="HTML5&amp;CSS3_移动端day01">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JavaScript基础_04day">
                         
-                        <span class="card-title">HTML5&amp;CSS3_移动端day01</span>
+                        <span class="card-title">JavaScript基础_04day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不要害怕失败，本没有什么可以失去。
+                            滴滴答答就是时时刻刻，人生又有多少时刻。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1148,6 +1242,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1155,8 +1250,8 @@
                         <span class="chip bg-color">前端工程师</span>
                     </a>
                     
-                    <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
-                        <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
+                    <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">JavaScript基础</span>
                     </a>
                     
                 </div>
@@ -1170,24 +1265,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/4400a44a.html">
+                <a href="/archives/4b5af899.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="HTML5&amp;CSS3_day08">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JavaScript基础_03day">
                         
-                        <span class="card-title">HTML5&amp;CSS3_day08</span>
+                        <span class="card-title">JavaScript基础_03day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不要害怕失败，本没有什么可以失去。
+                            事必躬亲，呕心沥血，必败无疑。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
                             </span>
                         <span class="publish-author">
                             
@@ -1208,8 +1303,8 @@
                         <span class="chip bg-color">前端工程师</span>
                     </a>
                     
-                    <a href="/tags/HTML5-CSS3/">
-                        <span class="chip bg-color">HTML5&amp;CSS3</span>
+                    <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">JavaScript基础</span>
                     </a>
                     
                 </div>
