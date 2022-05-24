@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript基础_04day | 瑾年-瑾年的学习记录-瑾年Blog</title>
+    <title>JavaScript基础_05day | 瑾年-瑾年的学习记录-瑾年Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript基础_04day</h1>
+                    <h1 class="description center-align post-title">JavaScript基础_05day</h1>
                 </div>
             </div>
         </div>
@@ -473,7 +473,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-19
+                    2022-05-23
                 </div>
                 
 
@@ -487,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -517,188 +517,234 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>1-undefined+任意类型（除了字符串，字符串会拼接）=NaN </p>
-<p>2-声明了但是没有赋值或没有值的东西，如变量，数组，没有设置return值的函数 等，打印输出的是undefined</p>
-<p>3-数字类型可以直接输出，但是英文的话会被认为是变量，如果没有声明就会报错。</p>
-<p>4-Shift+Alt+鼠标左键可以同时选择多行操作</p>
-<h2 id="为什么学习函数"><a href="#为什么学习函数" class="headerlink" title="为什么学习函数"></a>为什么学习函数</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/457.png" alt="457"></p>
-<h2 id="函数的使用"><a href="#函数的使用" class="headerlink" title="函数的使用"></a>函数的使用</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/458.png" alt="458"></p>
-<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p> <img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/459.png" alt="459"></p>
-<h3 id="函数的执行"><a href="#函数的执行" class="headerlink" title="函数的执行"></a>函数的执行</h3><p>函数只封装不会被执行，必须被调用才会被执行</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/460.png" alt="460"></p>
-<p>alert()和parseInt()也是函数的调用，只是环境中已经提前帮我们封装好了</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/461.png" alt="461"></p>
-<h2 id="函数传参"><a href="#函数传参" class="headerlink" title="函数传参"></a>函数传参</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/462.png" alt="462"></p>
-<p>调用中写的值是实际参与运算叫实参，function name（形参）{}，</p>
-<p><strong>形参相当于在函数体内声明了的东西（实参是一个变量它就是变量，实参是数组，它就算数组等等）</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/463.png" alt="463"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/464.png" alt="464"></p>
-<p><strong>多个参数之间用逗号隔开，尽量做到形参和实参数量相同，如果实参多于形参，则前面的生效，后面的会存储在一个argument的伪数组中（有长度，但是不能pop，push等）</strong></p>
-<blockquote>
-<p>这个arguments在此函数内，在函数外用arguments是没有被声明的，这也很好理解，因为一个页面有很多个函数，不可能共用arguments</p>
-</blockquote>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/465.png" alt="465"></p>
-<p>利用逻辑中断，防止无实参传入，导致结果为undefined</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/466.png" alt="466"></p>
-<p>如图，当无实参，用或运算，就会把结果赋值为0</p>
-<p><strong>案例</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/467.png" alt="467"></p>
+                <h2 id="函数传参技巧"><a href="#函数传参技巧" class="headerlink" title="函数传参技巧"></a>函数传参技巧</h2><p>此技巧，为前面所学逻辑中断防止用户没有传入参数，导致输出为NaN的升级方法。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/489.png" alt="489"></p>
+<p>如上图，可以利用或运算符的逻辑中断，如果用户没有传入数据，则x和y都等于0</p>
+<p>其实我们可以直接在形参这里设置，x与y等于0，有参数传过来，就等于传过来的数据，没有即也等于0</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h3><p>当我们要储存一类信息，比如一个人，要保存他的姓名，身高，性别，会的技能，我们应该怎么保存它呢？</p>
+<p>​        我们可以用数组，因为数组可以保存各种类型的数据，但有一个致命缺点，就是很难区分，human[180，180，”男”]，你无法区分他是是男的，还是喜欢男的哈哈，很难区分。</p>
+<p>​        所以就需要用到对象</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/490.png" alt="490"></p>
+<p>静态特征称为属性，动态特征称为方法。</p>
+<p>数组是有顺序的，对象是无序的。</p>
+<p>对象是一种数据类型，是无序数据的集合，可以详细的描述某个事物。</p>
+<h3 id="对象的使用"><a href="#对象的使用" class="headerlink" title="对象的使用"></a>对象的使用</h3><p> <img src="https://zhoudongqi.com/picture/new/HTML_CSS/491.png" alt="491"></p>
+<p>里面的属性和方法，用逗号隔开</p>
+<p>方法后面一般写的是匿名函数</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/492.png" alt="492"></p>
+<p>属性名如上图的uname，可以用单/双引号，如写成 ‘uname’</p>
+<p>但是一般不添加，除非名称遇到一些特殊符号，但是在json中必须加上。</p>
+<p>属性方法名字可以有空格，中横线等，但不代表什么符号都可以（会报错），一般写字母就行了。</p>
+<p><strong>console.log与console.dir的区别</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/493.png" alt="493"></p>
+<p>一个是直接打印出来，一个是以directory目录的形式显示出来。 </p>
+<p><strong>属性与方法的访问</strong></p>
+<p>属性和方法的访问有两种方法，如下图。</p>
+<p>第一种 对象名.属性/方法名</p>
+<p>第二种 对象名[‘属性/方法名’]</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/494.png" alt="494"></p>
+<p>我们一般用第一种方式，第二种方式在后面会用到，而是必须这样写。</p>
+<p><strong>方法的调用</strong></p>
+<p>对象.方法名()</p>
+<p>如上图有有一个biancheng的方法，调用的时候写obj.biancheng()即可，它本质还是一个函数。</p>
+<h3 id="操作对象"><a href="#操作对象" class="headerlink" title="操作对象"></a>操作对象</h3><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/495.png" alt="495"></p>
+<p>1-查，前面已经用到过了，就是  对象.属性/方法名</p>
+<p>2-改，直接重新赋值即可</p>
+<p>3-增，js中的对象可以动态添加，直接 对象.新属性/方法名=新值 </p>
+<p>4-删，delete 对象.属性/方法名</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/496.png" alt="496"></p>
+<h3 id="遍历对象（for-k-in-对象）"><a href="#遍历对象（for-k-in-对象）" class="headerlink" title="遍历对象（for k in 对象）"></a>遍历对象（for k in 对象）</h3><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/497.png" alt="497"></p>
+<p>因为对象没有顺序，不像数组里面的数据都排序了，所以不能通过以前的for循环来遍历</p>
+<p>而需要用到 for(let k in 对象)来遍历，k是一个变量，可以随便设置，常用写k</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/498.png" alt="498"></p>
+<p>其中这个k就是对象中的方法与属性名字，里面有几个方法和属性，就循环多少次</p>
+<p>如上图第一次循环，k===’name’ 第二次循环k===’birthday’ 第三次循环k===‘age’</p>
+<p>因为k不是在对象里面的一个属性/方法名字，所以zdq.k是无法取到值的，所以上图出现了undefined</p>
+<p>只能通过对象查询的第二种方法， 对象[‘属性/方法名’]来取值。</p>
+<h2 id="案例学生信息表（数组对象）"><a href="#案例学生信息表（数组对象）" class="headerlink" title="案例学生信息表（数组对象）"></a>案例学生信息表（数组对象）</h2><p>数组对象就是包含多个对象的一个数组</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/499.png" alt="499"></p>
+<p>分析：</p>
+<p>1-首先把不变的东西通过页面显示出来，如序号，姓名等</p>
+<p>2-变化的数据通过遍历数组对象来得到数据，通过for循环来打印tr</p>
+<p>3-再把tr中的数据用${}取出对象中的数据替换。</p>
+<p><strong>新知识</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/500.png" alt="500"></p>
+<p>这里的:not(:first-child)表示，tr中除了第一个tr</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">table</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+            <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token selector">table,
+        th,
+        td</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+            <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token selector">caption</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+            <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+            <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token selector">tr</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+            <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token selector">table tr:nth-child(1)</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> #ddd<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token selector">table tr:not(:first-child):hover</span> <span class="token punctuation">&#123;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> #eee<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>学生信息<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>将数据渲染到页面中...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+
+
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">// 定义一个存储了若干学生信息的数组</span>
+        <span class="token keyword">let</span> students <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'小明'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'河北省'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'小红'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'河南省'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'小刚'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'山西省'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'小丽'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'山东省'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'晓强'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'山东省'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'晓强'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span> hometown<span class="token operator">:</span> <span class="token string">'山东省'</span> <span class="token punctuation">&#125;</span>
+
+        <span class="token punctuation">]</span>
+
+        <span class="token comment">// 第一步 打印表格的头部和尾部</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;table>
+            &lt;caption>学生列表&lt;/caption>
+            &lt;tr>
+                &lt;th>序号&lt;/th>
+                &lt;th>姓名&lt;/th>
+                &lt;th>年龄&lt;/th>
+                &lt;th>性别&lt;/th>
+                &lt;th>家乡&lt;/th>
+
+            &lt;/tr>
+            </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 中间遍历行数  原则就是有几条数据，我就遍历几次</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> students<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+                &lt;tr>
+        &lt;td></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/td>
+        &lt;td></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>students<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/td>
+        &lt;td></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>students<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/td>
+        &lt;td></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>students<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>gender<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/td>
+        &lt;td></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>students<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>hometown<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/td>
+    &lt;/tr></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+
+
+        <span class="token comment">// 尾部</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;/table></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h3><h4 id="内置对象是什么"><a href="#内置对象是什么" class="headerlink" title="内置对象是什么"></a>内置对象是什么</h4><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/501.png" alt="501"></p>
+<p>1-document.write()和console.log/dir()都是内置对象，我们调用了document对象里面的write方法，console对象里面的log/dir方法</p>
+<p>2-alert()，prompt()等是内置函数。</p>
+<h4 id="内置对象Math"><a href="#内置对象Math" class="headerlink" title="内置对象Math"></a>内置对象Math</h4><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/502.png" alt="502"></p>
+<p>1-更多的内置对象，可以去w3c或者mdn内查看。</p>
+<p>2-内置对象中有方法也有属性，如Math.PI属性，就是3.14xxxxx</p>
+<p>3-注意Math的第一个字母大写</p>
+<p><strong>Math.random()</strong></p>
+<p>它返回的是0-1的随机数，包括0，不包括1</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-   <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span>
-  <span class="token keyword">function</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token parameter">arry</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-   
-    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arry<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        sum<span class="token operator">+=</span>arry<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-    <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">&#125;</span>
-  <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">92</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>  <span class="token comment">//  圆周率    π  </span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">//  随机数  随机抽奖  随机点名</span>
+       <span class="token comment">// 返回的是小数  但是能得到 0  得不到 1</span>
+       <span class="token comment">// 向上取整  返回的整数</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// ceil  2</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// ceil  2</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">1.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// ceil  2</span>
+       <span class="token comment">// 向下取整  返回的整数  floor  </span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// floor  1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// floor  1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// floor  1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'-------------------------------'</span><span class="token punctuation">)</span>
+       <span class="token comment">// round 就近取整( .5往大取证)  返回的整数   </span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  2</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  2</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'-------------------------------'</span><span class="token punctuation">)</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  -1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  -1</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// round  -2</span>
 
+       <span class="token comment">// 最大值和最小值</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//45</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//1</span>
+   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-<h2 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/468.png" alt="468"></p>
-<p><strong>函数有的有返回值，有的没有返回值。</strong></p>
-<p>有的函数除了处理完问题，应该还需要有返回值，就像厨师炒了菜，要返回出来给顾客吃，不能把菜烂在厨房，如pop()返回删除的元素值，unshift()返回新数组的长度，promt()返回用户输入的字符串等等。</p>
-<p>有的函数没有，如alert()它的作用就是一个警示框，不需要返回值。</p>
-<p><strong>那么返回值怎么返回呢？</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/469.png" alt="469"></p>
-<p><strong>使用return返回，且一个函数体内语句，执行return后，直接退出函数体，不再执行后续代码。</strong></p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/470.png" alt="470"></p>
-<p>这个函数虽然返回值和那一句document.write()毫不相干，但是因为有 let re = getSum([100,99,92])这一句</p>
-<p>就等于函数被调用了，函数内的所有语句等于被执行了一遍。</p>
-<p><strong>返回数组最大值</strong></p>
+<p>只需要注意就近取整Math.round()，当数据是负数，遇到  .5 往大取整</p>
+<p>如Math.round(1.5)结果为2</p>
+<p>但Math.round(-1.5)结果为-1</p>
+<h4 id="生成任意范围随机数"><a href="#生成任意范围随机数" class="headerlink" title="生成任意范围随机数"></a>生成任意范围随机数</h4><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/503.png" alt="503"></p>
+<p>这些公式是公理，可以不理解，直接取文档查阅，但是理解可以更好的记忆。</p>
+<p>第一个公式：</p>
+<p>因为是向下取整，取0-10的整数，一共十一个数字，取十一段范围，如0-0.1的范围给0，0.1-0.2的范围给1，每个数字平均一段“机率”所以是乘11</p>
+<p>第二个公式：</p>
+<h4 id="随机点名案例"><a href="#随机点名案例" class="headerlink" title="随机点名案例"></a>随机点名案例</h4><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/504.png" alt="504"></p>
+<p>1-先用公式封装一个取自己设置范围数字的随机数函数</p>
+<p>2-把数字长度减1作为max,0作为最小,取得下标,然后输出即可</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-  <span class="token keyword">function</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token parameter">arry</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">let</span> max <span class="token operator">=</span> arry<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arry<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>max <span class="token operator">&lt;=</span> arry<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        max <span class="token operator">=</span> arry<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
-      <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">最大值为</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>max<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> max
-  <span class="token punctuation">&#125;</span>
-    <span class="token comment">// 你搁着重复声明呢？作用域不同，不冲突的。</span>
-  <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">99</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span><span class="token number">99999</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+     <span class="token keyword">let</span> name <span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'赵云'</span><span class="token punctuation">,</span><span class="token string">'张飞'</span><span class="token punctuation">,</span><span class="token string">'关羽'</span><span class="token punctuation">,</span><span class="token string">'马超'</span><span class="token punctuation">,</span><span class="token string">'刘备'</span><span class="token punctuation">,</span><span class="token string">'曹操'</span><span class="token punctuation">]</span>
+     <span class="token keyword">function</span> <span class="token function">getRandom</span><span class="token punctuation">(</span><span class="token parameter">min<span class="token punctuation">,</span>max</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+         <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>max<span class="token operator">-</span>min<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>min
+     <span class="token punctuation">&#125;</span>
+     
+     document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>name<span class="token punctuation">[</span><span class="token function">getRandom</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>name<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+ </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="函数返回多个值"><a href="#函数返回多个值" class="headerlink" title="函数返回多个值"></a>函数返回多个值</h3><p>1-return只能返回一个值，强行返回多个，取最后那一个。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/471.png" alt="471"></p>
-<p><strong>那我咋返回多个值呢</strong></p>
-<p>答：使用数组的形式返回出来，虽然返回的只有一个数组，但是可以有多个各种不同的数据。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-  <span class="token keyword">function</span> <span class="token function">manyDdata</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span>y</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    jia<span class="token operator">=</span>x<span class="token operator">+</span>y
-    jian<span class="token operator">=</span>x<span class="token operator">-</span>y
-    cheng<span class="token operator">=</span>x<span class="token operator">*</span>y
-    <span class="token keyword">return</span> <span class="token punctuation">[</span>jia<span class="token punctuation">,</span>jian<span class="token punctuation">,</span>cheng<span class="token punctuation">]</span>
-  <span class="token punctuation">&#125;</span>
-  <span class="token function">manyDdata</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
-  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token function">manyDdata</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>三元表达式是有一个返回值的，如下图</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/472.png" alt="472"></p>
-<p><strong>断点调试的f10与f11区别</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/473.png" alt="473"></p>
-<p>f10对应半圆箭头的快捷键，遇到函数，直接完成进行下一条语句</p>
-<p>f11对应向下箭头的快捷键，遇到函数，会进入函数内部，分析函数内部的语句执行过程。</p>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/474.png" alt="474"></p>
-<p><strong>为什么我明明声明了变量，却用不了呢？</strong></p>
-<p>因为第一个是在for循环内声明的，for循环是块作用域，第二个num2是在函数内声明的，有函数作用域。</p>
-<p><strong>怎么简单区分到底能不能用？</strong></p>
-<p>一句话，被包含的能用包含它的，爹的儿子用，儿子的爹不能用。</p>
-<p><strong>为啥我随便用，没有这啥作用域的讲究？</strong></p>
-<p>1-你用的声明变量的关键词是var，var有变量提升，不规范现在一般不使用。</p>
-<p>2-如下图你根本没声明，直接使用了变量并赋值，那么这个变量会被当做全局变量，不建议使用，底层会有漏洞。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/476.png" alt="476"></p>
-<p><strong>Tips</strong></p>
-<p>1-函数中的形参可以看作是被声明了的一个具有函数作用域的局部变量</p>
-<p>2-global全局，local局部的，block块</p>
-<p><strong>作用域的概述</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/475.png" alt="475"></p>
-<p>注意如果有两个script标签，它们定义的变量一样是全局的</p>
-<p>如下，第一个标签内声明的变量，第二个script里面是可以用的。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">3</span>
-  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>两个作用域声明了名字一样的变量，调用者在同时两个作用域内，到底执行谁呢？按照什么规则执行的？</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/477.png" alt="477"></p>
-<p>上图中，函数作用域的num和for块作用域的num都可以被console.log使用，那么使用谁？</p>
-<p>通过作用域链，简单来说就近原则，可以知道，执行的结果为20</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/478.png" alt="478"></p>
-<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/479.png" alt="479"></p>
-<p>一般将匿名函数赋值给一个变量，并通过变量名称来调用，是高阶函数(包含函数表达式和回调函数)的一种，也叫函数表达式。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/480.png" alt="480"></p>
-<p>默认这个变量名称就是它的函数名了。</p>
-<p><strong>使用场景</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/481.png" alt="481"></p>
-<p>点击了这个按钮后，就会执行这个函数。（这种是老的写法，新写法是添加监听器）</p>
-<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/482.png" alt="482"></p>
-<p>一般函数不调用不会执行，但是这个函数可以立即执行。</p>
-<p><strong>第一种写法</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/483.png" alt="483"></p>
-<p>其实立即执行函数写出来，就已经等于调用了，如上图</p>
-<p>匿名函数的变量fn就等价于function(){}</p>
-<p>而立即执行函数是(function(){})  ()就等于fn()，其中xy是形参，1和2是实参。</p>
-<p><strong>第二种写法</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/484.png" alt="484"></p>
-<p>一种是把匿名函数的变量fn就等价于function(){}，把这个fn用小括号包起来，就等于(fn)()</p>
-<p>第二种写法是不包fn，把整个包起来，等于(fn ())</p>
-<blockquote>
-<p>如上图，立即执行函数写了一个函数名，其实立即执行执行函数和匿名函数也是可以写一个”假名字”的，用来区分它的作用。</p>
-</blockquote>
-<p><strong>使用场景</strong></p>
-<p>立即执行函数，不是为了复用，被反复调用，而是为了让这段js按顺序运行，但是怕写的变量和其他变量冲突，就有了立即执行函数，因为在函数内，变量的作用域不同，就不用担心<strong>变量冲突变量污染</strong>了。</p>
-<p><strong>注意</strong></p>
-<p>如果一个页面有多个立即执行函数，不想其他语句分号；可以省略（编辑器内换行等于分号），但立即执行函数一定要在函数后面加分号，否则会报错，为了防止上一个立即函数后面没写分号，通常在立即执行函数前再加一个分号。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/485.png" alt="485"></p>
-<p>这个分号不一定是立即执行函数的，但反正两个立即执行函数间的语句，至少有一个分号； 去隔开它们就行了。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-   <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">hah</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-      document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">let</span> num <span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-   <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">hah</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-      document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-   
-  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>这里用一个普通的let声明，后面有分号也行。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/486.png" alt="486"></p>
-<h2 id="输入秒数转换为时分秒案例"><a href="#输入秒数转换为时分秒案例" class="headerlink" title="输入秒数转换为时分秒案例"></a>输入秒数转换为时分秒案例</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/487.png" alt="487"></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-   <span class="token comment">// 用户输入秒数</span>
-   <span class="token keyword">let</span> seconds <span class="token operator">=</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">请输入秒数</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-   <span class="token comment">// 封装转换函数</span>
-   <span class="token keyword">function</span> <span class="token function">getResult</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-       <span class="token keyword">let</span> h <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">/</span><span class="token number">60</span><span class="token operator">/</span><span class="token number">60</span><span class="token operator">%</span><span class="token number">24</span><span class="token punctuation">)</span>
-       <span class="token keyword">let</span> m <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">/</span><span class="token number">60</span><span class="token operator">%</span><span class="token number">60</span><span class="token punctuation">)</span>
-       <span class="token keyword">let</span> s <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>t<span class="token operator">%</span><span class="token number">60</span><span class="token punctuation">)</span>
-       h <span class="token operator">=</span> h<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>h<span class="token operator">:</span>h
-       m <span class="token operator">=</span> m<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>m<span class="token operator">:</span>m
-       s <span class="token operator">=</span> s<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">?</span><span class="token string">'0'</span><span class="token operator">+</span>s<span class="token operator">:</span>s
-       <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">计算后的时间为</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>h<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">小时</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>m<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">分</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>s<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">秒</span><span class="token template-punctuation string">`</span></span>
-       
-   <span class="token punctuation">&#125;</span>
-   <span class="token comment">// 打印输出</span>
-    <span class="token keyword">let</span> result <span class="token operator">=</span><span class="token function">getResult</span><span class="token punctuation">(</span>seconds<span class="token punctuation">)</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
- </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p><strong>遇到错误</strong></p>
-<p>1-三元表达式是返回一个值，但我并没有给这个返回值去赋予变量。</p>
-<p>2-形参就相当于函数内声明的一个变量，不能再次声明</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/488.png" alt="488"></p>
+<p>如果取到过的名字,不会再被取到应该怎么做呢?</p>
+<p>我的思路:</p>
+<p>因为这个名字不一定是在最前面也不一定在最后面,所以需要用splice来删除它即可</p>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><strong>tips</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/505.png" alt="505"></p>
+<p>script标签是可以写在盒子内的,如上图,那么script渲染出的东西,也只会出现在盒子范围内.</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/506.png" alt="506"></p>
+<p>分析:</p>
+<p>1-这些案例和原先的柱状图案例一样,重在考查对数组对象中的取值</p>
+<p>2-我们先写好h5和c3,然后通过for 循环来输出相应对象多个li即可</p>
+<p>3-li的页面内容通过数组对象的取值来改变.</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p><strong>术语</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/507.png" alt="507"></p>
+<p><strong>数据类型</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/508.png" alt="508"></p>
+<p><em>简单数据类型存储在栈,        复杂引用数据类型存储在堆(地址存在栈,内容在堆)</em></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/509.png" alt="509"></p>
+<p>对象等赋值,如下</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/510.png" alt="510"></p>
+<p>问题:obj2里面的属性改变,obj1也改了,为什么呢?</p>
+<p>因为这里obj2被赋予的是obj1的地址,那么两者就指向同一个堆里面的数据</p>
+<p>当obj2堆里面的数据改变,自然obj1的也被改变了</p>
+<p><strong>数组等引用型数据遇到这种情况也是同理</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/511.png" alt="511"></p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>不管是变量，还是数组，还是对象等等等，它们的声明都会受到作用域的影响，不能跨域使用。</p>
 
                 
             </div>
@@ -725,7 +771,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.zhoudongqi.com/archives/d68dc020.html">https://www.zhoudongqi.com/archives/d68dc020.html</a>
+                    <a href="https://www.zhoudongqi.com/archives/6e31a745.html">https://www.zhoudongqi.com/archives/6e31a745.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1210,24 +1256,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/6e31a745.html">
+                <a href="/archives/67f7322a.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JavaScript基础_05day">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="dom&amp;Bom_01Day">
                         
-                        <span class="card-title">JavaScript基础_05day</span>
+                        <span class="card-title">dom&amp;Bom_01Day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            善生恶，丑生美，上善若水。
+                            相爱不如相知。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
                         </span>
                         <span class="publish-author">
                             
@@ -1248,8 +1294,8 @@
                         <span class="chip bg-color">前端工程师</span>
                     </a>
                     
-                    <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">JavaScript基础</span>
+                    <a href="/tags/webApi/">
+                        <span class="chip bg-color">webApi</span>
                     </a>
                     
                 </div>
@@ -1263,24 +1309,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/4b5af899.html">
+                <a href="/archives/d68dc020.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JavaScript基础_03day">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JavaScript基础_04day">
                         
-                        <span class="card-title">JavaScript基础_03day</span>
+                        <span class="card-title">JavaScript基础_04day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            事必躬亲，呕心沥血，必败无疑。
+                            滴滴答答就是时时刻刻，人生又有多少时刻。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
                             </span>
                         <span class="publish-author">
                             
