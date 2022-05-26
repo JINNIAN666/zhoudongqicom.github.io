@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -706,7 +706,10 @@
 <p>这些公式是公理，可以不理解，直接取文档查阅，但是理解可以更好的记忆。</p>
 <p>第一个公式：</p>
 <p>因为是向下取整，取0-10的整数，一共十一个数字，取十一段范围，如0-0.1的范围给0，0.1-0.2的范围给1，每个数字平均一段“机率”所以是乘11</p>
-<p>第二个公式：</p>
+<p>第三个公式：</p>
+<p>1-很明显第三个公式的N是当random取0时用的；</p>
+<p>2-当random不等于0，因为后面有+N，所以最少已经是N了，所以只剩下M-N的值，当random随机到最大也永远等于不了1，所以永远取不到公式中的M - N，也就取不到M这个值，所以需要+1来向下取整，得到M</p>
+<p>我是这样理解的，可能有错误。</p>
 <h4 id="随机点名案例"><a href="#随机点名案例" class="headerlink" title="随机点名案例"></a>随机点名案例</h4><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/504.png" alt="504"></p>
 <p>1-先用公式封装一个取自己设置范围数字的随机数函数</p>
 <p>2-把数字长度减1作为max,0作为最小,取得下标,然后输出即可</p>
@@ -1584,7 +1587,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">69k</span>&nbsp;字
+                class="white-color">71.4k</span>&nbsp;字
             
             
             

@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -517,7 +517,170 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="switch中default中的break可以省略吗？"><a href="#switch中default中的break可以省略吗？" class="headerlink" title="switch中default中的break可以省略吗？"></a>switch中default中的break可以省略吗？</h2><p>总所周知，switch中每段case语句结束后，需要写break来跳出switch语句，否则会一直往下面执行</p>
+<p>1-当default在switch中的最后，可以不加break，因为往下也没东西了</p>
+<p>2-当default后面还有switch的语句，就需要break。</p>
+<h2 id="webapi的规划"><a href="#webapi的规划" class="headerlink" title="webapi的规划"></a>webapi的规划</h2><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/512.png" alt="512"></p>
+<p>第一天：我们需要让页面通过一些操作，发生一些改变，就需要获取这个元素，还有学习如何修改它的属性如样式等。</p>
+<p>第二天：学习一些事件基础，比如用户点击某控件，页面发生某些改变。</p>
+<p>第三天：节点的增删查改。</p>
+<p>第四天：更高级的事件</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/513.png" alt="513"></p>
+<p>第五天：轮播图等特效案例</p>
+<p>第六天：bom操作，如勾选记住密码，后续不需要我们再输入密码，浏览器会存储下来</p>
+<p>第七条：正则表达式，即在浏览器中就完成表单的一些验证，如密码合法性，减少服务器的压力</p>
+<h2 id="webapi基本认知"><a href="#webapi基本认知" class="headerlink" title="webapi基本认知"></a>webapi基本认知</h2><p>webapi就是通过js来操作html和浏览器</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/514.png" alt="514"></p>
+<p><strong>dom树</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/515.png" alt="515"></p>
+<p>dom树，可以直观的体现标签与标签间的关系。</p>
+<p><strong>dom对象</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/516.png" alt="516"></p>
+<p>1-dom的核心就是把网页中的内容当做一个对象来处理，如html中写的一个超链接a，也会自动生成一个对象，有一系列的属性和方法，我们可以通过修改这些属性来改变a的内容样式等。</p>
+<p>2-document是dom提供的一个对象，网页所有内容都包含在document里面，如a生成的a对象，就是document对象的一个属性。（对象里面是可以嵌套对象的，也等于一个属性）</p>
+<p>如下代码</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">let dad =&#123;
+    name:'dad',
+    age:18,
+    son:&#123;
+        name:'son',
+        age:12
+    &#125;
+&#125;
+console.log(dad.son.name);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在开发它一般是不使用的，这里提到是方便理解document对象包含了网页中的所有标签等生成的对象。它们都是document对象的一个属性。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/517.png" alt="517"></p>
+<h2 id="获取DOM对象"><a href="#获取DOM对象" class="headerlink" title="获取DOM对象"></a>获取DOM对象</h2><p><strong>通过css选择器来获取DOM元素（重点）</strong></p>
+<p>  <img src="https://zhoudongqi.com/picture/new/HTML_CSS/518.png" alt="518"></p>
+<p>1-query查找查询；selector选择器</p>
+<p>2-document.querySelector(“css选择器”)就是dom提供的一个通过查询选择器，并返回匹配的第一个元素对象的方法。</p>
+<p>3-注意这里只返回第一个，Selector的S需要大写，一般这些内置方法都符合小驼峰原则。</p>
+<p>4-方法括号内要加引号</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/519.png" alt="519"></p>
+<p>只要括号内写css选择器即可，类选择器，标签选择器，id选择器都可以，和原先学css时一样的书写方法。</p>
+<p><strong>问题：</strong>我就想获取多个元素怎么办？</p>
+<p>使用document.querySelectorAll()即可，多加一个All</p>
+<p>注意：它返回多个对象，包含在一个数组内。</p>
+<p><strong>思考</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/520.png" alt="520"></p>
+<p>因为querySelector是获取一个元素的对象，所以是可以直接修改的，All就不行了，需要数组遍历出对象，再修改。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>超链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>我的<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>产品<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>联系<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+        <span class="token keyword">let</span> hah<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>hah<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hah<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>querySelectorAll()获取的多个元素对象组成的数组是伪数组</strong></p>
+<p>很容易理解，如果它可以pop删和push增，那页面元素都乱套了，所以js在底层中就设置它是一个伪数组。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/521.png" alt="521"></p>
+<p><strong>其他获取DOM元素方法（了解）</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/522.png" alt="522"></p>
+<p>这里分别是通过id选择器，类选择器，标签选择器来选择，其中id中的Element后没有s，是因为id是唯一的。</p>
+<p>这种方法缺陷很明显，太麻烦，还不如直接querySelector,想写什么选择器就什么选择器。</p>
+<h2 id="设置-修改DOM元素内容"><a href="#设置-修改DOM元素内容" class="headerlink" title="设置/修改DOM元素内容"></a>设置/修改DOM元素内容</h2><p><strong>document,write(）</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/523.png" alt="523"></p>
+<p><strong>对象.innerText属性</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/524.png" alt="524"></p>
+<p>1-innerText就是里面的文字，是div生成对象的其中一个属性</p>
+<p>2-我们要修改，直接对象.innerText=””即可</p>
+<p>3-innerText不识别标签，如上图strong不会被解析</p>
+<p><strong>对象.innerHTML属性</strong></p>
+<p>1-innerHTML和innerText的用法相似，区别就是可以识别标签</p>
+<p>2-HTML必须全面大写</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/525.png" alt="525"></p>
+<p><strong>案例</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/526.png" alt="526"></p>
+<h2 id="设置-修改DOM元素的属性"><a href="#设置-修改DOM元素的属性" class="headerlink" title="设置/修改DOM元素的属性"></a>设置/修改DOM元素的属性</h2><p>修改常用属性</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/527.png" alt="527"></p>
+<p>修改样式属性</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/528.png" alt="528"></p>
+<p>css样式属性默认写在一个style对象里，所以用对象.style.样式属性来修改</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/529.png" alt="529"></p>
+<p>注意</p>
+<p>1-当样式属性有斜杠，如background-color，margin-top等，我们需要转换为小驼峰命名法，即backgroundColor与marginTop</p>
+<p>2-body标签特殊，因为一个页面只有一个body页面，所以不需要获取它的对象，可以直接使用document.body来选中，如document.body.style.backgroundImage=”xxx.png”,</p>
+<p>​    这里为什么最前面多了一个document呢？因为我们在获取时就是从document取得的，也就是说document.querySelect(“”)返回的对象也是从document来的，只是省略了。</p>
+<p>​    body因为没使用document.querySelect(“”)来获取，所以前面需要加上document</p>
+<p>3-这里提供js修改的样式会被添加到行内式css中，并不会修改原先内部式代码，也就是说只是添加了行内式来层叠覆盖。</p>
+<p><strong>使用style可以改样式，但是当要修改多个样式，未免太麻烦，所以有了className</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/530.png" alt="530"></p>
+<p>1-上图的元素也是获取之后的对象</p>
+<p>2-这里相当于给获取元素加上一个类名</p>
+<p>3-这里的类名是赋值，如果原先就有一个类，会被覆盖，如果需要添加一个类，需要保留之前的类。</p>
+<p>4-可以不使用等号，而是使用+=，就不会覆盖原先的类名（视频弹幕一位兄弟说的，我试试还真可以）</p>
+<p><strong>但是这样还是或多或少对类的操作不方便，所以有了classList</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/531.png" alt="531"></p>
+<p>toggle转换，切换，切换键，原先有这个类名就删了，原先没有就添加。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/532.png" alt="532"></p>
+<p>如disabled，checked，selected，它们的值是false和true</p>
+<p>使用  获取的对象.checked=flase/true</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/533.png" alt="533"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+        <span class="token keyword">let</span> input <span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">)</span>
+        input<span class="token punctuation">.</span>type<span class="token operator">=</span><span class="token string">"password"</span>
+        input<span class="token punctuation">.</span>value<span class="token operator">=</span><span class="token string">"hah"</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="定时器-间歇函数"><a href="#定时器-间歇函数" class="headerlink" title="定时器-间歇函数"></a>定时器-间歇函数</h2><p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/534.png" alt="534"></p>
+<p>如上图的用户协议秒数变化，轮播图的转换等循环自动执行的代码，叫做定时器函数。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/535.png" alt="535"></p>
+<p>interval间隔的</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/536.png" alt="536"></p>
+<p>setInterval(函数名,定时时间)</p>
+<p>注意：</p>
+<p>1-前面函数要么写匿名函数，要么写一个函数名，如果写函数名则不要加小括号，如上图的show</p>
+<p>因为加了小括号就立即调用了，定时器的意义就没了（如果加了括号，只会立即执行一次）</p>
+<p>2-定时时间是按毫秒来的，如上图1000ms就等于1s</p>
+<p>3-setInterval(函数,定时时间)，这个方法会返回一个数字，一般是第几个定时器就返回几，后面关闭定时器需要用到这个返回值。</p>
+<p><strong>关闭清除定时器</strong></p>
+<p>当一个轮播图，鼠标放上去，就会停止轮播，就用到了关闭定时器</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/537.png" alt="537"></p>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><strong>案例1</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/538.png" alt="538"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">cols</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>30<span class="token punctuation">"</span></span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+        用户注册协议
+        欢迎注册成为京东用户！在您注册过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体或下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制）。
+        【请您注意】如果您不同意以下协议全部或任何条款约定，请您停止注册。您停止注册后将仅可以浏览我们的商品信息但无法享受我们的产品或服务。如您按照注册流程提示填写信息，阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容，并表明您同意我们可以依据协议内容来处理您的个人信息，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方（详情查看）
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>我已阅读用户协议(6s)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+        <span class="token keyword">let</span> btn <span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span>
+        <span class="token keyword">let</span> seconds<span class="token operator">=</span><span class="token number">6</span>
+        btn<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span>
+        <span class="token comment">// timer是定时函数返回的值，用于关闭定时器</span>
+       <span class="token keyword">let</span> timer<span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            seconds<span class="token operator">--</span>
+            btn<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">我已阅读用户协议(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>seconds<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">s)</span><span class="token template-punctuation string">`</span></span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>seconds<span class="token operator">===</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token comment">// 关闭定时器</span>
+                <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+                btn<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">"我已阅读用户协议"</span>
+                <span class="token comment">// 注意布尔类型不要加引号，否则会被看作字符串</span>
+                btn<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">false</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意布尔类型true和false不要加引号，否则会被当做字符串。</p>
+
                 
             </div>
             <hr/>
@@ -1024,30 +1187,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/67f7322a.html">
+                <a href="/archives/fa200a93.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="dom&amp;Bom_01Day">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="dom&amp;Bom_06Day">
                         
-                        <span class="card-title">dom&amp;Bom_01Day</span>
+                        <span class="card-title">dom&amp;Bom_06Day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            相爱不如相知。
+                            一场雨把我困在这里，你冷漠的表情让我伤心。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-25
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1060,7 +1222,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1358,7 +1519,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">69k</span>&nbsp;字
+                class="white-color">71.4k</span>&nbsp;字
             
             
             
