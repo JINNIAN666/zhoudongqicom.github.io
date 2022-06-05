@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    790
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -517,7 +517,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p><strong>学习目标</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/632.png" alt="632"></p>
+<p><strong>获取位置</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/633.png" alt="633"></p>
+<p>1-调用它们后，返回的是一个对象，里面存储了位置的值。</p>
+<p>2-如果页面元素都没有定位，则position会找到最顶层元素位置，以它为参照物，即html</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/634.png" alt="634"></p>
+<p><strong>滚动距离</strong></p>
+<p>这些个的意思和dom是完全一样的，但是写法不同。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/635.png" alt="635"></p>
+<p><strong>显示和隐藏动画</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/636.png" alt="636"></p>
+<p>这三个方法的原理是内置了设置了元素的display属性。</p>
+<p>设置持续时间，就是动画的时间，以毫秒计算，在动画过程中，是通过行内不断改变元素大小和透明度等实现。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/637.png" alt="637"></p>
+<p><strong>淡出和淡入动画</strong></p>
+<p>用法和动画的显示隐藏大致一样，只是动画效果不一样。</p>
+<p>淡入和淡出不出时间，也会自带动画时间。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/638.png" alt="638"></p>
+<p><strong>展开和收起动画</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/639.png" alt="639"></p>
+<p>slide滑动的，逐渐的</p>
+<p>注意down是展开，up是收起</p>
+<p><strong>三个动画分别是隐藏显示，淡入淡出，展开收起，它们的原理基本相同，只是动画效果不同。</strong></p>
+<p>再者就是动画返回的都是原对象，所以可以使用链式编程。</p>
+<p><strong>动画队列及停止方法。</strong></p>
+<p>问题：如网页下滑出现返回顶部的控件，当我们上下反复快速滑动，那么这个返回顶部控件的动画会有显示和不显示来回切换（我不滑动了，动画还在来回执行）和需求效果不符合，非常不美观，所以我们需要停止它，就用到了停止方法。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/640.png" alt="640"></p>
+<p>stop会停止当前动画运行，然后继续执行后续动画</p>
+<p>stop(true)会停止在当前动画执行到的样子，不执行后续动画</p>
+<p>stop(true,true)会直接把动画跳到停止在当前动画的结束状态的样子，不执行后续动画。</p>
+<p><strong>自定义动画</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/641.png" alt="641"></p>
+<p>自定义动画使用animation方法，因为自定义传入的键值对较多，所以用对象的形式传入。</p>
+<p><strong>插入节点</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/642.png" alt="642"></p>
+<p><strong>回调函数</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/643.png" alt="643"></p>
+<p>注意回调函数，总是写在最后面。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/644.png" alt="644"></p>
+<p>我们可以通过回调函数来知道此动画有没有被执行完毕，因为动画执行完毕后才会调用设置的回调函数。</p>
+<p>$(this)可以把this的dom对象转换为jquery对象。</p>
+<p><strong>延迟动画</strong></p>
+<p>通俗讲就是等多少毫秒，这个动画再执行。</p>
+<p>$(‘选择器’).delay(延迟时间).动画方法()</p>
+<p>与动画的区别就算前面加了个delay()方法</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/645.png" alt="645"></p>
+<p><strong>获取尺寸</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/646.png" alt="646"></p>
+<p><strong>事件参数</strong></p>
+<p>事件参数和dom中的意义也完全一样，如判断键盘按下事件，是哪个键盘按的，就可以加一个事件参数e，对象e中会记录一个属性，让你知道这一次按的是哪个键。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/647.png" alt="647"></p>
+<p><strong>删除节点</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/648.png" alt="648"></p>
+<p>注意这个remove()方法中jquery中才有，别在原生dom中也去乱用。</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/649.png" alt="649"></p>
+<p><strong>事件委托</strong></p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/650.png" alt="650"></p>
+<p>事件委托的原理是利用了事件冒泡</p>
+<p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/651.png" alt="651"></p>
+<p>如图，事件委托可以直接给父级添加事件，让子元素不需要再进行事件绑定，优化了代码。</p>
+
                 
             </div>
             <hr/>
@@ -1028,19 +1089,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/9f1ea422.html">
+                <a href="/archives/35176ca9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="jQuery_01day">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="jQuery_03day">
                         
-                        <span class="card-title">jQuery_01day</span>
+                        <span class="card-title">jQuery_03day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            东邪西毒，事在人为，得而不得，作茧自缚。
+                            兴百姓苦，亡亦百姓苦。
                         
                     </div>
                     <div class="publish-info">
@@ -1081,32 +1142,48 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/0.html">
+                <a href="/archives/fa200a93.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="dom&amp;Bom_06Day">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">dom&amp;Bom_06Day</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            一场雨把我困在这里，你冷漠的表情让我伤心。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            瑾年
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+                        <span class="chip bg-color">前端工程师</span>
+                    </a>
+                    
+                    <a href="/tags/webApi/">
+                        <span class="chip bg-color">webApi</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1340,7 +1417,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.7k</span>&nbsp;字
+                class="white-color">86.2k</span>&nbsp;字
             
             
             
