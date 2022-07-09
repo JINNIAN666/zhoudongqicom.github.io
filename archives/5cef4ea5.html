@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML5&amp;CSS3移动端,瑾年的学习记录">
+    <meta name="keywords" content="一次浅的社工,瑾年的学习记录">
     <meta name="description" content="瑾年的学习记录，分享每天学到的各类前沿技术，与学习中遇到的问题，供大家在瑾年Blog中学习交流。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>页面注入（仅供学习交流） | 瑾年-瑾年的学习记录-瑾年Blog</title>
+    <title>一次浅的社工 | 瑾年-瑾年的学习记录-瑾年Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">页面注入（仅供学习交流）</h1>
+                    <h1 class="description center-align post-title">一次浅的社工</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8A%93%E5%8C%85/">
-                                <span class="chip bg-color">抓包</span>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
                             </a>
                         
-                            <a href="/tags/%E9%9D%99%E6%80%81%E6%B3%A8%E5%85%A5/">
-                                <span class="chip bg-color">静态注入</span>
+                            <a href="/tags/%E7%A4%BE%E5%B7%A5/">
+                                <span class="chip bg-color">社工</span>
                             </a>
                         
                     </div>
@@ -460,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                学习
+                            <a href="/categories/%E7%A4%BE%E5%B7%A5/" class="post-category">
+                                社工
                             </a>
                         
                     </div>
@@ -473,7 +473,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2021-07-20
                 </div>
                 
 
@@ -487,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    584
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -517,68 +517,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>前言</strong></p>
-<p>1-本站内容均来自网络，且不提供工具下载，如有相关内容侵害了您的权益，请联系站长删除</p>
-<p>2-方法大部分人都会，也是一个非常简单的注入，这里只做了方法集成，有问题欢迎各位大佬指正</p>
-<p>3-此方法仅供学习交流，本站也没有任何盈利，切勿用于任何违规用途。</p>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>抓到请假页面的返回包，进行静态注入修改时间地点即可</p>
-<p>缺点：操作繁杂，数据改错一个标点，前后端数据格式对不上等问题导致无显示，</p>
-<p>而且canary不能关闭，必须一直打开canary，否则退出再进页面又重置到原页面了。</p>
-<p>此方法参考</p>
-<p><a href="https://zhoudongqi.com/archives/d62e487b.html" target=_blank>修改返回包</a></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>直接通过参考原页面与相关资源代码，做一个页面出来</p>
-<p>缺点：太麻烦，难做，功能也不可能一模一样，只能通过静态模拟一个，容易弄巧成拙。</p>
-<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html">视频因为不可抗力因素已经删了，可以参考https://www.zhoudongqi.com/archives/d62e487b.html
-原理一样的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><strong>演示视频：</strong></p>
-<p><video src="https://www.zhoudongqi.com/heima/yanshi.mp4" width="300px" height="500px" controls="controls"></video></p>
-<p><strong>教程视频：</strong></p>
-<p><video src="https://www.zhoudongqi.com/heima/jiaochen.mp4" width="300px" height="500px" controls="controls"></video></p>
-<p>优点：操作简单，注入成功后，只要不关闭被修改注入的软件后台，不需要再开启canary。</p>
-<p>原理：此app不全是原生安卓，主页其实就是一个网页，找到这个网址注入返回包，简单重定向到修改过后的页面。</p>
-<p>此注入方法是我感觉最简单的一种之一，其他操作可能会因为app在Android11上的新协议（不信任本地的代理证书），以及各种小插曲导致抓不到包，什么root框架绕过这里不讨论。</p>
-<p>今日校园同理，原理是一样的，改的东西不同罢了。</p>
-<p><strong>所需工具：</strong></p>
-<p>httpcanary <a href="http://m.2265.com/down/244552.html" rel="external nofollow noreferrer" target=_blank>点我查看</a></p>
-<p><strong>步骤：</strong></p>
-<p>1-打开httpcanary（第一次打开会提示安装证书用于抓https协议的包，这里用不到，安装了也只是不提示网页证书不受信任，没有实际用处徒增麻烦，所以没必要安装，直接跳过）</p>
-<p>2-按照视频中，添加需要抓取的app与域名</p>
-<p>3-点击右下角图标，开启抓包，进入被抓包app后，数据可能无法正常加载，我们按照视频点击右下角canary的悬浮窗，先关闭抓包，就会正常显示页面（这时是原页面），我们再一直刷新即可，直到抓到包，就出现了我们想要的页面（提示风险页面就抓到了，这个风险是必提示的，因为我们没有安装canary的证书，这里的域名又开启了https协议）</p>
-<p>4-在抓到的第一个包中（时间最早的在最下面），根据视频点击静态注入，修改响应包为以下简单的html代码。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">https://xxxxxxxxxxxxxx/microhome/homepage/index
-找到这个包即可，xxxxxxx是抓包域名，这里没写出来。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>5-如视频中再进入app，反复刷新即可。</p>
-<p><em>Tips：步骤看起来好像很麻烦，其实很简单，按照视频中一步一步来即可，</em>不会的地方可以在评论区留言，或者私信我。</p>
-<p><em>仅供学习交流，欢迎各大佬指正，提供更好思路进行学习~~~</em></p>
-<p><strong>视频中的代码</strong></p>
-<p>此页面你们无法使用，本方法仅供学习交流，不为大家提供任何页面支持。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IE=edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>refresh<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0;url=https://zhoudongqi.com/happy/智慧首页.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>常见问题：</strong></p>
-<p>1-注入页面错误</p>
-<p>2-开启多个注入插件了，老注入不用了没有在 设置-插件管理 中关闭。否则会导致冲突</p>
-<p>3-苹果手机无法使用，其实canary就是一个抓包app，苹果商城也有类似应用，但貌似需要收费，学习交流白嫖至上，此方法不提倡。</p>
-<h2 id="建议修复方法"><a href="#建议修复方法" class="headerlink" title="建议修复方法"></a>建议修复方法</h2><p>1-加上防抓包检测</p>
-<p>2-返回包数据等密文连接，使用多重身份验证等更安全的协议。</p>
-<p>3-动态二维码，一人一码，根本上避免伪冒问题。</p>
-<p><em><strong>本站所有页面仅供学习交流，请勿用于任何非法用途，否则后果自负。</strong></em></p>
-<p><em><strong>本站所有页面仅供学习交流，请勿用于任何非法用途，否则后果自负。</strong></em></p>
-<p><em><strong>本站所有页面仅供学习交流，请勿用于任何非法用途，否则后果自负。</strong></em></p>
+                <h2 id="中国公民的隐私安全应该如何防护？"><a href="#中国公民的隐私安全应该如何防护？" class="headerlink" title="中国公民的隐私安全应该如何防护？"></a>中国公民的隐私安全应该如何防护？</h2><p>为了规避审查，大部分业务通过外网聊天软件，如telegram等传播，甚至有黑警通过公安内部非法查询进行牟利，还有银行职员，社保局工作人员等等各种有相关查询权限的人，利用此黑产赚钱，这都是违法的奉劝大家<strong>遵循法律法规，切勿以身试法</strong>，逆天而行。可以不用，但不能没有Privacy is gone</p>
+<blockquote>
+<p>违法人员提供的相关服务：微信QQ好友提取，开房同住，手机号查户籍，全家户口户籍信息，姓名查身份证，名下房产，手机定位，身份证使用记录（包含飞机火车开房等等），身边关联人员，银行流水/个人资产，快递收件地址，银行卡冻结原因，婚姻纪录，手机通话纪录，手机机主信息，公司法人股东，车辆行驶轨迹等等等等</p>
+</blockquote>
+<p>查询信息包括车牌号码，开房信息，qq老密，户籍sfz，各大网站密码，q群关系，手机机主，贴吧，微博，lol，快递地址（各大商城如jd流出），facebook等等等等，视频中库的信息量一百多G已是黑产中的九牛一毛，而且这些都是免费的库子。</p>
+<h2 id="黑商向外的部分裤"><a href="#黑商向外的部分裤" class="headerlink" title="黑商向外的部分裤"></a>黑商向外的部分裤</h2><p><img src="https://www.zhoudongqi.com/picture/mix/1.png" alt="1"></p>
+<p>这些是目前市面上常见的查询库</p>
+<p><img src="https://www.zhoudongqi.com/picture/mix/2.png" alt="2"></p>
+<p>腾讯200g数据内容如下</p>
+<p><img src="https://www.zhoudongqi.com/picture/mix/3.png" alt="3"></p>
+<p>库子都是已经被下载的数据，已经无可挽回损失，可恶的是那些黑产人员还提供付费查询，利用一些没有职业道德法律意识的银行，移动等等平台的职员进行高价实时查询服务，严重危害了公民的隐私安全。</p>
+<p>2022  </p>
+<p>1-学习通所有大学生信息在相应违法网站开价10w（第二天tg机器人红鼻子就已经拿到数据，并供免费查询）</p>
+<p>2- 202207红鼻子销号，但是又诞生了形形色色各种机器人。</p>
+<p>3-2022-06/07 上海公安被脱裤，所有近十亿条报案人相关信息被开价130w</p>
+<p>网络空间安全以及公民隐私安全已经成为我国需要重点防护的对象。</p>
 
                 
             </div>
@@ -605,7 +559,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.zhoudongqi.com/archives/f16557d1.html">https://www.zhoudongqi.com/archives/f16557d1.html</a>
+                    <a href="https://www.zhoudongqi.com/archives/5cef4ea5.html">https://www.zhoudongqi.com/archives/5cef4ea5.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,12 +597,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8A%93%E5%8C%85/">
-                                    <span class="chip bg-color">抓包</span>
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
                                 </a>
                             
-                                <a href="/tags/%E9%9D%99%E6%80%81%E6%B3%A8%E5%85%A5/">
-                                    <span class="chip bg-color">静态注入</span>
+                                <a href="/tags/%E7%A4%BE%E5%B7%A5/">
+                                    <span class="chip bg-color">社工</span>
                                 </a>
                             
                         </div>
@@ -1090,31 +1044,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/5b8d0cd6.html">
+                <a href="/archives/ca1f9928.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML5&amp;CSS3_移动端day05">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="如何获取他人位置ip">
                         
-                        <span class="card-title">HTML5&amp;CSS3_移动端day05</span>
+                        <span class="card-title">如何获取他人位置ip</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            闻道有先后，术业有专攻。
+                            害人之心不可有，防人之心不可无。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1124,12 +1078,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/">
-                        <span class="chip bg-color">前端工程师</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
                     </a>
                     
-                    <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
-                        <span class="chip bg-color">HTML5&amp;CSS3移动端</span>
+                    <a href="/tags/%E5%AE%9A%E4%BD%8D/">
+                        <span class="chip bg-color">定位</span>
                     </a>
                     
                 </div>
@@ -1143,24 +1097,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/ab4c9af2.html">
+                <a href="/archives/c7821acb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="DDOS分布式拒绝服务攻击">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="KALIDNS污染">
                         
-                        <span class="card-title">DDOS分布式拒绝服务攻击</span>
+                        <span class="card-title">KALIDNS污染</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            失败并不可怕，焦虑没有任何用处，吸取经验及时止损。
+                            我只在需要勇敢时勇敢
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
                             </span>
                         <span class="publish-author">
                             
@@ -1177,12 +1131,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
-                    </a>
-                    
-                    <a href="/tags/ddos%E6%94%BB%E5%87%BB/">
-                        <span class="chip bg-color">ddos攻击</span>
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
                     </a>
                     
                 </div>
