@@ -313,199 +313,44 @@
         <div class="brand">
             <div class="title center-align">
                 
-                瑾年
-                
+                    瑾年
+                        
             </div>
 
             <div class="description center-align">
                 
-                <span id="subtitle"></span>
-                <!-- <script src="https://www.zhoudongqi.com/libs/typed/typed.js"></script> -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script> -->
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
+                    <span id="subtitle"></span>
+
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed("#subtitle", {
+                            strings: [ 
                             
                                 "从来没有真正的绝境, 只有心灵的迷途",
                             
                                 "Never really desperate, only the lost of the soul",
                             
                         ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
                     });
-                </script>
-                
+                    </script>
+                    
             </div>
         </div>
     </div>
 </div>
-<script>
-    const { z: Z } = require("zod");
-const S = require("superstruct");
-const T = require("..");
-
-const typed = T.object({
-  data: T.object({
-    launchesPast: T.array(
-      T.object({
-        mission_name: T.string(),
-        launch_date_local: T.string(),
-        launch_site: T.object({
-          site_name_long: T.string(),
-        }),
-        links: T.object({
-          article_link: T.nullable(T.string()),
-          video_link: T.string(),
-        }),
-        rocket: T.object({
-          rocket_name: T.string(),
-          first_stage: T.object({
-            cores: T.array(
-              T.object({
-                flight: T.number(),
-                core: T.object({
-                  reuse_count: T.number(),
-                  status: T.nullable(T.string()),
-                }),
-              }),
-            ),
-          }),
-          second_stage: T.object({
-            payloads: T.array(
-              T.object({
-                payload_type: T.string(),
-                payload_mass_kg: T.nullable(T.number()),
-                payload_mass_lbs: T.nullable(T.number()),
-              }),
-            ),
-          }),
-        }),
-        ships: T.array(
-          T.object({
-            name: T.string(),
-            home_port: T.string(),
-            image: T.string(),
-          }),
-        ),
-      }),
-    ),
-  }),
-});
-
-const superstruct = S.object({
-  data: S.object({
-    launchesPast: S.array(
-      S.object({
-        mission_name: S.string(),
-        launch_date_local: S.string(),
-        launch_site: S.object({
-          site_name_long: S.string(),
-        }),
-        links: S.object({
-          article_link: S.nullable(S.string()),
-          video_link: S.string(),
-        }),
-        rocket: S.object({
-          rocket_name: S.string(),
-          first_stage: S.object({
-            cores: S.array(
-              S.object({
-                flight: S.number(),
-                core: S.object({
-                  reuse_count: S.number(),
-                  status: S.nullable(S.string()),
-                }),
-              }),
-            ),
-          }),
-          second_stage: S.object({
-            payloads: S.array(
-              S.object({
-                payload_type: S.string(),
-                payload_mass_kg: S.nullable(S.number()),
-                payload_mass_lbs: S.nullable(S.number()),
-              }),
-            ),
-          }),
-        }),
-        ships: S.array(
-          S.object({
-            name: S.string(),
-            home_port: S.string(),
-            image: S.string(),
-          }),
-        ),
-      }),
-    ),
-  }),
-});
-
-const zod = Z.object({
-  data: Z.object({
-    launchesPast: Z.array(
-      Z.object({
-        mission_name: Z.string(),
-        launch_date_local: Z.string(),
-        launch_site: Z.object({
-          site_name_long: Z.string(),
-        }),
-        links: Z.object({
-          article_link: Z.nullable(Z.string()),
-          video_link: Z.string(),
-        }),
-        rocket: Z.object({
-          rocket_name: Z.string(),
-          first_stage: Z.object({
-            cores: Z.array(
-              Z.object({
-                flight: Z.number(),
-                core: Z.object({
-                  reuse_count: Z.number(),
-                  status: Z.nullable(Z.string()),
-                }),
-              }),
-            ),
-          }),
-          second_stage: Z.object({
-            payloads: Z.array(
-              Z.object({
-                payload_type: Z.string(),
-                payload_mass_kg: Z.nullable(Z.number()),
-                payload_mass_lbs: Z.nullable(Z.number()),
-              }),
-            ),
-          }),
-        }),
-        ships: Z.array(
-          Z.object({
-            name: Z.string(),
-            home_port: Z.string(),
-            image: Z.string(),
-          }),
-        ),
-      }),
-    ),
-  }),
-});
-
-module.exports = {
-  typed,
-  superstruct,
-  zod,
-};
-</script>
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+    
     </div>
 </div>
 
@@ -522,20 +367,20 @@ module.exports = {
             <div class="tag-chips">
                 
                 
-                <a href="/tags/KALI%E6%94%BB%E5%87%BB-DNS%E6%B1%A1%E6%9F%93/" title="KALI攻击_DNS污染: 1">
+                <a href="/tags/ECharts/" title="ECharts: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="KALI攻击_DNS污染" style="background-color: #F9EBEA;">KALI攻击_DNS污染
-                        <span class="tag-length">1</span>
+                            data-tagname="ECharts" style="background-color: #F9EBEA;">ECharts
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/ECharts/" title="ECharts: 2">
+                <a href="/tags/KALI%E6%94%BB%E5%87%BB-DNS%E6%B1%A1%E6%9F%93/" title="KALI攻击_DNS污染: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="ECharts" style="background-color: #F5EEF8;">ECharts
-                        <span class="tag-length">2</span>
+                            data-tagname="KALI攻击_DNS污染" style="background-color: #F5EEF8;">KALI攻击_DNS污染
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -585,19 +430,10 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7/" title="JavaScript高级: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="JavaScript高级" style="background-color: #D7BDE2;">JavaScript高级
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/" title="前端工程师: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="前端工程师" style="background-color: #A3E4D7;">前端工程师
+                            data-tagname="前端工程师" style="background-color: #D7BDE2;">前端工程师
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -606,17 +442,17 @@ module.exports = {
                 <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/" title="JavaScript基础: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="JavaScript基础" style="background-color: #85C1E9;">JavaScript基础
+                            data-tagname="JavaScript基础" style="background-color: #A3E4D7;">JavaScript基础
                         <span class="tag-length">5</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法: 1">
+                <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7/" title="JavaScript高级: 6">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Markdown基础语法" style="background-color: #F8C471;">Markdown基础语法
-                        <span class="tag-length">1</span>
+                             chip-active "
+                            data-tagname="JavaScript高级" style="background-color: #85C1E9;">JavaScript高级
+                        <span class="tag-length">6</span>
                     </span>
                 </a>
                 
@@ -624,8 +460,17 @@ module.exports = {
                 <a href="/tags/SEO/" title="SEO: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="SEO" style="background-color: #F9E79F;">SEO
+                            data-tagname="SEO" style="background-color: #F8C471;">SEO
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Markdown基础语法" style="background-color: #F9E79F;">Markdown基础语法
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -693,19 +538,19 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/%E5%89%8D%E7%AB%AF%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/" title="前端错误分析: 1">
+                <a href="/tags/%E9%98%B6%E6%AE%B5%E9%87%8D%E7%82%B9%E5%A4%8D%E4%B9%A0/" title="阶段重点复习: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="前端错误分析" style="background-color: #F5EEF8;">前端错误分析
+                            data-tagname="阶段重点复习" style="background-color: #D5F5E3;">阶段重点复习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E9%98%B6%E6%AE%B5%E9%87%8D%E7%82%B9%E5%A4%8D%E4%B9%A0/" title="阶段重点复习: 1">
+                <a href="/tags/%E5%89%8D%E7%AB%AF%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/" title="前端错误分析: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="阶段重点复习" style="background-color: #D5F5E3;">阶段重点复习
+                            data-tagname="前端错误分析" style="background-color: #F5EEF8;">前端错误分析
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -720,11 +565,11 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统: 1">
+                <a href="/tags/%E6%8A%93%E5%8C%85/" title="抓包: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="操作系统" style="background-color: #F8F9F9;">操作系统
-                        <span class="tag-length">1</span>
+                            data-tagname="抓包" style="background-color: #A3E4D7;">抓包
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -738,19 +583,10 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/%E6%8A%93%E5%8C%85/" title="抓包: 2">
+                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="抓包" style="background-color: #A3E4D7;">抓包
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%97%A5%E5%BF%97/" title="日志: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="日志" style="background-color: #F9EBEA;">日志
+                            data-tagname="操作系统" style="background-color: #F8F9F9;">操作系统
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -760,6 +596,15 @@ module.exports = {
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Mysql" style="background-color: #FEF9E7;">Mysql
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%97%A5%E5%BF%97/" title="日志: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="日志" style="background-color: #F9EBEA;">日志
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -783,20 +628,20 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="HTML5&CSS3移动端: 7">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="HTML5&CSS3移动端" style="background-color: #A3E4D7;">HTML5&CSS3移动端
-                        <span class="tag-length">7</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" title="科学上网: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="科学上网" style="background-color: #FFF;">科学上网
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="HTML5&CSS3移动端: 7">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="HTML5&CSS3移动端" style="background-color: #A3E4D7;">HTML5&CSS3移动端
+                        <span class="tag-length">7</span>
                     </span>
                 </a>
                 
@@ -810,19 +655,19 @@ module.exports = {
                 </a>
                 
                 
-                <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" title="学习资料: 1">
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="学习资料" style="background-color: #FEF9E7;">学习资料
+                            data-tagname="计算机网络" style="background-color: #A3E4D7;">计算机网络
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" title="学习资料: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="计算机网络" style="background-color: #A3E4D7;">计算机网络
+                            data-tagname="学习资料" style="background-color: #FEF9E7;">学习资料
                         <span class="tag-length">1</span>
                     </span>
                 </a>
