@@ -704,14 +704,14 @@
 
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/ECharts/</loc>
+    <loc>https://www.zhoudongqi.com/tags/KALI%E6%94%BB%E5%87%BB-DNS%E6%B1%A1%E6%9F%93/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/KALI%E6%94%BB%E5%87%BB-DNS%E6%B1%A1%E6%9F%93/</loc>
+    <loc>https://www.zhoudongqi.com/tags/ECharts/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -760,14 +760,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
+    <loc>https://www.zhoudongqi.com/tags/JavaScript%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/JavaScript%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.zhoudongqi.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -802,13 +802,6 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/jQuery/</loc>
-    <lastmod>2022-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zhoudongqi.com/tags/idea/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -816,7 +809,7 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/python/</loc>
+    <loc>https://www.zhoudongqi.com/tags/jQuery/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -824,6 +817,13 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/tags/webApi/</loc>
+    <lastmod>2022-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhoudongqi.com/tags/python/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -893,13 +893,6 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E6%81%B6%E6%84%8F%E9%AA%9A%E6%89%B0/</loc>
-    <lastmod>2022-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zhoudongqi.com/tags/%E9%9D%99%E6%80%81%E6%B3%A8%E5%85%A5/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -907,7 +900,7 @@
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <loc>https://www.zhoudongqi.com/tags/%E6%81%B6%E6%84%8F%E9%AA%9A%E6%89%B0/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -915,6 +908,13 @@
   
   <url>
     <loc>https://www.zhoudongqi.com/tags/HTML5-CSS3%E7%A7%BB%E5%8A%A8%E7%AB%AF/</loc>
+    <lastmod>2022-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhoudongqi.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -944,14 +944,14 @@
 
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://www.zhoudongqi.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhoudongqi.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <loc>https://www.zhoudongqi.com/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
