@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-03
+                    2022-12-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.6k
+                    6.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    27 分
                 </div>
                 
 
@@ -513,7 +513,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>tips：</p>
+                <blockquote>
+<p><strong>无论学习什么东西，你想记住它，就得赋予意义！</strong></p>
+<p><strong>对于前后端来说，就是找到此知识点运用在何种需求，思考为什么要这样做，学了它有什么用？</strong></p>
+<p><strong>学IT就得自己去敲代码，用的多了就记住了，反复去看去记是没用的，过两天就忘。</strong></p>
+</blockquote>
+<p>tips：</p>
 <p>1-编辑文件文字的时候，突然点一个地方，如果写入必须删了那个字，而不能插入。是因为进入了“覆盖(Overwrite)”模式。切换“插入/覆盖”的默认快捷键是Insert。</p>
 <p>2-f5是刷新网页，但是会走缓存，ctrl+f5是强制刷新重新获取资源。</p>
 <p>3-在最新的vscode中，！已经无法自动生成html模板了（可以在设置的use inline completions中打开），我们可以输入doc生成</p>
@@ -565,7 +570,7 @@
 <p>template模板，mount挂载嵌入</p>
 <p>1-我们写入原生的html</p>
 <p>2-通过script引入vue的cdn文件，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://unpkg.com/vue@next%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84vue%E6%BA%90%E7%A0%81cdn">https://unpkg.com/vue@next是最新的vue源码cdn</a></p>
-<p>3-Vue是一个全局对象，里面有一个creatApp函数方法，注意Vue.createApp()必须大写V</p>
+<p>3-Vue是一个全局对象，里面有一个createApp函数方法，注意Vue.createApp()必须大写V</p>
 <p>4-在方法内传入一个对象，对象中有一个template属性，里面反引号加入原生的html代码</p>
 <p>5-createApp会返回一个对象，我们需要定义一个变量接收</p>
 <p>6-接收的对象会有一个mount函数，把它的内容挂载到html的标签上，通过id选中识别（只要是选择器都可以）。</p>
@@ -597,8 +602,8 @@
     </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>我们通过写一个data属性（这个template和data不能随便命名的，是vue规定的）</p>
-<p>然后data属性规定是一个函数，函数内return一个对象，包含了需要使用的变量等</p>
+<p><strong>我们通过写一个data属性（这个template和data不能随便命名的，这是vue底层规定的，必须这样写）</strong></p>
+<p><strong>然后data属性规定是一个函数，函数内return一个对象，包含了需要使用的变量等</strong></p>
 <p>然后通过两个大括号写入数据。</p>
 <p><strong>动态的列表数据</strong></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
@@ -660,11 +665,11 @@
 <p>2-学习新的一个属性，methods，里面写一个对象，包含不同的方法函数。</p>
 <p>3-在标签里面通过@click=”方法名”来实现调用，而不是以前的原生dom截取监听事件。</p>
 <p><strong>问题：上面代码你这个jian里面的this怎么能控制我data里面的counter？</strong></p>
-<p>因为这些vue底层通过proxy和bind方法这些，重定向了this的指向，我们知道就好了</p>
+<p>因为这些vue底层通过proxy和bind方法这些，重定向了this的指向，这里的this可以代理data里面函数返回的那个对象，我们知道就好了，深入源码底层的时候就全明白了。</p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1107.png" alt="1107"></p>
 <p><strong>代码重构</strong></p>
 <p>我们template也可以直接删，然后把样式标签直接写在要挂载的那个标签内</p>
-<p>如果我们写了template默认是会覆盖掉挂载标签的内容的，不写template就默认挂载标签内容为模板</p>
+<p>如果我们写了template默认是会覆盖掉挂载标签的内容的，<em>不写template就默认挂载标签内容为模板</em></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jishuqi<span class="token punctuation">"</span></span> <span class="token attr-name">app</span><span class="token punctuation">></span></span>
@@ -705,6 +710,13 @@
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1102.png" alt="1102"></p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1103.png" alt="1103"></p>
 <p>在vue中，vue框架就担任了view-modol的角色，它即会底层操作dom也会把view视图和model数据结合起来。</p>
+<blockquote>
+<p>简单的说，Controller所要担任的任务更加全面，包括了很多的业务逻辑。而ViewModel则简化甚至剔除了业务逻辑，主要的工作就只是把Model中的数据组装成适合View使用的数据。<br>相对于Vue来说，Angular确实算得上MVC框架。其实吧，对于前端来说，只需要很少甚至不需要业务逻辑，所以MVC这种后端设计结构其实并不适合。所以随着MVP、MVVM这种弱化业务逻辑的结构在前端领域变得越来越流行。</p>
+</blockquote>
+<blockquote>
+<p>MVC<br>路由至控制器内,需要在控制器自己处理model(data), 然后进行重新渲染生成view(UI)</p>
+<p>MVVM<br>数据驱动式，一旦model有变化, 其view(UI)就会改变.</p>
+</blockquote>
 <h2 id="data属性"><a href="#data属性" class="headerlink" title="data属性"></a>data属性</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1105.png" alt="1105"></p>
 <p>data数据是如何被展示的</p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1104.png" alt="1104"></p>
@@ -739,10 +751,13 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>上面为什么可以data(){}这样写？不是应该data:function(){}吗？</p>
-<p>这是es6的高级写法，是可以的，其中data就是function(){}一个匿名函数function(){}()会执行这个函数，不就等于data()</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">https://www.cnblogs.com/zsh-blogs/p/12963108.html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
 <h2 id="methods属性"><a href="#methods属性" class="headerlink" title="methods属性"></a>methods属性</h2><p>methods属性中的对象是不能写成箭头函数的，在js高级我们知道箭头函数的this是沿用与上一层的this（一般结构下会指向全局window），那么就无法调用到data里面的数据了。</p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1106.png" alt="1106"></p>
-<h2 id="vscode生成代码片段"><a href="#vscode生成代码片段" class="headerlink" title="vscode生成代码片段"></a>vscode生成代码片段</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1109.png" alt="1109"></p>
+<h2 id="vscode生成代码片段"><a href="#vscode生成代码片段" class="headerlink" title="vscode生成代码片段"></a>vscode生成代码片段</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1109.png"></p>
 <p>代码片段就是按几个键，直接生成一个html或者js或者c等等文件的模板</p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1108.png" alt="1108"></p>
 <p>选择html.json,然后进入网站snippet-generator.app，复制以后每次要一键生成的代码，然后生成json代码复制到html.json中</p>
@@ -754,6 +769,8 @@
 <p>2-{ { } }中不仅可以写简单的变量，还可以写成表达式，甚至是三元运算符和有返回值的函数</p>
 <p>为什么可以呢？因为表达式和运算符和函数调用后，最终都会返回一个值的，显示就显示那个值。</p>
 <p>3-但是它里面不能定义语句，如{ {const i =1 }  },很简单因为它没有返回值出来。</p>
+<p><strong>注意：</strong> 使用插值语法必须让它和vue有联系，你如果直接写html写一个p标签，里面就写插值语法是没用的，必须有挂载。</p>
+<p>其次是template后是反引号``，不是双引号。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -812,8 +829,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="v-once了解"><a href="#v-once了解" class="headerlink" title="v-once了解"></a>v-once了解</h3><p>v-once，v-for,v-text等等都是写在标签内的</p>
-<p>v-once表示此标签内的内容，只渲染一次，后续你怎么操作让它改变，都改不了的。</p>
+<h3 id="v-once了解"><a href="#v-once了解" class="headerlink" title="v-once了解"></a>v-once了解</h3><p>v-once，v-for,v-text等等都是写在标签内的，它算是标签的一个属性。</p>
+<p>v-once表示此标签内的内容（包括此标签包含的后代标签），只渲染一次，后续你怎么操作让它改变，都改不了的。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -923,8 +940,8 @@
 <p>但是如果起初h2里面就有内容，会被v-html的内容覆盖。</p>
 <h3 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a>v-pre</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1112.png" alt="1112"></p>
 <p>也就是说，加了v-pre会让插值语法{ { } }失效，而在用户浏览器页面显示出两个大括号</p>
-<p>应用场景：我们就需要显示两个大括号，不需要插值语法</p>
-<h3 id="v-cloak了解"><a href="#v-cloak了解" class="headerlink" title="v-cloak了解"></a>v-cloak了解</h3><p>cloak遮盖，斗篷。它需要配合css一起使用。</p>
+<p>应用场景：我们 就需要显示两个大括号，不需要插值语法</p>
+<h3 id="v-cloak了解"><a href="#v-cloak了解" class="headerlink" title="v-cloak了解"></a>v-cloak了解</h3><p>cloak遮盖，斗篷。它需要配合css一起使用。 </p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1085,6 +1102,13 @@
 <p>问题：绑定class不也是个属性，直接用v-bind不就好了？</p>
 <p>如果你就一个类名是可以的，但是实际中通常有很多个类名，有时需要添加，有时这个类名不需要添加</p>
 <p>所以就需要用到class属性的对象语法和数组语法来动态绑定。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> isActive ? <span class="token punctuation">'</span>active<span class="token punctuation">'</span>: <span class="token punctuation">'</span><span class="token punctuation">'</span> <span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btnClick<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+这里通过v-bind语法糖绑定属性使用了三元运算符，不仅仅是class属性可以使用，其他的href等属性也都可以使用，就像console.log不仅可以打印变量，也表达式的结果，只要有最终值返回即可，甚至是一个函数，只要这个函数有返回值（这里的class需要函数返回适用于class的对象写法），然后按照那个最终值赋予结果。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>但是class的对象写法，href，src等属性就不可用，是独有的。</p>
+<p>注意class的对象写法是后加，如果原先就设置了class，不会被覆盖。</p>
+</blockquote>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1142,6 +1166,7 @@
   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>注意：书写的时候记得外用了双引号，内就要用单引号。</p>
 <p>如下代码，对象动态绑定就是给class一个对象，然后键值对写入，键是对象名，值是布尔值</p>
 <p>比如下面的代码，why的值为true所以，button会被加入一个why的类名</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 2.2.对象语法的多个键值对 --></span>
@@ -1162,7 +1187,7 @@
 
 <p>数组绑定方法的话，只要是里面的值都会被添加到class类名里面，我们也可以配合对象绑定使用，如上的第四个</p>
 <p><strong>v-bind 动态绑定style属性</strong></p>
-<p>style的动态绑定也有对象和数组两种方式，其中数组语法很少用。因为与其写数组，我们直接在对象里面多写两个值就好了。</p>
+<p>style的动态绑定也有对象和数组两种方式，其中数组语法很少用。因为写数组，数组里面的值也必须是对象，等于多此一举；我们直接在对象里面多写两个值就好了。</p>
 <p>疑惑：原先不是说，什么对象的键值对，如果值是true就把键加进去吗？这里咋不同了直接全加进去了？</p>
 <p>因为我们是通过v-bind来进行绑定的，它底层就这样，没有为什么，class和style的添加方式是不同的，你看了底层源码就明白了。</p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1115.png" alt="1115"></p>
@@ -1216,9 +1241,19 @@
 <p>注意对象里面无法识别-或者px的，我们必须写成如下</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name"><span class="token namespace">v-bind:</span>style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&#123; color: fontColor, fontSize: fontSize + <span class="token punctuation">'</span>px<span class="token punctuation">'</span> &#125;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>哈哈哈哈<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>font-size用大驼峰fontSize或者加引号 “font-size”: fontSize + ‘px’</p>
+<p>font-size用小驼峰fontSize或者加引号 “font-size”: fontSize + ‘px’</p>
+<blockquote>
+<p>为什么不能写font-size？</p>
+<p>因为对象里面是不认识横杠这个符号的，比如你在对象里面写一个带横杠的属性，肯定报错。</p>
+<p>解决办法就是把带横杠的属性名加个引号，或者通过小驼峰</p>
+<p>30px为什么不认识？ 和横杠同理。属性值你给个30px，对象是不支持这种写法的，你需要加引号变成字符串</p>
+</blockquote>
+<p>问题：变成字符串还能正常解析这段css吗？</p>
+<p>可以的，底层都写好了。</p>
 <p><strong>动态绑定属性名</strong></p>
 <p>一般属性就是style，class，src等等，如果你属性名字都不固定，就需要动态绑定属性名，这个很少用</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">v-bind：[name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -2103,14 +2138,14 @@
 </div>
 
 <script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
+<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script> -->
+<script src="https://www.zhoudongqi.com/myutils/Meting.min.js"></script>
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             
            <a href="/about" target="_blank">瑾年</a>
@@ -2119,7 +2154,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">177.4k</span>&nbsp;字
+                class="white-color">191k</span>&nbsp;字
             
             
             

@@ -480,14 +480,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-12
+                    2022-11-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.4k
                 </div>
                 
 
@@ -649,7 +649,7 @@ border-image-slice: 30 30 30 30;
 /* 这个属性默认的是 border的宽度 但是 有区别， 这个是 边框图片的宽度 不会挤压文字 */ border-image-width: 30px; 
 border-image-repeat: round/stretch/repeat;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><p>1-A55；a97</p>
+<h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><p>1-A65；a97</p>
 <p>2-&amp;&amp;优先级比||高；非！是一元运算符，优先级也很高</p>
 <p>3-三目运算符  条件？X:Y  会返回X或者Y，但并不会赋值。</p>
 <p>4-prompt和input框等接收的用户输入，都是字符型。</p>
@@ -675,6 +675,11 @@ return x+y
 <p>14-math对象的math.floor()/ceil()/round()/pi/max(x,y,z,…)/min(x,y,z,…)等方法和属性</p>
 <p>15-取N-M随机数公式：Math.floor(Math.random()*(M-N+1)+N</p>
 <p>17-script标签是可以写在body中的某个盒子div内的,如上图,那么script渲染出的东西（声明的变量什么的还是共享的）,也只会出现在盒子范围内</p>
+<p>18-因为小数的精度问题，如0.1+0.2是不等于0.3的 </p>
+<p>19-正负号解析和比较运算符都会进行数字的隐式转换。</p>
+<p>20-数组的方法splice，中文为粘接的意思，就是删一些东西然后再加一些进去；第一个参数是指明从哪里粘接，第二个参数是删几个，第三个参数是需要添加进去的东西。splice没有返回值。</p>
+<p>21-函数的return无法返回多个值，强制返回会取最后一个；但是可以把这多个值通过数组返回出来。</p>
+<p>22-属性和方法的访问有两种方法；第一种 对象名.属性/方法名；第二种 对象名[‘属性/方法名’]</p>
 <h2 id="webapi"><a href="#webapi" class="headerlink" title="webapi"></a>webapi</h2><p>1-document 是 window 的一个子对象</p>
 <p>2-在页面中只存在一个的标签，如body和id选择器的元素，可以不用document.querySelector(‘’)查找，直接去使用对象，但使用前必须加上document，如document.body.style.backgroundColor=’red’</p>
 <p>3-document.getElementById/getElementsByTagName/getElementsByClassName()</p>
@@ -1555,14 +1560,14 @@ let date =new Date()
 </div>
 
 <script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
+<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script> -->
+<script src="https://www.zhoudongqi.com/myutils/Meting.min.js"></script>
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             
            <a href="/about" target="_blank">瑾年</a>
@@ -1571,7 +1576,7 @@ let date =new Date()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">177.4k</span>&nbsp;字
+                class="white-color">191k</span>&nbsp;字
             
             
             
