@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-08
+                    2023-01-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    369
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    12 分
                 </div>
                 
 
@@ -513,7 +513,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Composition-API"><a href="#Composition-API" class="headerlink" title="Composition API"></a>Composition API</h2><h2 id="认识Composition-Api"><a href="#认识Composition-Api" class="headerlink" title="认识Composition Api"></a>认识Composition Api</h2><p>以后开发不再用options api 而是composition api，这个api其实就是setup函数</p>
+                <h2 id="Composition-API"><a href="#Composition-API" class="headerlink" title="Composition API"></a>Composition API</h2><p>以后开发不再用options api 而是composition api，这个api其实就是setup函数</p>
 <p>compositionAPI：组合API</p>
 <p>optionsAPI：选项API</p>
 <h3 id="options和composition对比"><a href="#options和composition对比" class="headerlink" title="options和composition对比"></a>options和composition对比</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1252.png" alt="1252"></p>
@@ -524,6 +524,7 @@
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1255.png" alt="1255"></p>
 <p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1256.png" alt="1256"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+&lt;!-- template中ref对象自动解包 --&gt;
  &lt;h2&gt;数字:&#123;&#123; counter &#125;&#125;&lt;&#x2F;h2&gt;
  &lt;button @click&#x3D;&quot;add&quot;&gt;+1&lt;&#x2F;button&gt;
  &lt;button @click&#x3D;&quot;sub&quot;&gt;-1&lt;&#x2F;button&gt;
@@ -532,13 +533,18 @@
 
 &lt;script&gt;
 import &#123;ref&#125; from &quot;vue&quot;
+&#x2F;&#x2F;import &#123;reactive&#125; from &quot;vue&quot;
+&#x2F;&#x2F;import &#123;reactive，ref&#125; from &quot;vue&quot; 这种写法同时导入也可以
   export default &#123;
     setup()&#123;
+&#x2F;&#x2F;注意此时counter其实就是一个ref对象了，而不是简单的100，所以想使用这个100，必须通过counter.value
       let counter &#x3D; ref(100)
+      &#x2F;&#x2F; function add（）&#123;&#125;
       const add &#x3D;()&#x3D;&gt;&#123;
         counter.value +&#x3D;1
       
       &#125;
+      &#x2F;&#x2F; function sub（）&#123;&#125;
       const sub &#x3D;()&#x3D;&gt;&#123;
         counter.value -&#x3D;1
       &#125;
@@ -554,15 +560,297 @@ import &#123;ref&#125; from &quot;vue&quot;
 
 &lt;style scoped&gt;
 
-&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>步骤：</p>
 <p>1-在script标签内书写setup函数</p>
-<p>2-在setup函数中声明变量和使用箭头函数声明会发生的事件</p>
-<p>3-setup中所有声明的东西，必须return返回出去才可以使用</p>
-<p>3-我们点击按钮发现没反应，其实counter已经变化了，但是它不是响应式数据，不会在页面上实时改变</p>
-<p>4-导入vue提供的ref方法，使用ref包裹住数据，即可实现响应式。</p>
+<p>2-在setup函数中声明变量和使用箭头函数（普通函数也可以）声明会发生的事件</p>
+<p><strong>3-setup中所有声明的东西，必须return返回出去才可以使用</strong></p>
+<p>4-我们点击按钮发现没反应，其实普通数据counter已经变化了，但是它不是响应式数据不会被劫持代理，不会在页面上实时改变</p>
+<p>5.1-导入vue提供的ref方法，使用ref包裹住数据，即可实现响应式。</p>
+<p>5.1.1使用ref后，在script中必须通过counter.value才能取到真正的值，在template中的插值语法中不需要，因为有vue内部会自动解包。(解包就是自动取出其对象的value属性)</p>
+<blockquote>
+<p>//注意此时counter其实就是一个ref对象了，而不是简单的100，所以想使用这个100，必须通过counter.value</p>
+</blockquote>
+<p>5.2通过reactive函数</p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1257.png" alt="1257"></p>
+<p>react就是回应，反应的意思，reactive就是响应式，因为我们在setup中写的数据是普通数据，不会像在optionsAPI的data中的数据那样被vue劫持，所以是不会在页面中自动响应更新的。</p>
+<p>需要我们手动通过reactive劫持（其实data响应式原理的底层也是通过reactive函数），注意：<strong>reactive函数必须传入复杂类型的参数，</strong>如上的传入对象，而不是是简单的字符串或者一个数字值。      </p>
+<p><strong>什么时候用ref，什么时候用reactive</strong></p>
+<p>这里是coderwhy老师总结出的经验，我以后也就这样写，其实只要你需要响应式数据，ref和reactive都可以完成，但是各有各的优点。</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;form&gt;
+      账号: &lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;account.username&quot;&gt;
+      密码: &lt;input type&#x3D;&quot;password&quot; v-model&#x3D;&quot;account.password&quot;&gt;
+    &lt;&#x2F;form&gt;
+    
+    &lt;form&gt;
+      账号: &lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;username&quot;&gt;
+      密码: &lt;input type&#x3D;&quot;password&quot; v-model&#x3D;&quot;password&quot;&gt;
+    &lt;&#x2F;form&gt;
 
+    &lt;hr&gt;
+
+    &lt;show-info :name&#x3D;&quot;name&quot; :age&#x3D;&quot;age&quot;&gt;&lt;&#x2F;show-info&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+  import &#123; onMounted, reactive, ref &#125; from &#39;vue&#39;
+  import ShowInfo from &#39;.&#x2F;ShowInfo.vue&#39;
+
+  export default &#123;
+    components: &#123;
+      ShowInfo
+    &#125;,
+    data() &#123;
+      return &#123;
+        message: &quot;Hello World&quot;
+      &#125;
+    &#125;,
+    setup() &#123;
+      &#x2F;&#x2F; 定义响应式数据: reactive&#x2F;ref
+      &#x2F;&#x2F; 强调: ref也可以定义复杂的数据
+      const info &#x3D; ref(&#123;&#125;)
+      console.log(info.value)
+
+      &#x2F;&#x2F; 1.reactive的应用场景
+      &#x2F;&#x2F; 1.1.条件一: reactive应用于本地的数据
+      &#x2F;&#x2F; 1.2.条件二: 多个数据之间是有关系&#x2F;联系(聚合的数据, 组织在一起会有特定的作用)
+      const account &#x3D; reactive(&#123;
+        username: &quot;coderwhy&quot;,
+        password: &quot;1234567&quot;
+      &#125;)
+
+      const username &#x3D; ref(&quot;coderwhy&quot;)
+      const password &#x3D; ref(&quot;123456&quot;)
+
+      &#x2F;&#x2F; 2.ref的应用场景: 其他的场景基本都用ref(computed)
+      &#x2F;&#x2F; 2.1.定义本地的一些简单数据
+      const message &#x3D; ref(&quot;Hello World&quot;)
+      const counter &#x3D; ref(0)
+      const name &#x3D; ref(&quot;why&quot;)
+      const age &#x3D; ref(18)
+
+      &#x2F;&#x2F; 2.定义从网络中获取的数据也是使用ref
+      &#x2F;&#x2F; const musics &#x3D; reactive([])
+      const musics &#x3D; ref([])
+      onMounted(() &#x3D;&gt; &#123;
+        const serverMusics &#x3D; [&quot;海阔天空&quot;, &quot;小苹果&quot;, &quot;野狼&quot;]
+        musics.value &#x3D; serverMusics
+      &#125;)
+
+
+      return &#123;
+        account,
+        username,
+        password,
+        name,
+        age
+      &#125;
+    &#125;
+  &#125;
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+&lt;&#x2F;style&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>来自本地的，有关联的数据就用reactive，为什么呢？</p>
+<p>因为有关联的数据，比如账号密码，你使用reactive的方法就直接account.username和account.password即可，更方便使用。</p>
+</blockquote>
+<blockquote>
+<p>其他场景一般都用ref函数</p>
+<p>比如来自服务器的数据，使用ref的话，如上代码直接music.value=serverMusics即可，如果是使用reactive函数，那么你没法去把服务器的数据搞进去，或者说需要一个一个遍历进去，很麻烦。</p>
+</blockquote>
+<p><strong>hooks文件夹是什么？</strong></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/JaneLittle/article/details/127127644">https://blog.csdn.net/JaneLittle/article/details/127127644</a></p>
+<p><code>vue3</code> 借鉴 <code>react hooks</code> 开发出了 Composition API ，所以也就意味着 Composition API 也能进行自定义封装 <code>hooks</code>。</p>
+<p><code>vue3</code> 中的 <code>hooks</code> 就是函数的一种写法，就是将文件的一些单独功能的<code>js</code>代码进行抽离出来，放到单独的js文件中，或者说是一些可以复用的公共方法/功能。其实 <code>hooks</code> 和 <code>vue2</code> 中的 <code>mixin </code>有点类似，但是相对 <code>mixins</code> 而言， <code>hooks</code> 更清楚复用功能代码的来源, 更清晰易懂。</p>
+<h2 id="安装Vue-devtool"><a href="#安装Vue-devtool" class="headerlink" title="安装Vue-devtool"></a>安装Vue-devtool</h2><p>作用：方便调试</p>
+<p>1-直接在chorm商店下载（某些原因正常情况下打不开）</p>
+<p>安装后如果不生效，重启下浏览器</p>
+<p>2-找个安装教程手动安装，去github下载源码然后打包，拖到chorm拓展内。</p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1258.png" alt="1258"></p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1259.png" alt="1259"></p>
+<h2 id="认识readonly只读函数（了解）"><a href="#认识readonly只读函数（了解）" class="headerlink" title="认识readonly只读函数（了解）"></a>认识readonly只读函数（了解）</h2><p><img src="C:\Users\smores\Desktop\study_pic\1260.png" alt="1260"></p>
+<p>它的原理就是劫持了对象的set方法，让它无法被修改。</p>
+<p><strong>问题：</strong>子组件可以修改来自父组件通过父子通信，传递过来的数据，即修改props内的数据（如对象）。</p>
+<p>规范准则：虽然这是可行的，但是不符合单项数据流的准则，如父组件将此数据传递给了3个子组件，然后其中一个子组件修改了数据，那么父组件根本不知道是谁改的，非常不利于维护。            这个准则在react内也要遵守</p>
+<p><strong>实在要修改这个数据呢？</strong></p>
+<p>在子组件内通过emit发送自定义事件给父组件，由父组件进行修改。</p>
+<p><strong>问题：</strong>当其他人在编写子组件的时候，他不知道这个单向数据流的准则，修改了数据应该怎么避免呢？</p>
+<p><strong>解决：</strong>在父组件内使用readonly函数包裹住需要传出到子组件的数据即可。那么这个数据将不能被修改。</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">app.vue
+&lt;template&gt;
+  &lt;h2&gt;App: &#123;&#123; info &#125;&#125;&lt;&#x2F;h2&gt;
+  &lt;show-info :info&#x3D;&quot;info&quot; 
+             :roInfo&#x3D;&quot;roInfo&quot; 
+             @changeInfoName&#x3D;&quot;changeInfoName&quot;
+             @changeRoInfoName&#x3D;&quot;changeRoInfoName&quot;&gt;
+  &lt;&#x2F;show-info&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+  import &#123; reactive, readonly &#125; from &#39;vue&#39;
+  import ShowInfo from &#39;.&#x2F;ShowInfo.vue&#39;
+
+  export default &#123;
+    components: &#123;
+      ShowInfo
+    &#125;,
+    setup() &#123;
+      &#x2F;&#x2F; 本地定义多个数据, 都需要传递给子组件
+      &#x2F;&#x2F; name&#x2F;age&#x2F;height
+      const info &#x3D; reactive(&#123;
+        name: &quot;why&quot;,
+        age: 18,
+        height: 1.88
+      &#125;)
+
+      function changeInfoName(payload) &#123;
+        info.name &#x3D; payload
+      &#125;
+
+      &#x2F;&#x2F; 使用readOnly包裹info
+      const roInfo &#x3D; readonly(info)
+      function changeRoInfoName(payload) &#123;
+        info.name &#x3D; payload
+      &#125;
+
+      return &#123;
+        info,
+        changeInfoName,
+        roInfo,
+        changeRoInfoName
+      &#125;
+    &#125;
+  &#125;
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+&lt;&#x2F;style&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">showinfo.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;ShowInfo: &#123;&#123; info &#125;&#125;&lt;&#x2F;h2&gt;
+    &lt;!-- 代码没有错误, 但是违背规范(单项数据流) --&gt;
+    &lt;button @click&#x3D;&quot;info.name &#x3D; &#39;kobe&#39;&quot;&gt;ShowInfo按钮&lt;&#x2F;button&gt;
+    &lt;!-- 正确的做法: 符合单项数据流--&gt;
+    &lt;button @click&#x3D;&quot;showInfobtnClick&quot;&gt;ShowInfo按钮&lt;&#x2F;button&gt;
+    &lt;hr&gt;
+    &lt;!-- 使用readonly的数据 --&gt;
+    &lt;h2&gt;ShowInfo: &#123;&#123; roInfo &#125;&#125;&lt;&#x2F;h2&gt;
+    &lt;!-- 代码就会无效(报警告) --&gt;
+    &lt;!-- &lt;button @click&#x3D;&quot;roInfo.name &#x3D; &#39;james&#39;&quot;&gt;ShowInfo按钮&lt;&#x2F;button&gt; --&gt;
+    &lt;!-- 正确的做法 --&gt;
+    &lt;button @click&#x3D;&quot;roInfoBtnClick&quot;&gt;roInfo按钮&lt;&#x2F;button&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+  export default &#123;
+    props: &#123;
+      &#x2F;&#x2F; reactive数据
+      info: &#123;
+        type: Object,
+        default: () &#x3D;&gt; (&#123;&#125;)
+      &#125;,
+      &#x2F;&#x2F; readonly数据
+      roInfo: &#123;
+        type: Object,
+        default: () &#x3D;&gt; (&#123;&#125;)
+      &#125;
+    &#125;,
+    emits: [&quot;changeInfoName&quot;, &quot;changeRoInfoName&quot;],
+    setup(props, context) &#123;
+      function showInfobtnClick() &#123;
+        context.emit(&quot;changeInfoName&quot;, &quot;kobe&quot;)
+      &#125;
+
+      function roInfoBtnClick() &#123;
+        context.emit(&quot;changeRoInfoName&quot;, &quot;james&quot;)
+      &#125;
+
+      return &#123;
+        showInfobtnClick,
+        roInfoBtnClick
+      &#125;
+    &#125;
+  &#125;
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+&lt;&#x2F;style&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当readonly后，就算是父组件本身也无法修改如上代码的roInfo，但是是可以通过原始info修改的。</p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1261.png" alt="1261"></p>
+<h3 id="方法补充（了解）"><a href="#方法补充（了解）" class="headerlink" title="方法补充（了解）"></a>方法补充（了解）</h3><p><img src="C:\Users\smores\Desktop\study_pic\1262.png" alt="1262"></p>
+<p>什么叫shallow呢，就是浅层，shallowReactive就是浅层响应，如上图代码，当firend内的name属性变化，那么浅层响应就不会被修改。</p>
+<p><strong>toRefs函数</strong></p>
+<p><strong>作用</strong>：如下当我们使用reactive函数后，在template中每次都需要通过info.name,info.age等等来取值，有的人想直接写name和age怎么办呢？</p>
+<p>答：我们可以将此对象解构</p>
+<p><strong>出现问题：解构后，数据会变成普通数据，没有响应式的功能</strong></p>
+<p>解决：使用toRef函数再进行解构。</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;info: &#123;&#123; name &#125;&#125; - &#123;&#123; age &#125;&#125; - &#123;&#123; height &#125;&#125;&lt;&#x2F;h2&gt;
+    &lt;button @click&#x3D;&quot;age++&quot;&gt;修改age&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;height &#x3D; 1.89&quot;&gt;修改height&lt;&#x2F;button&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+  import &#123; reactive, toRefs, toRef &#125; from &#39;vue&#39;
+  
+  export default &#123;
+    setup() &#123;
+
+        const info &#x3D; reactive(&#123;
+          name: &quot;why&quot;,
+          age: 18,
+          height: 1.88
+        &#125;)
+
+        &#x2F;&#x2F; reactive被解构后会变成普通的值, 失去响应式
+        &#x2F;&#x2F;多个解构
+        const &#123; name, age &#125; &#x3D; toRefs(info)
+        &#x2F;&#x2F;单个解构
+        const height &#x3D; toRef(info, &quot;height&quot;)
+
+        return &#123;
+          name,
+          age,
+          height
+        &#125;
+
+    &#125;
+  &#125;
+
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+&lt;&#x2F;style&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="C:\Users\smores\Desktop\study_pic\1263.png" alt="1263"></p>
+<h3 id="为什么setup函数内无法使用this？"><a href="#为什么setup函数内无法使用this？" class="headerlink" title="为什么setup函数内无法使用this？"></a>为什么setup函数内无法使用this？</h3><p><img src="C:\Users\smores\Desktop\study_pic\1265.png" alt="1265"></p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1266.png" alt="1266"></p>
+<p>所以并不是原先官方文档说的setup之前，data和computed等没有被做解析，而是：</p>
+<p>它内部源码，没有给setup绑定this，原先的optionsApi的methods，computed什么的都通过appy和bind等绑定了this。</p>
+<p><strong>问题：</strong>没有this，那我如何this.$emit呢？</p>
+<p>setup（props，context）里有两个默认参数，第一个就是父组件传递进来的数据，第二个就包含了：</p>
+<p><img src="C:\Users\smores\Desktop\study_pic\1267.png" alt="1267"></p>
+<h2 id="setup中的对应原optionsApi的功能函数的使用"><a href="#setup中的对应原optionsApi的功能函数的使用" class="headerlink" title="setup中的对应原optionsApi的功能函数的使用"></a>setup中的对应原optionsApi的功能函数的使用</h2><h3 id="computed函数使用"><a href="#computed函数使用" class="headerlink" title="computed函数使用"></a>computed函数使用</h3><h3 id="组件的生命周期函数"><a href="#组件的生命周期函数" class="headerlink" title="组件的生命周期函数"></a>组件的生命周期函数</h3><h3 id="Provide-Inject使用"><a href="#Provide-Inject使用" class="headerlink" title="Provide/Inject使用"></a>Provide/Inject使用</h3><h3 id="watch-watchEffect"><a href="#watch-watchEffect" class="headerlink" title="watch/watchEffect"></a>watch/watchEffect</h3><h3 id="自定义Hook联系"><a href="#自定义Hook联系" class="headerlink" title="自定义Hook联系"></a>自定义Hook联系</h3><h3 id="script-setup-语法糖"><a href="#script-setup-语法糖" class="headerlink" title="script setup 语法糖"></a>script setup 语法糖</h3>
                 
             </div>
             <hr/>
@@ -1389,7 +1677,7 @@ import &#123;ref&#125; from &quot;vue&quot;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">191k</span>&nbsp;字
+                class="white-color">193.5k</span>&nbsp;字
             
             
             
