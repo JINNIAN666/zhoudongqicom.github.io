@@ -476,14 +476,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-06
+                    2023-02-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.8k
+                    6.9k
                 </div>
                 
 
@@ -649,7 +649,15 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>情况一：在事件绑定的时候不传入参数，也就是函数不加括号写东西进去，那么自动有一个默认参数event，里面包含了点击等各种信息。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn1Click<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn1Click<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+//前提是methods里面的函数写了一个形参如btn1Click(event)，如果是btn1Click()，那么也是没有event能在方法中被使用。
+  methods: &#123;
+        // 1.默认参数: event对象
+        // 总结: 如果在绑定事件的时候, 没有传递任何的参数, 那么event对象会被默认传递进来
+        btn1Click(event) &#123;
+          console.log("btn1Click:", event)
+        &#125;
+      &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>情况二：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn2Click(<span class="token punctuation">'</span>why<span class="token punctuation">'</span>, age)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -786,7 +794,9 @@
 <p>v-show和v-if作用一样，条件成立则显示元素。</p>
 <p>1-v-show不成立的时候，浏览器中是由dom元素的，只是用display：none隐藏了，但是v-if就是直接消耗，标签直接无了</p>
 <blockquote>
-<p>注意这里是display：none不是display：hidden，隐藏后只是dom元素标签还存在，但是不占标准流的，也就是说隐藏后其他元素会顶替它的位置</p>
+<p>注意这里是display：none不是display：hidden。</p>
+<p>hidden隐藏后dom元素标签还存在，只是东西不见了，但是还占标准流。</p>
+<p>none是不占标准流了，也就是说none后其他元素会顶替它的位置</p>
 </blockquote>
 <p>2-所以v-show不能使用template，因为template根本不会出现在浏览器中，那么v-show就无法通过给template来设置display来达到隐藏和显示效果，所以只能用div。</p>
 <p>3-当一个元素需要经常判断显示隐藏就用v-show，因为如果用v-if就要来回创建销毁dom，会频繁引起回流重绘，导致性能降低。</p>
@@ -2353,7 +2363,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">193.5k</span>&nbsp;字
+                class="white-color">194.2k</span>&nbsp;字
             
             
             

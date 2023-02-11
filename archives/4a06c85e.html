@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-09
+                    2023-01-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    14 分
                 </div>
                 
 
@@ -850,7 +850,86 @@ import &#123;ref&#125; from &quot;vue&quot;
 <p><strong>问题：</strong>没有this，那我如何this.$emit呢？</p>
 <p>setup（props，context）里有两个默认参数，第一个就是父组件传递进来的数据，第二个就包含了：</p>
 <p><img src="C:\Users\smores\Desktop\study_pic\1267.png" alt="1267"></p>
-<h2 id="setup中的对应原optionsApi的功能函数的使用"><a href="#setup中的对应原optionsApi的功能函数的使用" class="headerlink" title="setup中的对应原optionsApi的功能函数的使用"></a>setup中的对应原optionsApi的功能函数的使用</h2><h3 id="computed函数使用"><a href="#computed函数使用" class="headerlink" title="computed函数使用"></a>computed函数使用</h3><h3 id="组件的生命周期函数"><a href="#组件的生命周期函数" class="headerlink" title="组件的生命周期函数"></a>组件的生命周期函数</h3><h3 id="Provide-Inject使用"><a href="#Provide-Inject使用" class="headerlink" title="Provide/Inject使用"></a>Provide/Inject使用</h3><h3 id="watch-watchEffect"><a href="#watch-watchEffect" class="headerlink" title="watch/watchEffect"></a>watch/watchEffect</h3><h3 id="自定义Hook联系"><a href="#自定义Hook联系" class="headerlink" title="自定义Hook联系"></a>自定义Hook联系</h3><h3 id="script-setup-语法糖"><a href="#script-setup-语法糖" class="headerlink" title="script setup 语法糖"></a>script setup 语法糖</h3>
+<h2 id="setup中的对应原optionsApi的功能函数的使用"><a href="#setup中的对应原optionsApi的功能函数的使用" class="headerlink" title="setup中的对应原optionsApi的功能函数的使用"></a>setup中的对应原optionsApi的功能函数的使用</h2><h3 id="computed函数使用"><a href="#computed函数使用" class="headerlink" title="computed函数使用"></a>computed函数使用</h3><p><img src="C:\Users\smores\Desktop\study_pic\1268.png" alt="1268"></p>
+<pre class="line-numbers language-vue.js" data-language="vue.js"><code class="language-vue.js">&lt;template&gt;
+  &lt;h2&gt;&#123;&#123; fullname &#125;&#125;&lt;&#x2F;h2&gt;
+  &lt;button @click&#x3D;&quot;setFullname&quot;&gt;设置fullname&lt;&#x2F;button&gt;
+  &lt;h2&gt;&#123;&#123; scoreLevel &#125;&#125;&lt;&#x2F;h2&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+import &#123; reactive, computed, ref &#125; from &#39;vue&#39;
+
+  export default &#123;
+    setup() &#123;
+      &#x2F;&#x2F; 1.定义数据
+      const names &#x3D; reactive(&#123;
+        firstName: &quot;kobe&quot;,
+        lastName: &quot;bryant&quot;
+      &#125;)
+
+      &#x2F;&#x2F; const fullname &#x3D; computed(() &#x3D;&gt; &#123;
+      &#x2F;&#x2F;   return names.firstName + &quot; &quot; + names.lastName
+      &#x2F;&#x2F; &#125;)
+      const fullname &#x3D; computed(&#123;
+        set: function(newValue) &#123;
+          const tempNames &#x3D; newValue.split(&quot; &quot;)
+          names.firstName &#x3D; tempNames[0]
+          names.lastName &#x3D; tempNames[1]
+        &#125;,
+        get: function() &#123;
+          return names.firstName + &quot; &quot; + names.lastName
+        &#125;
+      &#125;)
+
+      console.log(fullname)
+
+      function setFullname() &#123;
+        fullname.value &#x3D; &quot;coder why&quot;
+        console.log(names)
+      &#125;
+
+
+      &#x2F;&#x2F; 2.定义score
+      const score &#x3D; ref(89)
+      const scoreLevel &#x3D; computed(() &#x3D;&gt; &#123;
+        return score.value &gt;&#x3D; 60 ? &quot;及格&quot;: &quot;不及格&quot;
+      &#125;)
+
+      return &#123;
+        names,
+        fullname,
+        setFullname,
+        scoreLevel
+      &#125;
+    &#125;
+  &#125;
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+&lt;&#x2F;style&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-vue.js" data-language="vue.js"><code class="language-vue.js">&#x2F;&#x2F; const fullname &#x3D; computed(() &#x3D;&gt; &#123;
+   &#x2F;&#x2F;   return names.firstName + &quot; &quot; + names.lastName
+   &#x2F;&#x2F; &#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如上即computed在setup中的基本使用，其中默认只设置了get，没有set，如果要设置set如下</p>
+<pre class="line-numbers language-vue.js" data-language="vue.js"><code class="language-vue.js">const fullname &#x3D; computed(&#123;
+      set: function(newValue) &#123;
+        const tempNames &#x3D; newValue.split(&quot; &quot;)
+        names.firstName &#x3D; tempNames[0]
+        names.lastName &#x3D; tempNames[1]
+      &#125;,
+      get: function() &#123;
+        return names.firstName + &quot; &quot; + names.lastName
+      &#125;
+    &#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中computed（）返回的也是一个ref对象，我们给fullname赋值，需要通过fullname.value</p>
+<h3 id="组件的生命周期函数"><a href="#组件的生命周期函数" class="headerlink" title="组件的生命周期函数"></a>组件的生命周期函数</h3><h3 id="Provide-Inject使用"><a href="#Provide-Inject使用" class="headerlink" title="Provide/Inject使用"></a>Provide/Inject使用</h3><h3 id="watch-watchEffect"><a href="#watch-watchEffect" class="headerlink" title="watch/watchEffect"></a>watch/watchEffect</h3><h3 id="自定义Hook联系"><a href="#自定义Hook联系" class="headerlink" title="自定义Hook联系"></a>自定义Hook联系</h3><h3 id="script-setup-语法糖"><a href="#script-setup-语法糖" class="headerlink" title="script setup 语法糖"></a>script setup 语法糖</h3><p>vue3.2版本才有</p>
+
                 
             </div>
             <hr/>
@@ -1369,19 +1448,19 @@ import &#123;ref&#125; from &quot;vue&quot;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/archives/55cb27f3.html">
+                <a href="/archives/4e61e81f.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Vue3_05_非父子通信&amp;生命周期">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Vue3_04_组件间的通信与插槽">
                         
-                        <span class="card-title">Vue3_05_非父子通信&amp;生命周期</span>
+                        <span class="card-title">Vue3_04_组件间的通信与插槽</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            万物是变化的，没有一个固定结果，而是去享受当下与过程。
+                            dont doubt your vibe。
                         
                     </div>
                     <div class="publish-info">
@@ -1677,7 +1756,7 @@ import &#123;ref&#125; from &quot;vue&quot;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">193.5k</span>&nbsp;字
+                class="white-color">194.2k</span>&nbsp;字
             
             
             
