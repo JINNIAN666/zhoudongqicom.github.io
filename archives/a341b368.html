@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="HTML5&amp;CSS3,瑾年的学习记录">
     <meta name="description" content="分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -476,14 +476,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-11
+                    2023-02-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.5k
+                    4.4k
                 </div>
                 
 
@@ -801,12 +801,13 @@
 <p>form 表单域——翻译：类型; 种类; 形式; 外表; 样子; 表格</p>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>1-HTML是标记语言，不是编程语言</p>
 <p>2-HTML语言文件后缀可以是HTML和HTM，常用为HTML</p>
-<p>3-HTML5的文档定义就是<!doctype html>不需要加“5”，不区分大小写</p>
+<p>3-HTML5的文档定义就是</p>
+<p>// <!doctype html></p>
+<p>不需要加“5”，不区分大小写</p>
 <p>4-元素由标签和内容组成</p>
 <p>5-标签一般是成对出现的，&lt; br&gt;与&lt; hr&gt; &lt; img&gt;这些单标签，根据最新标准，最好写为&lt; br/&gt;与&lt; hr/&gt; &lt; img/&gt;</p>
-<p>6-标签与属性虽然没大小写要求，单最好写小写，属性后的值用双引号（个别属性值自带双引号，则用单引号）</p>
-<p>7-通过元素是否需要包含内容，判断是单标签还是双标签，如p标签，需要包含内容则是双，hr单纯加一条下划线</p>
-<p>则是单标签。</p>
+<p>6-标签与属性虽然没大小写要求，但最好写小写，属性后的值用双引号（个别属性值自带双引号，则用单引号）</p>
+<p>7-通过元素是否需要包含内容，判断是单标签还是双标签，如p标签，需要包含内容则是双，hr单纯加一条下划，则是单标签。</p>
 <p>8.一个标签可以有多个属性，属性间，属性与标签名字间用空格隔开</p>
 <p>9.字符实体为分号结尾”；“如&amp;n bsp；</p>
 <p>10.本地绝对路径的符号为\，绝对路径就是完全完整的一个路径，如E:\前端\HTML_CSS_CODE，而网站的绝对路径与其他相对路径等基本上是“/”</p>
@@ -873,26 +874,26 @@
 <p><mark>a标签的target，当值为_blank则新页面打开，_self则本页面打开</mark></p>
 <p><mark>超链接的href为超文本引用，hypertext reference，链接可以用””#”代替</mark></p>
 <p><img src="https://zhoudongqi.com/picture/new/HTML_CSS/04.png"></p>
-<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><pre class="line-numbers language-none"><code class="language-none">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta name&#x3D;&quot;author&quot; content&#x3D;&quot;瑾年&quot;&gt;
-&lt;meta name&#x3D;&quot;keywords&quot; content&#x3D;&quot;练习&quot;&gt;
- &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
-&lt;&#x2F;head&gt;
-&lt;body&gt;
-&lt;h1&gt;40.6摄氏度:上海创出140年气象史上高温新纪录&lt;&#x2F;h1&gt;
-&lt;p&gt;2021年07月27日 10:58:26 来源:新华网&lt;&#x2F;P&gt;
-&lt;hr&#x2F;&gt;
-&lt;p&gt;新华网上海7月26日电（记者李荣）26日13时36分至47分这一时间段，上海徐家汇气象观测站测得当日最高温达40.6摄氏度。这是上海有气象记录以来140年的高温新纪录，打破了此前1934年创下的40.2摄氏度的历史极值。&lt;&#x2F;p&gt;
-&lt;br&#x2F;&gt;
-&lt;p&gt;上海已经连续2天发出了最高等级的红色高温警报。上海中心气象台首席服务官满莉萍说，今年副热带高压强度特别强，对上海及江南地区的控制“实在太稳定了”，整个7月份基本上都处在它的势力范围之内。25日上海已出现了气象史上7月份“第四高”的高温值，这使得26日的“基础”气温就很高，超过了30摄氏度，然后不断地升温。此外，26日白天风小，又吹的是西南风，特别是在中午之后这一个最易出现高温的时段，光照又比较强，所以气温“直线飙升”，一举冲破历史极值，出现了“创纪录”的极端酷暑天。
+<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token name">doctype</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>author<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>瑾年<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>keywords<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>练习<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>40.6摄氏度:上海创出140年气象史上高温新纪录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>2021年07月27日 10:58:26 来源:新华网<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>P</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>新华网上海7月26日电（记者李荣）26日13时36分至47分这一时间段，上海徐家汇气象观测站测得当日最高温达40.6摄氏度。这是上海有气象记录以来140年的高温新纪录，打破了此前1934年创下的40.2摄氏度的历史极值。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>上海已经连续2天发出了最高等级的红色高温警报。上海中心气象台首席服务官满莉萍说，今年副热带高压强度特别强，对上海及江南地区的控制“实在太稳定了”，整个7月份基本上都处在它的势力范围之内。25日上海已出现了气象史上7月份“第四高”的高温值，这使得26日的“基础”气温就很高，超过了30摄氏度，然后不断地升温。此外，26日白天风小，又吹的是西南风，特别是在中午之后这一个最易出现高温的时段，光照又比较强，所以气温“直线飙升”，一举冲破历史极值，出现了“创纪录”的极端酷暑天。
 
 在上海历史上，出现40摄氏度以上极端高温的几率并不大。根据相关资料，中心城区徐家汇观测站140年来仅出现了5次记录，除了这一次的新纪录，还有就是1934年7月12日的40.2摄氏度；1934年8月25日、2009年7月20日、2010年8月13日的40摄氏度。
 
-由于气温实在太高，上海26日下午不少地区出现了热对流天气。气象台说，首先是浦东地区，下起了热雷雨。到15时05分，全市大部分地区出现了分散性的雷电活动和热雷雨，中心城区徐家汇等地都响起了隆隆的雷声。&lt;&#x2F;p&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;
+由于气温实在太高，上海26日下午不少地区出现了热对流天气。气象台说，首先是浦东地区，下起了热雷雨。到15时05分，全市大部分地区出现了分散性的雷电活动和热雷雨，中心城区徐家汇等地都响起了隆隆的雷声。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><b>练习2</b></p>
@@ -2090,7 +2091,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">194.2k</span>&nbsp;字
+                class="white-color">193.6k</span>&nbsp;字
             
             
             
@@ -2324,7 +2325,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 </body>
