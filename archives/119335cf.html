@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-12
+                    2023-03-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    18 分
                 </div>
                 
 
@@ -578,7 +578,7 @@
 <p>24-background-position： 可以书写left/right/bottom等，也可以写数字，单位是像素。</p>
 <p>25-background复合属性也可以一起写，不需要注意顺序，因为他们的属性值都有很大不同。</p>
 <p>26-p和h不能互相嵌套，因为一段文字不能即是段落又是标题</p>
-<p>27-互相嵌套的块元素紧贴在一起，设置margin后塌陷；解决方法：让它们不贴在一起即可，用个标签隔开，或者设置浮动，或者给父元素设置overflow：hidden</p>
+<p>27-互相嵌套的块元素紧贴在一起，设置margin后外边距塌陷；解决方法：让它们不贴在一起即可，用个标签隔开，或者设置浮动，或者给父元素设置overflow：hidden（原理：父级元素设置了overflow:hidden;属性后布局正常，触发了BFC,导致了该父级就会按照BFC的规则进行布局。）</p>
 <p>28-两个盒子间，就是有白色间距，也清除了margin等；这是因为代码中两个盒子的语句换行了，解决方法：给盒子设置浮动。（注意浮动会脱标）</p>
 <p>29：input中的placeholder属性也是可以写css的，如input::placeholder{}</p>
 <blockquote>
@@ -602,6 +602,15 @@
 <p>37-页面图标引入</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>38-书写css，先写可能用到的浮动和定位，然后写盒子模型的样式，最后写文字样式，这样可以提高渲染效率；</p>
+<p>如你先写了盒子模型，都渲染完了，又浮动一下，又要消耗性能。</p>
+<p>39-伪元素是类似行内元素的特性，无法直接设置大小和margin和padding。</p>
+<p>40-清除浮动有，额外标签法，单伪元素清除法，双伪元素清除法（相较与单伪元素它的display设置为了table，而且上面也加了一个块级元素，所以可以解决塌陷问题），它们的核心都是加一个块级元素，然后赋予clear:both的css；</p>
+<p>还有overflow清除浮动（利用了BFC块级格式化上下文的特性）</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/always_die0/article/details/108296195">https://blog.csdn.net/always_die0/article/details/108296195</a></p>
+<p>41-固定定位是脱标的，还有注意绝对定位和相对定位的left，right，top，bottom是基于谁比较的，不理解的话会写反。</p>
+<p>比如left:100px.top:20px，是以相对与参照物（绝对定位就是以有定位的父级为参照物，相对定位就是起初自己的位置为参照物），移动后，参照物在移动后位置的上面20px，左边100px。</p>
+<p>42-绝对定位移动后，移动前的原先的位置也是不脱标的，还是会占标准流的位置。</p>
 <h2 id="C3拓展与移动端适配"><a href="#C3拓展与移动端适配" class="headerlink" title="C3拓展与移动端适配"></a>C3拓展与移动端适配</h2><p>1-transform:translate（x，y） rotate（xdeg）当一个动画既要旋转又要位移，必须先写位移后写旋转，因为先旋转会改变xy轴的方法，从而改变位移方向。</p>
 <p>2-linear-gradient{transparent，rgba（0，0，0，0）}可以设置渐变颜色，参数用逗号隔开即可。</p>
 <p>3-perspective：800-1200属性实现透视效果，此属性加给需要透视元素的父级(一代父级，不包括爷爷祖宗)，而且必须配合translateZ使用才有效果。</p>
@@ -1576,7 +1585,7 @@ let date =new Date()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">193.6k</span>&nbsp;字
+                class="white-color">194k</span>&nbsp;字
             
             
             
