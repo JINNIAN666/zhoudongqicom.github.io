@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.zhoudongqi.com/archives/ef67e041.html</loc>
+    <lastmod>2023-04-04</lastmod>
+  </url>
+  <url>
     <loc>https://www.zhoudongqi.com/archives/9fa8673d.html</loc>
     <lastmod>2023-03-23</lastmod>
   </url>
@@ -343,9 +347,5 @@
   <url>
     <loc>https://www.zhoudongqi.com/archives/e8bb5609.html</loc>
     <lastmod>2022-07-11</lastmod>
-  </url>
-  <url>
-    <loc>https://www.zhoudongqi.com/archives/ef67e041.html</loc>
-    <lastmod>2022-07-10</lastmod>
   </url>
 </urlset> 
