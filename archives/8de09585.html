@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="windows,瑾年的学习记录">
+    <meta name="keywords" content="中英翻译,JinNianX，瑾年，探索未知">
     <meta name="description" content="分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>windows疑难杂症 | 瑾年-JinNianX-瑾年的学习记录</title>
+    <title>修复Googletranslater | 瑾年-JinNianX-瑾年的学习记录</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">windows疑难杂症</h1>
+                    <h1 class="description center-align post-title">修复Googletranslater</h1>
                 </div>
             </div>
         </div>
@@ -444,8 +444,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/windows/">
-                                <span class="chip bg-color">windows</span>
+                            <a href="/tags/max/">
+                                <span class="chip bg-color">max</span>
                             </a>
                         
                     </div>
@@ -456,8 +456,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%B5%E8%84%91/" class="post-category">
-                                电脑
+                            <a href="/categories/max/" class="post-category">
+                                max
                             </a>
                         
                     </div>
@@ -469,21 +469,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-01
+                    2023-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-27
+                    2023-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    134
+                    458
                 </div>
                 
 
@@ -513,12 +513,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>问题一：打出一个字必须清除覆盖一个字，非常难受</p>
-<p>原因：不小心进入了覆盖模式，按一下键盘上的ins也就是insert键即可解除。</p>
-<p>问题二：打游戏切换任务栏，如：从游戏切换回桌面，会黑屏几秒</p>
-<p>原因：游戏帧数hz与桌面不一样，统一帧数即可。</p>
-<p>问题三：平时的win快捷键失效。win+L锁屏，win+D返回桌面等。</p>
-<p>原因：win键被不小心锁住了，按fn+win解锁即可。</p>
+                <p><strong>前言：</strong></p>
+<p>我们在chorm浏览器中自带了Googletranslater这个插件，右键选择即可翻译英文网页，但是最近好像失效了，我科学上网都无效。</p>
+<p>原因：科学上网都无效说明不是网络的问题，其实是国内通过DNS服务器污染了Google的正确的翻译服务的ip地址，网络虽然正常，但是我们用的dns解析服务器还是国内的，所以取不到正确的IP，所以无法访问。</p>
+<p>解决：我们需要手动找到最新的ip地址，然后内置到我们电脑的host文件中，即用手动设置来代替DNS服务器。</p>
+<p>缺点：谷歌的翻译服务的ip也经常改变，意味着我们要经常手动更改，而且最新的可用IP也很难找，太麻烦了。</p>
+<p>最佳解决：通过下面项目一键设置最新host即可。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">https://github.com/Ponderfly/GoogleTranslateIpCheck<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意：</p>
+<p>此项目大概原理就是把所有的google翻译服务器ip写入了软件，然后如果都失效，就去此软件开发者的服务器找最新的可用ip；但是貌似软件开发者的服务器是不可用状态，这时我们只需要去当前github项目中手动下载最新的可用IP地址，然后替换掉此软件目录的ip.txt文件再重新运行软件即可。</p>
+<p><strong>如何修改本地HOST</strong></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">C:\Windows\System32\drivers\etc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>一般在如上路径，用记事本方式打开即可。</p>
+<p>然后再在cmd中执行如下指令刷新dns即可</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">ipconfig /flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>详细参考</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">https://blog.csdn.net/weixin_55846296/article/details/131451501<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>目前可用IP</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">108.177.97.100
+64.233.189.191
+216.239.32.40
+142.251.171.90
+172.217.218.90
+142.251.174.90
+74.125.196.113
+142.251.175.90
+108.177.126.90<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -535,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">瑾年</a>
+                    <a href="/about" rel="external nofollow noreferrer">周东奇</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -545,7 +570,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.zhoudongqi.com/archives/8258e2a0.html">https://www.zhoudongqi.com/archives/8258e2a0.html</a>
+                    <a href="https://www.zhoudongqi.com/archives/8de09585.html">https://www.zhoudongqi.com/archives/8de09585.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,7 +583,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <!-- <a href="/about" target="_blank">瑾年</a> -->
+                    <!-- <a href="/about" target="_blank">周东奇</a> -->
                     <a href="/about" target="_blank">周东奇</a>
                     !
                 </span>
@@ -596,8 +621,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/windows/">
-                                    <span class="chip bg-color">windows</span>
+                                <a href="/tags/max/">
+                                    <span class="chip bg-color">max</span>
                                 </a>
                             
                         </div>
@@ -1035,46 +1060,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/4ceae954.html">
+                <a href="/archives/8de09585.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="认识英语音标-英语兔">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="修复Googletranslater">
                         
-                        <span class="card-title">认识英语音标-英语兔</span>
+                        <span class="card-title">修复Googletranslater</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            攘外必先安内
+                            凡是都有利弊，取其大。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD/" class="post-category">
-                                    英语
+                            <a href="/categories/max/" class="post-category">
+                                    max
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/English/">
-                        <span class="chip bg-color">English</span>
+                    <a href="/tags/max/">
+                        <span class="chip bg-color">max</span>
                     </a>
                     
                 </div>
@@ -1088,31 +1115,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/e345326.html">
+                <a href="/archives/e72c68fb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="小程序_01">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="claude人工智能不回复">
                         
-                        <span class="card-title">小程序_01</span>
+                        <span class="card-title">claude人工智能不回复</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            失败是件好事，让我尽早排除了一种错误的方式。。
+                            年轻人总是急功近利自以为是，不知天高地厚。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/max/" class="post-category">
+                                    max
                                 </a>
                             
                             
@@ -1122,8 +1149,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%9F%E7%94%9F%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">原生小程序</span>
+                    <a href="/tags/max/">
+                        <span class="chip bg-color">max</span>
                     </a>
                     
                 </div>
