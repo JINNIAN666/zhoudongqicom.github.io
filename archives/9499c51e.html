@@ -41,7 +41,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img style="z-index:1" src="/medias/logo.png" class="logo-img" alt="logo"logo title="深呼吸，冥想，你能看多远还是蒙了眼，大胆做你所想；纠结没意思，Just do it，rise up！！！">
+                    <img style="z-index:1" src="/medias/logo.png" class="logo-img" alt="logo"logo title="深呼吸，冥想，你能看多远还是蒙了眼，大胆做你所想；纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.">
                     
                     <span class="logo-span" title="0-X,体验这场旅途;一切都在改变,唯有意识。">瑾年</span>
                 </a>
@@ -472,21 +472,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-26
+                    2024-02-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    4.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
 
@@ -544,8 +544,8 @@
 <blockquote>
 <p><strong>总而言之言而总之，有两个备案</strong></p>
 <p>icp管局备案：你用国内服务器就必须要备案，用国外服务器就不需要备案。然后个人备案的icp管局备案大部分省份不允许网站进行交互（注册登入和评论等操作）</p>
-<p>公安备案：无论用不用国内服务器都要求备案，但是不严，大部分人没有公安备案过。在这里申请交互式基本上也需要线下（看情况吧我申请没去线下也通过了）。</p>
-<p>两个备案互不联系职能不同：我管局备案是个人备案，理论是不允许交互的，然而公安备案我申请交互式又通过了，但如果我的网站交互，被管局发现，即使公安备案了交互式，也和管局不相干，照样会给警告要求取消交互的。</p>
+<p>公安备案：无论用不用国内服务器都要求备案，要求是开站icp备案下来30天内进行公安备案，否则可以给予警告或关站整改。但是不严，大部分网站没有公安备案过。在这里申请交互式基本上也需要线下。</p>
+<p>两个备案互不联系职能不同：我管局备案是个人备案，理论是不允许交互的，然而公安备案我申请交互式又通过了，但如果我的网站交互，被管局发现，即使公安备案了交互式，也和管局不相干，可能也会警告要求取消交互。</p>
 <p>用海外服务器：不需要管局备案，但同样要进行公安备案，但上文说了，要求不严格，很多人没备案过。看个人吧，比如你godday注册的com域名，又是海外服务器，都无法判断你是国内站点，你是否公安备就看自觉性了。cn域名的话，找你了再备案呗。</p>
 <p>看似很复杂，其实也没那么离谱，只要你不是h，d，d和骗人，提供一些服务，按不了你的head，最多整改罚款。</p>
 </blockquote>
@@ -603,7 +603,7 @@
 <p>我们公安备案的一般是非交互式，也就是没有用户的注册登入的，如果要有让大众注册登入的交互功能，备案就需要选交互式。（icp备案是不分交互式的，但是icp个人备案大部分省份默认也是不能交互的，也就是不能让用户注册和发评论等操作）</p>
 <p>区别：</p>
 <p>非交互式：如上内容线上申请一下，等工信局通过就行了。</p>
-<p>交互式：不同地区可能不同，有的地方可能需要线下和police叔叔面对面备案的。</p>
+<p>交互式：不同地区可能不同，有的地方线上申请后可能还需要线下和police叔叔面对面备案的。</p>
 </blockquote>
 <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>1-总所周知，想用国内服务器为域名提供服务，域名必须备案，但备案又很麻烦，如果你只是用此域名做一个静态网站，则可以用github的仓库代替服务器。</p>
 <blockquote>
@@ -628,6 +628,17 @@
 <p>它们职责根本不同，你公安备案通过了支付交互不代表你能这样做，它只是一个备案，反而如果你备案了，没有经营许可证网站还涉及交易，还能通过备案找到你是谁。</p>
 </blockquote>
 <p>所以一般站长就会通过码支付或者易支付或者发卡网进行站点经营（详细自行百度吧）</p>
+<h2 id="网站运维"><a href="#网站运维" class="headerlink" title="网站运维"></a>网站运维</h2><p>1-上cdn和对象存储oss/cos等。（记得设置限制和防刷）</p>
+<p>2-关闭境外访问，防海外ip的ddos。（注意要在dns层面或者机房层面就禁止，服务器禁止了，cdn没禁，流量费照样起飞）</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">参考：https://blog.anheyu.com/posts/dfb3.html
+为什么禁海外ip：
+1-大宽度服务器一般是国外ip
+2-国外ip抓不到不好查，而国内ipddos，即使是肉鸡，也能溯源查到攻击者的几率更大。
+3-我们的站点也不需要让国外访问<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3-将所有图片资源压缩替换为webp（可以设置不支持webp的浏览器照样显示原jpg和png（也得压缩）），一般这个功能在oss和cdn中可以设置。</p>
+<p>4-服务器和cdn，oss等都上防盗链。</p>
+<p>5-一定要定时备份站点！！！防止误操作或者被黑了删数据！！！</p>
 
                 
             </div>
@@ -1190,7 +1201,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">217.1k</span>&nbsp;字
+                class="white-color">217.8k</span>&nbsp;字
             
             
             
@@ -1208,7 +1219,7 @@
                     class="white-color"></span>&nbsp;人
             </span>
             <br>
-            <span class="justdoit">深呼吸，冥想，你能看多远还是蒙了眼，大胆做你所想；纠结没意思，Just do it，rise up！！！</span>
+            <span class="justdoit">深呼吸，冥想，你能看多远还是蒙了眼，大胆做你所想；纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.</span>
             
             <br>
             
