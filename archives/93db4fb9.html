@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-31
+                    2024-02-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    651
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -531,6 +531,28 @@
 <p>4-内网穿透就是让外网能访问到内网设备上的数据和服务。</p>
 <p>5-ipv4就是IP，255-255-255-255，但是地址有限目前不够用了，就算局域共用ip都越来越不够用；所以启用ipv6，达到足够多的ip，地球的每一颗沙子都可以有独立ip。</p>
 <p>6-NAS（Network Attached Storage：网络附属存储），就是一个联网硬盘，存数据用的，同一个局域网下都可以直接访问：就等于传统硬盘需要插线，nas只要是同一个局域网，所有设备都可以直接访问。（外网访问就需要内网穿透了）</p>
+<p>7-非对称加密：公钥用来加密，私钥用来解密，（也可以私钥加密，公钥解密。反正一方加密另外一方就只能解密）。</p>
+<blockquote>
+<p>公钥和私钥是根据数学原理设计的，使得通过公钥加密的数据只能使用相应的私钥进行解密。这是因为公钥和私钥之间存在一种数学上的关联，可以通过私钥来推导出公钥，但反过来是非常困难的。</p>
+<p>这种特性确保了数据的安全性。如果任何人都可以使用公钥解密数据，那么加密就没有意义了，因为任何人都可以获取到私密信息。只有私钥的持有者才能解密数据，这样可以确保数据只能被授权的人访问。</p>
+</blockquote>
+<p>8-对称加密：指的是加密和解密使用的秘钥都是同一个。</p>
+<p>9-https：在应用层的http上面加了一个证书验证（tls或者ssl）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/weixin_46511008/article/details/120792170">https://blog.csdn.net/weixin_46511008/article/details/120792170</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/andy-zhou/p/5345003.html">https://www.cnblogs.com/andy-zhou/p/5345003.html</a></p>
+<p>1-用户浏览器访问服务器</p>
+<p>2-服务器下发公钥给用户浏览器</p>
+<p>3-用户浏览器对公钥进行验证（黑客可能通过广播公钥的方式伪装服务端，用了黑客的公钥，私钥也在黑客手里，自然加密没用了，所以要通过ca机构验证此公钥的合法性）</p>
+<p>4-用户浏览器通过服务器下发的非对称性加密的公钥，加密一个对称性“对话密钥”（由先前通信的浏览器和服务器各自生成的随机数组成）发给服务器</p>
+<p>5-服务器收到“对话密钥”，达成对称性加密通信。</p>
+<p>为什么要“对话密钥”对称性加密？</p>
+<p>因为用户端没有非对称性加密的私钥（它也不能有私钥，不然在私钥传递前过程中，黑客也获取了私钥），无法解密服务器发来的信息。</p>
+<p>为什么不直接攻击获取“对话密钥”？</p>
+<p>这个是公钥加密的，黑客获取了也解密不了。</p>
+<p>为什么不直接获取没有用非对称加密公钥，加密前的“对话密钥”？</p>
+<p>因为这个“对话密钥”是随机数组成的，如浏览器生成的随机数3，它通过公钥加密传递，攻击者又没有用户浏览器的最高权限，黑客通过通信协议劫持数据，根本管不到浏览器里面去。只能获取到公钥加密后的“对话密钥”  ，如果黑客有浏览器的最高权限，那他就算是”真实用户“了，都用不着管什么对称加密不对称加密的。</p>
+</blockquote>
 
                 
             </div>
@@ -1089,7 +1111,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">218.4k</span>&nbsp;字
+                class="white-color">219.2k</span>&nbsp;字
             
             
             

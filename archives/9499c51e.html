@@ -472,21 +472,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-08
+                    2024-02-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.2k
+                    5.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    18 分
                 </div>
                 
 
@@ -634,6 +634,7 @@
 <p>存储oss/cos可以设置私用访问，只允许cdn来访问，那么存储流量就不会被刷，但是cdn就遭罪了，不过cdn流量比存储的便宜一点。</p>
 </blockquote>
 <p>2-关闭境外访问，防海外ip的ddos。（注意要在dns层面或者机房层面就禁止，服务器禁止了，cdn没禁，流量费照样起飞）</p>
+<p>3-网站备案，备案后有人攻击你，你报警，他得进去。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">参考：https://blog.anheyu.com/posts/dfb3.html
 为什么禁海外ip：
 1-大宽度服务器一般是国外ip
@@ -643,10 +644,14 @@
 <p>3-将所有图片资源压缩替换为webp（可以设置不支持webp的浏览器照样显示原jpg和png（也得压缩）），一般这个功能在oss和cdn中可以设置。</p>
 <p>4-服务器和cdn，oss等都上防盗链。</p>
 <p>5-一定要定时备份站点！！！防止误操作或者被黑了删数据！！！</p>
-<h2 id="站点安全"><a href="#站点安全" class="headerlink" title="站点安全"></a>站点安全</h2><p>什么设置修改后台访问端口和地址，再设置后台登入次数等限制，即使找到后台入口也爆破不开等，这些都基操。</p>
+<h2 id="站点安全"><a href="#站点安全" class="headerlink" title="站点安全"></a>站点安全</h2><p>什么设置修改后台访问端口和地址，再设置后台登入次数等限制，即使找到后台入口也爆破不开，防止ssh爆破，禁ping等，设置域名禁止转移，数据库定时备份，网站备份这些都基操。</p>
 <h3 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h3><p>1-网站没有太大的业务价值的时候，每天备份就行，被黑了打不了重装</p>
 <p>2-网站有业务价值后，可以找专业人士渗透测试。</p>
-<h3 id="ddos攻击"><a href="#ddos攻击" class="headerlink" title="ddos攻击"></a>ddos攻击</h3><p><strong>cc攻击</strong>：是web层面的，打的http/https，一般是不断请求慢接口，让你服务器cpu内存和io等处理不过来，导致网站交互功能（用户登录注册，发评论等）瘫痪。</p>
+<h3 id="ddos攻击"><a href="#ddos攻击" class="headerlink" title="ddos攻击"></a>ddos攻击</h3><p>ddos就是资源换资源，沾满你的流量带宽，或者cpu和内存。</p>
+<p>了解ddos，必须先学习通信协议，http,tcp,udp,dns,ip等等协议。</p>
+<p>攻击：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/282616786/">https://space.bilibili.com/282616786/</a></p>
+<p>防御：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV16m4y1a7se/">https://www.bilibili.com/video/BV16m4y1a7se/</a></p>
+<p><strong>cc攻击</strong>：是web层面的，打的http/https，一般是不断请求慢接口，让你服务器cpu内存和io等处理不过来，导致网站交互功能（用户登录注册，发评论等）瘫痪。</p>
 <p>解决：</p>
 <p>1-设置并发限制。</p>
 <p>2-统计每个ip的请求总时长，超过阈值直接拒绝连接。</p>
@@ -658,7 +663,7 @@
 <p>原理：因为cdn用的方案绝大都是nginx，只有http(s)协议能通过cdn到达源站，其他协议一律在cdn处过滤了。这样四层协议完全无法穿过cdn，什么udp 洪水，udp反射，icmp洪水，syn洪水都没用。</p>
 </blockquote>
 <p><strong>防止泄露源ip：</strong></p>
-<p>源IP泄露了，cdn就只有对正常用户起缓存加速和节省带宽作用了。起不到防御udp等攻击的作用了，因为直接打你源ip就行了，流量不需要通过cdn了。</p>
+<p>源IP泄露了，cdn就只有对正常用户起缓存加速和节省带宽作用了。起不到防御udp等ddos攻击的作用了，因为直接打你源ip就行了，流量不需要通过cdn了。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1MX4y177BU/">https://www.bilibili.com/video/BV1MX4y177BU/</a></p>
 </blockquote>
@@ -1224,7 +1229,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">218.4k</span>&nbsp;字
+                class="white-color">219.2k</span>&nbsp;字
             
             
             
