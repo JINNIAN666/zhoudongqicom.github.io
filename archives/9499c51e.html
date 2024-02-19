@@ -472,21 +472,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-12
+                    2024-02-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    6.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    22 分
                 </div>
                 
 
@@ -545,9 +545,9 @@
 <p><strong>总而言之言而总之，有两个备案</strong></p>
 <p>icp管局备案：你用国内服务器就必须要备案，用国外服务器就不需要备案。然后个人备案的icp管局备案大部分省份不允许网站进行交互（注册登入和评论等操作）</p>
 <p>公安备案：无论用不用国内服务器都要求备案，要求是开站icp备案下来30天内进行公安备案，否则可以给予警告或关站整改。但是不严，大部分网站没有公安备案过。在这里申请交互式基本上也需要线下。</p>
-<p>两个备案互不联系职能不同：我管局备案是个人备案，理论是不允许交互的，然而公安备案我申请交互式又通过了，但如果我的网站交互，被管局发现，即使公安备案了交互式，也和管局不相干，可能也会警告要求取消交互。</p>
+<p>两个备案互不联系职能不同：如果管局备案是个人备案，理论是不允许交互的，然而公安备案我申请交互式又通过了，但如果我的网站交互，被管局发现，即使公安备案了交互式，也和管局不相干，可能也会警告要求取消交互。</p>
 <p>用海外服务器：不需要管局备案，但同样要进行公安备案，但上文说了，要求不严格，很多人没备案过。看个人吧，比如你godday注册的com域名，又是海外服务器，都无法判断你是国内站点，你是否公安备就看自觉性了。cn域名的话，找你了再备案呗。</p>
-<p>看似很复杂，其实也没那么离谱，只要你不是h，d，d和骗人，提供一些服务，按不了你的head，最多整改罚款。</p>
+<p>看似很繁琐，其实也没那么离谱，只要你不是h，d，d和骗人，提供一些服务，按不了你的head，最多整改罚款。</p>
 </blockquote>
 <p>3-如何icp备案？</p>
 <p>企业备案需要营业执照，法人身份证信息等，这里我也不太清楚。</p>
@@ -603,7 +603,7 @@
 <p>我们公安备案的一般是非交互式，也就是没有用户的注册登入的，如果要有让大众注册登入的交互功能，备案就需要选交互式。（icp备案是不分交互式的，但是icp个人备案大部分省份默认也是不能交互的，也就是不能让用户注册和发评论等操作）</p>
 <p>区别：</p>
 <p>非交互式：如上内容线上申请一下，等工信局通过就行了。</p>
-<p>交互式：不同地区可能不同，有的地方线上申请后可能还需要线下和police叔叔面对面备案的。</p>
+<p>交互式：不同地区可能不同，大部分地方线上申请后还需要线下面审，但基本上就是确定主体人，然后和你说一些注意事项。（个人为主体就去户籍所在地精确到县，公司为主体就去公司注册地）</p>
 </blockquote>
 <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>1-总所周知，想用国内服务器为域名提供服务，域名必须备案，但备案又很麻烦，如果你只是用此域名做一个静态网站，则可以用github的仓库代替服务器。</p>
 <blockquote>
@@ -644,29 +644,68 @@
 <p>3-将所有图片资源压缩替换为webp（可以设置不支持webp的浏览器照样显示原jpg和png（也得压缩）），一般这个功能在oss和cdn中可以设置。</p>
 <p>4-服务器和cdn，oss等都上防盗链。</p>
 <p>5-一定要定时备份站点！！！防止误操作或者被黑了删数据！！！</p>
-<h2 id="站点安全"><a href="#站点安全" class="headerlink" title="站点安全"></a>站点安全</h2><p>什么设置修改后台访问端口和地址，再设置后台登入次数等限制，即使找到后台入口也爆破不开，防止ssh爆破，禁ping等，设置域名禁止转移，数据库定时备份，网站备份这些都基操。</p>
-<h3 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h3><p>1-网站没有太大的业务价值的时候，每天备份就行，被黑了打不了重装</p>
-<p>2-网站有业务价值后，可以找专业人士渗透测试。</p>
-<h3 id="ddos攻击"><a href="#ddos攻击" class="headerlink" title="ddos攻击"></a>ddos攻击</h3><p>ddos就是资源换资源，沾满你的流量带宽，或者cpu和内存。</p>
-<p>了解ddos，必须先学习通信协议，http,tcp,udp,dns,ip等等协议。</p>
+<p>6-上redis缓存等。</p>
+<h2 id="站点安全"><a href="#站点安全" class="headerlink" title="站点安全"></a>站点安全</h2><p>什么设置修改后台访问端口和地址；后台用户名不要与前台一致；</p>
+<p>设置后台登入次数等限制，即使找到后台入口也爆破不开；禁止国外ip访问；</p>
+<p>修改ssh连接端口；防止ssh爆破；隐藏服务器信息，关闭不必要的端口；</p>
+<p>https；及时更新系统（yum -y update）和环境；不用盗版插件与代码；</p>
+<p>禁ping等(对象是服务器，你在宝塔把源服务器设置了禁ping，不代表cdn也禁ping，cdn是另外的服务器)；</p>
+<p>设置域名禁止转移；宝塔的安全软件全安排上（win系统可以用安全狗）；</p>
+<p>宝塔将网站敏感文件路径设置为加密访问；开启域名禁止转移；设置网站和数据库定时备份任务（记得还要定时下载到本地）等等这些都基操。</p>
+<blockquote>
+<p>windows吃性能，而且没有Linux安全，虽然是可视化界面简单，不过一般选用Linux</p>
+</blockquote>
+<h3 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h3><p>1-网站没有太大的业务价值的时候，装一些waf（比如wp程序就搞个wordfence插件等），每天备份就行，被黑了大不了重装。</p>
+<p>2-宝塔面板或者什么权限，全部开双重验证，如宝塔：设置指定地址和端口才能进管理后台，然后还得输入一次页面方法密码，然后输入面伴登录账户密码后，还得手机二次验证。</p>
+<p>3-没用的端口全部关了。</p>
+<p>4-网站有业务价值后，可以找专业人士渗透测试。</p>
+<h3 id="DDos攻击"><a href="#DDos攻击" class="headerlink" title="DDos攻击"></a>DDos攻击</h3><blockquote>
+<p>所有的措施只是追求一个性价比的防御方式，但是惹到大佬了，肯定防不住，大型攻击只有上高防（防御是一个过程，你一个小站不会遭到大型攻击，大站有钱上防御了也不怕攻击），不然腾讯云这些大厂的高防服务早破产了。</p>
+</blockquote>
+<p>tip：</p>
+<p>1-下载一个最新的恶意ip，然后全部丢到防火墙里面拦截。</p>
+<p>2-黑洞：就是机房检测到你的ip在被攻击，直接把你ip停了。</p>
+<p>3-ddos就是资源换资源，沾满你的流量带宽（ddos），或者cpu和内存（CC）。</p>
+<p><strong>了解ddos，必须先学习通信协议，http,tcp,udp,dns,ip等等协议。</strong></p>
+<blockquote>
+<p>攻击方式：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1Ad4y11744">https://www.bilibili.com/video/BV1Ad4y11744</a></p>
 <p>攻击：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/282616786/">https://space.bilibili.com/282616786/</a></p>
 <p>防御：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV16m4y1a7se/">https://www.bilibili.com/video/BV16m4y1a7se/</a></p>
+</blockquote>
 <p><strong>cc攻击</strong>：是web层面的，打的http/https，一般是不断请求慢接口，让你服务器cpu内存和io等处理不过来，导致网站交互功能（用户登录注册，发评论等）瘫痪。</p>
 <p>解决：</p>
+<p>最简单：找个好waf</p>
 <p>1-设置并发限制。</p>
 <p>2-统计每个ip的请求总时长，超过阈值直接拒绝连接。</p>
 <p>3-拉黑ip</p>
-<p><strong>udp洪水放大攻击</strong>：打的是带宽，UDP是一种无连接的协议，它不需要在发送和接收数据之前建立连接。这使得UDP攻击可以通过发送大量的UDP数据包，占用服务器的带宽，从而导致网络拥塞，影响正常的网络通信。</p>
+<p><strong>ddos的udp洪水放大攻击</strong>：打的是带宽，UDP是一种无连接的协议，它不需要在发送和接收数据之前建立连接。这使得UDP攻击可以通过发送大量的UDP数据包，占用服务器的带宽，从而导致网络拥塞，影响正常的网络通信。</p>
 <p>解决：</p>
 <p>1-上cdn，打不到自己的源服务器。注意：这样的话，攻击者可以刷量攻击，cdn流量会让你破产，所以得设置cdn不缓存，请求回源，然后源服务器设置响应请求的一系列带宽限制，如：一小时内只能走多少流量，因为正常用户用缓存一般也没有影响。（也可以配cdn鉴权）</p>
 <blockquote>
 <p>原理：因为cdn用的方案绝大都是nginx，只有http(s)协议能通过cdn到达源站，其他协议一律在cdn处过滤了。这样四层协议完全无法穿过cdn，什么udp 洪水，udp反射，icmp洪水，syn洪水都没用。</p>
 </blockquote>
+<blockquote>
+<p>cdn可以防ddos，因为带宽打在cdn身上；但cdn防不了cc攻击的，cc攻击如：它是发起请求，去让你的服务器操作数据库，但是cdn是没有数据库功能的，所以这个攻击是源服务器在抗，cdn的waf都是通过限制和过滤恶意请求等间接防御。</p>
+<p>不要用不正规的cdn厂家服务，你不续费，他可以故意ddos你。</p>
+</blockquote>
+<p>2-买有硬件防火墙的cdn和ip</p>
 <p><strong>防止泄露源ip：</strong></p>
-<p>源IP泄露了，cdn就只有对正常用户起缓存加速和节省带宽作用了。起不到防御udp等ddos攻击的作用了，因为直接打你源ip就行了，流量不需要通过cdn了。</p>
+<p>源IP泄露了，cdn就只有对正常用户起缓存加速和节省带宽作用了。起不到防御udp等ddos攻击的作用了，因为直接打你源ip就行了，流量不需要通过cdn了，随便几下就打死了。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1MX4y177BU/">https://www.bilibili.com/video/BV1MX4y177BU/</a></p>
 </blockquote>
+<h3 id="XSS和CSRF和SQL注入"><a href="#XSS和CSRF和SQL注入" class="headerlink" title="XSS和CSRF和SQL注入"></a>XSS和CSRF和SQL注入</h3><p>XSS攻击主要是通过在公共站点中嵌入非法脚本，当其他用户访问这些页面时，这些脚本会被执行，从而影响用户的操作或窃取用户信息；CSRF攻击则是伪造用户的身份，向目标网站发送请求，这些请求通常与转账、发邮件、购物等操作相关</p>
+<blockquote>
+<p>xss：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1Qd4y1k7K4">https://www.bilibili.com/video/BV1Qd4y1k7K4</a></p>
+<p><em>Cross Site Scripting</em>跨站脚本攻击是恶意用户通过用户的输入框注入恶意脚本到服务器，让e正常用户收到服务器的恶意脚本并执行。（不叫css是因为避免和前端的css重复，就叫了xss）</p>
+<p><em>Cross-site request forgery</em>跨站点请求伪造是伪造用户请求，进行非法操作，比如qq邮箱如果被csrf，那么攻击者就可以冒充你删除你的邮件。</p>
+<p>sql注入：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1ZR4y1Y745%EF%BC%8C%E9%80%9A%E4%BF%97%E8%AF%B4%EF%BC%9A%E5%A6%82%E7%99%BB%E5%85%A5%E8%B4%A6%E6%88%B7%EF%BC%8C%E9%BB%91%E5%AE%A2%E5%9C%A8%E7%99%BB%E5%85%A5%E6%A1%86%E5%86%85%E6%8F%92%E5%85%A5%E6%81%B6%E6%84%8Fsql%E5%AD%97%E7%AC%A6%EF%BC%8C%E6%AC%BA%E9%AA%97%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%89%A7%E8%A1%8Csql%EF%BC%8C%E4%BB%8E%E8%80%8C%E8%BE%BE%E5%88%B0%E9%AA%97%E5%8F%96%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81%E5%92%8C%E6%9D%83%E9%99%90%E7%AD%89%E6%93%8D%E4%BD%9C%E3%80%82">https://www.bilibili.com/video/BV1ZR4y1Y745，通俗说：如登入账户，黑客在登入框内插入恶意sql字符，欺骗服务器执行sql，从而达到骗取账户密码和权限等操作。</a></p>
+</blockquote>
+<p><strong>防护</strong></p>
+<p>一般现在用框架开发的程序都很少有这些漏洞，因为本身框架做了安全策略，还有配合waf防火墙，都可以进行有效防护。</p>
+<p>sql防范：对用户的输入过滤等。</p>
+<p>xss防范：对用户的输入（账户密码，评论等各种input框）做过滤，对输出做转义</p>
+<p>csrf防范：使用token（因为有同源策略，其他站点拿不到另一个站点的token）；避免get请求；使用验证码等，但是cookie也有同源策略，为什么又被利用了呢？token也会被xss等方式劫持呀？攻防永无尽之，这里只是了解</p>
 
                 
             </div>
@@ -1229,7 +1268,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">219.2k</span>&nbsp;字
+                class="white-color">220.4k</span>&nbsp;字
             
             
             
