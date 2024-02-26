@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>windows小知识 | 瑾年-JinNianX-瑾年的学习记录</title>
+    <title>互联网小知识 | 瑾年-JinNianX-瑾年的学习记录</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">windows小知识</h1>
+                    <h1 class="description center-align post-title">互联网小知识</h1>
                 </div>
             </div>
         </div>
@@ -476,21 +476,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-15
+                    2024-02-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -554,6 +554,38 @@
 <p>因为这个“对话密钥”是随机数组成的，如浏览器生成的随机数3，它通过公钥加密传递，攻击者又没有用户浏览器的最高权限，黑客通过通信协议劫持数据，根本管不到浏览器里面去。只能获取到公钥加密后的“对话密钥”  ，如果黑客有浏览器的最高权限，那他就算是”真实用户“了，都用不着管什么对称加密不对称加密的。</p>
 </blockquote>
 <p>10-WAF是Web Application Firewall的缩写，也就是web防火墙。</p>
+<p>11-github提供的静态页面page，仓库名字必须是“你的用户名.github.io”，只有这一个仓库才是真正的githubPage，其他”仓库地址.github.io”的仓库的虽然也可以为我们存储静态站点，但用”仓库地址.github.io”访问page都会404。</p>
+<blockquote>
+<p>除非通过域名解析，通过“仓库名称.github.io”会404，但是解析了域名，可以通过域名访问</p>
+</blockquote>
+<p>12-github和gitee和vercel都可以静态托管。</p>
+<blockquote>
+<p>github没有各方面限制，也不需要实名认证，唯一缺点就是大陆访问速度慢。</p>
+<p>gitee免费部署的page托管，很多限制，什么空间大小，付费版才可以自定义域名和https等等，唯一优点就是国内访问快一点。</p>
+</blockquote>
+<blockquote>
+<p>vercel弥补了github的速度慢的缺点，亲测很快。（2024.02.22；当然未来也可能被不可抗力因素限制）</p>
+<p>一招快速解决Vercel站点在国内无法访问的问题<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/660865097">https://zhuanlan.zhihu.com/p/660865097</a></p>
+<p>部署教程：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/675688020">https://zhuanlan.zhihu.com/p/675688020</a></p>
+<p>【Vercel部署个人博客-CSDN博客】<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/kuizuo12/article/details/124716488">https://blog.csdn.net/kuizuo12/article/details/124716488</a></p>
+<p>如果你有githubpages了，直接导入项目，然后换个域名dns解析就行了，很简单。（如果是githubpage转vercel，最好github登录，可以直接授权仓库）</p>
+<p>后续修改代码，直接github里面修改，vercel会自动同步。</p>
+</blockquote>
+<p>而且vercel的ip是泛播，有人ddos打带宽（通过ip），vercel会自动帮你防御（一般人打不死的），vercel也不会因为你的网站被攻击流量而封禁你的域名（因为根本不知道是你的域名被攻击了，ddos打的是ip）；如果被cc攻击（通过域名地址），因为本就是静态页面，没有接口，所以根本无法进行攻击，打的请求也根本不沾多少流量。</p>
+<blockquote>
+<p>ddos其实攻击者根本没有请求多少流量，而是通过放大攻击，用第三方把服务器要处理的流量放大了，而ddos是通过ip攻击的，vercel会防御，所以对我们静态网站无效；cc攻击，攻击者就需要实打实的流量请求，cc的本身就是为了打针对域名层面的动态服务，如果他用cc来消耗我们的带宽（vercel帮我们解决）和流量（vercel每个月只给100g，真有人强行消耗100g，我们大不了付费，攻击者成本比我们还高）。</p>
+</blockquote>
+<p>其次vercel还支持部署后端，severless，但是也要付费，而且面对成熟项目还是不足的，不然没人没服务器了~</p>
+<p>13-保存网站单个页面为静态资源</p>
+<blockquote>
+<p>我们一般会ctrl+s，但是这样保存的页面通常很不完整，教程如下</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.clicksun.cn/mis/bbs/showbbs.asp?id=22387">http://www.clicksun.cn/mis/bbs/showbbs.asp?id=22387</a></p>
+</blockquote>
+<p>14-保存整个网站的所有页面</p>
+<blockquote>
+<p>亲测小飞兔非常不错<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.xftsoft.com/product/">https://www.xftsoft.com/product/</a></p>
+<p>一般只用于保存自己的站点，记得把nginx限速和其他各类限速先关闭，不然会爬取失败。</p>
+</blockquote>
 
                 
             </div>
@@ -1112,7 +1144,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.4k</span>&nbsp;字
+                class="white-color">221.4k</span>&nbsp;字
             
             
             

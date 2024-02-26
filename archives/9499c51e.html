@@ -472,14 +472,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-19
+                    2024-02-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    6.5k
                 </div>
                 
 
@@ -706,6 +706,13 @@
 <p>sql防范：对用户的输入过滤等。</p>
 <p>xss防范：对用户的输入（账户密码，评论等各种input框）做过滤，对输出做转义</p>
 <p>csrf防范：使用token（因为有同源策略，其他站点拿不到另一个站点的token）；避免get请求；使用验证码等，但是cookie也有同源策略，为什么又被利用了呢？token也会被xss等方式劫持呀？攻防永无尽之，这里只是了解</p>
+<h2 id="CDN的选择"><a href="#CDN的选择" class="headerlink" title="CDN的选择"></a>CDN的选择</h2><p>按理来说节点ip越多，发布地区越广，加速效果越好；</p>
+<p>但是ping一些大厂官网会发现他们的ip一般就4-6个，也不多呀？</p>
+<p>因为他们的架构不像普通网站，而且他们的一个ip可能能顶你10个ip（也可能一个ip就是一整个机房），他们公司有专门的部署架构。</p>
+<p>对于普通网站来说，还是选择节点多，分布广的CDN服务商较好，当然得实际测试（有的是质量不够数量来凑，也许20个ip的速度还没有10个的快），比如用站长之家去ping。</p>
+<blockquote>
+<p>如果是面向国外用户，秒选cloudflare就行了。</p>
+</blockquote>
 
                 
             </div>
@@ -1268,7 +1275,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.4k</span>&nbsp;字
+                class="white-color">221.4k</span>&nbsp;字
             
             
             
