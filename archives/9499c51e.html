@@ -472,21 +472,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-08
+                    2024-03-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10k
+                    11.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    35 分
+                    40 分
                 </div>
                 
 
@@ -649,8 +649,9 @@
 <p>设置后台登入次数等限制，即使找到后台入口也爆破不开；禁止国外ip访问（dns层面（直接国外ip访问，主机地址解析到127.0.0.1），防火墙层面）；</p>
 <p>修改ssh连接端口；防止ssh爆破；隐藏服务器信息，关闭不必要的端口；</p>
 <p>https；及时更新系统（yum -y update）和环境；定期扫描木马，不用盗版插件与代码；</p>
-<p>禁ping等(对象是服务器，你在宝塔（也可以腾讯云直接防火墙禁ping）把源服务器设置了禁ping，不代表cdn也禁ping，cdn是另外的服务器)；</p>
+<p>禁ping等(对象是服务器，你在宝塔（也可以腾讯云直接防火墙禁ping，有很多种方式，别禁了记不得去哪可以打开）把源服务器设置了禁ping，不代表cdn也禁ping，cdn是另外的服务器)；</p>
 <p>设置域名禁止转移；宝塔的安全软件全安排上（win系统可以用安全狗）；</p>
+<p>不需要的端口就关了（比如开了https，80端口就可以关了）</p>
 <p>宝塔将网站敏感文件路径设置为加密访问；开启域名禁止转移；设置网站和数据库定时备份任务（记得还要定时下载到本地）等等这些都基操。</p>
 <blockquote>
 <p>windows吃性能，而且没有Linux安全，虽然是可视化界面简单，不过一般选用Linux</p>
@@ -683,7 +684,11 @@
 </blockquote>
 <p>解决：</p>
 <p>最简单：</p>
-<p>国内ip：找个好waf如宝塔服务器独立部署的waf；带盾的cdn，被打就上盾；</p>
+<p>国内ip：找个好waf如宝塔服务器独立部署的waf；上带盾的cdn，被打就上5s盾；</p>
+<blockquote>
+<p>本地服务器nginxwaf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADD-SP/ngx_waf/">https://github.com/ADD-SP/ngx_waf/</a></p>
+<p>宝塔独立部署waf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.kancloud.cn/kern123/cloudwaf/3198567%EF%BC%88%E9%9D%A2%E5%AF%B9cdn%E6%9C%8D%E5%8A%A1%E5%A5%97%E9%A4%90%E4%B8%8D%E5%A4%9F%EF%BC%8C%E6%88%96%E8%80%85%E6%9C%8D%E5%8A%A1%E5%95%86%E7%9A%84cc%E9%98%B2%E5%BE%A1%E6%89%8B%E6%AE%B5%E4%B8%8D%E5%A4%9F%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AAwaf%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%88%91%E8%AE%A4%E4%B8%BA%E6%90%9E%E8%BF%99%E4%B8%AA%E8%BF%98%E4%B8%8D%E5%A6%82%E5%8D%87%E7%BA%A7cdn%E9%98%B2%E5%BE%A1%E5%A5%97%E9%A4%90%EF%BC%89">https://www.kancloud.cn/kern123/cloudwaf/3198567（面对cdn服务套餐不够，或者服务商的cc防御手段不够的时候，我们自己设置一个waf服务器，其实我认为搞这个还不如升级cdn防御套餐）</a></p>
+</blockquote>
 <p>国外ip：解析到cloudflare的cdn上或者直接禁止国外ip；</p>
 <blockquote>
 <p>cc因为需要真实的连接，所以需要真实的ip，而国内是没那么多肉鸡的，就算有价格也较高，所以禁止国外ip是很有效的防cc措施。当然也可以解析到cloudflare，也能有效防御。</p>
@@ -702,6 +707,28 @@
 </blockquote>
 <p>cdn可以帮源服务器过滤udp和tcp这些四层，但是过滤不住http洪水啊？他连源ip都没有就可以攻击我。</p>
 <p>服务器防火墙，cdn防火墙，cdn人机验证盾，禁止国外ip等措施。</p>
+<blockquote>
+<p>其实CC攻击就是伪造正常用户的请求，我们识别区分正常用户和攻击者，再把攻击者拦住或封禁即可，如cdn人机验证盾就是拦住攻击者；除了人机验证盾，单个ip再限制连接请求限制，超过某个阈值再进行人机验证或者直接封禁。</p>
+<p>但是攻击者也会去打码，等一系列手段去通过人机验证，你换一种人机验证方式，他也可能更新绕过方法。</p>
+<p>你设置限制请求，他就上更多的ip，模拟正常，更精准的慢速请求面向某个慢接口攻击。这就只能分布式和负载均衡什么的源服务器硬抗了，因为cdn也处理不了动态请求。</p>
+<p>本质就是资金精力的比拼，但这种明显是有商业竞争行为的恶意攻击，攻击者本身付出的代价也很高。</p>
+<p>面对平常攻击，禁国外ip，再使用cloudflare或一个厉害防御的cdn，配合自身防火墙防御（如只允许cdn的ip访问服务器）即可。</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>如果你采用国内用户走国内cdn，国外用户走cloudflare，服务器防火墙设置了仅cdn的ip可访问，但在cc攻击测试中，发现资源cpu和内存还是占满了；这不是cloudflare的错，只要你正确设置了规则，它是肯定能防住的。</p>
+<p>资源沾满的原因，是你的国内cdn的防cc能力不行，也许你需要升级国内cdn上滑块验证码识别攻击者，才能达到免费cf的效果，但是有这种服务的cdn价格需要大几百一个月。</p>
+<p>cloudflare的缺点就是：国内访问速度的问题，可以优选节点等操作，但是还是慢一点。</p>
+<p>当你面临大攻击，但是考虑cf访问速度慢，国内的滑块cc防御又贵的情况下，就可以选择20刀一个月的cloudflare，他的防御能力比国内几百的滑块验证码等还强（这里只说了cc，其他防御能力更加强的不是一点半点），而且cloudflarepro可以进一步优化访问速度。</p>
+<p>缺点2：这点无法避免，dns解析生效慢，一般情况下几个小时，有的地区需要24-72小时，而且cloudflare是泛播，当你服务器关机一次，可能会换了ip，那么国内访问者就会取不到正确dns，就会卡。（这不是cf的错，而是国内运营商缓存了dns，导致不取最新ip）</p>
+<p>最佳：平时国内走国内cdn，国外走cloudflare，有人攻击了就立马直接禁止国外访问，然后站点全部套cloudflare。</p>
+</blockquote>
+<p><strong>ns接入和cname接入区别</strong></p>
+<blockquote>
+<p>ns接入是保护全站所有域名，cname接入一个是保护单个域名。每个子域名需要重新添加</p>
+<p>还有接入cloudflare可以有更好的dns层面的ddos防护和解析优化（国内得花钱）</p>
+<p>但是ns和cname都dns‘生效慢</p>
+</blockquote>
 <p><strong>刷量攻击</strong></p>
 <p>配合ngnix和防御脚本，带宽限制（如一个ip某个时间段最多多少流量）去防御，还有每次把攻击ip记录下来，上黑名单。（四层协议攻击上黑名单是没用的）</p>
 <p>解决：</p>
@@ -745,7 +772,7 @@
 <blockquote>
 <p>原理：cdn无法覆盖的偏远地区对域名进行访问，一般就会真实ip提供服务，这样就泄露了源ip</p>
 <p>原理：直接强行打死cdn（可能性较小），然后回源获取到真实ip。</p>
-<p>解决方法：域名解析就根本不要设置源ip提供服务；联系cdn服务商设置cdn打死禁止回源。</p>
+<p>解决方法：域名解析就根本不要设置源ip提供服务；联系cdn服务商设置cdn打死禁止回源；设置只允许cdn的ip访问源服务器。</p>
 </blockquote>
 <p>4-<strong>邮箱地址查源IP</strong></p>
 <p>阿里企业邮箱申请不需要企业营业执照什么的，每个人都可以申请的。</p>
@@ -786,9 +813,7 @@
 </ol>
 </blockquote>
 <p>但是如果站点有一些资源没被cdn普及到，被攻击者发现了，那么这些资源的请求会直接请求源ip，就暴露了源ip。</p>
-<blockquote>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3></blockquote>
-<p>宝塔面板用户可添加一个随意的网站1.1.1.1（域名或者IP随意），然后删除宝塔创建网站默认生成的全部文件，然后为这个随意添加的网站配置一个无效的证书（本文下方会为大家提供一个无效的证书使用），配置好证书之后在宝塔面板后台：【网站】-【默认站点】中心选择刚才添加的这个随意的网站作为默认站点。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>宝塔面板用户可添加一个随意的网站1.1.1.1（域名或者IP随意），然后删除宝塔创建网站默认生成的全部文件，然后为这个随意添加的网站配置一个无效的证书（本文下方会为大家提供一个无效的证书使用），配置好证书之后在宝塔面板后台：【网站】-【默认站点】中心选择刚才添加的这个随意的网站作为默认站点。</p>
 <p>7-网站漏洞</p>
 <blockquote>
 <p>原理：攻击者利用网站的漏洞让我们的服务器去攻击者黑客设置的资源，建立连接就暴露了IP</p>
@@ -803,6 +828,8 @@
 <p>4-cc攻击的话，cdn一般会防，还有1，2也都会防。</p>
 <p>5-不要泄露源ip</p>
 <p>国内ip走值得信任的小厂cdn（大厂计量害怕被刷量攻击），国外IP走cf，万一国内小厂cdn被击落，立马也换cf，再被击落用付费cf。更换期间上静态维护页。</p>
+<p>6-cdn禁止回源，还有设置服务器只允许cdn的ip访问，可以最大程度防止cdn被击穿导致源ip泄露</p>
+<p>7-一般直接禁止国外访问，实在要访问，把攻击者肉鸡最多的国家禁止访问。</p>
 </blockquote>
 <h3 id="XSS和CSRF和SQL注入"><a href="#XSS和CSRF和SQL注入" class="headerlink" title="XSS和CSRF和SQL注入"></a>XSS和CSRF和SQL注入</h3><p>XSS攻击主要是通过在公共站点中嵌入非法脚本，当其他用户访问这些页面时，这些脚本会被执行，从而影响用户的操作或窃取用户信息；CSRF攻击则是伪造用户的身份，向目标网站发送请求，这些请求通常与转账、发邮件、购物等操作相关</p>
 <blockquote>
@@ -830,7 +857,21 @@
 <p>可以国内外用户ip分开部署cdn，国内的部署一个性价比高的厂商，国外就用cf</p>
 </blockquote>
 <blockquote>
-<p>cloudflare优化后，国内访问其实还过得去，可以研究下优化和优选节点。</p>
+<p>国内用户访问通过国内cdn，国外用户访问通过cloudflare方法：</p>
+<p>1-将要防护的域名的ns交给cloudflare，这样可以全站防护，但是国内用户就无法再使用国内的cdn（因为国外的dns服务商没有多线路解析的功能），而国内用户访问cloudflare也会很慢。（所以不推荐）</p>
+<p>2-使用国内多线路解析，国内用户还是国内的cdn，国外用户请求通过cname方式接入cloudflare的cdn（推荐），但是cloudflare的免费套餐，不支持cname接入。</p>
+<p>解决办法：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.3520.net/free-cargo/2326.html">https://www.3520.net/free-cargo/2326.html</a></p>
+<p>遇到问题（提示网站重定向多次，无法访问）解决方法：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.3520.net/server/2829.html%EF%BC%8C%E5%A4%A7%E6%A6%82%E5%B0%B1%E6%98%AF%E6%8A%8Acloudflare%E5%86%85%E7%9A%84SSL/TLS%E6%94%B9%E6%88%90%E2%80%9C%E5%AE%8C%E5%85%A8%E2%80%9D%EF%BC%88%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6%EF%BC%89">https://www.3520.net/server/2829.html，大概就是把cloudflare内的SSL/TLS改成“完全”（使用服务器自签证书）</a></p>
+<p>cf配置参考：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.imydl.com/wp/16810.html">https://www.imydl.com/wp/16810.html</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.imydl.com/wp/17658.html">https://www.imydl.com/wp/17658.html</a></p>
+</blockquote>
+<blockquote>
+<p>多线路解析还可以分线路，比如电信，联通，移动，教育网，浏览器来源来分开解析，我们可以一个线路上一个国内cdn，原先是一个cdn抗，现在五六个cdn抗，自然防御力强很多。（平时默认开启一个cdn，遇到攻击了再开启多线路解析）</p>
+</blockquote>
+<blockquote>
+<p>cloudflare优化后，国内访问速度其实还过得去，可以研究下优化和优选节点。</p>
+<p>相比于国内高防cdn，cf特别良心了，速度优化还是不够用，可以升级cfpro，20美刀一个月，也比国内高防便宜，防御效果也好，速度pro又可以优化，基本上大差不差。</p>
 </blockquote>
 <p><strong>http刷量</strong></p>
 <p>上cdn就有一个坏处，流量得花钱，四层协议的攻击流量费算不到我们头上，但是http刷量攻击流量费就得算我们头上了。</p>
@@ -1418,7 +1459,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">224.8k</span>&nbsp;字
+                class="white-color">226.3k</span>&nbsp;字
             
             
             

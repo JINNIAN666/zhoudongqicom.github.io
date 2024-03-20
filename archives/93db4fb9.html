@@ -483,14 +483,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -558,7 +558,7 @@
 <p>11-github提供的静态页面page，仓库名字必须是“你的用户名.github.io”，只有这一个仓库才是真正的githubPage，其他”仓库地址.github.io”的仓库的虽然也可以为我们存储静态站点，但用”仓库地址.github.io”访问page都会404。</p>
 <blockquote>
 <p>除非通过域名解析，通过“仓库名称.github.io”会404，但是解析了域名，可以通过域名访问</p>
-<p>dns解析主机值，只需要cname到仓库名称.github.io即可，不需要添加ip主机值的。</p>
+<p>如果有github不知道如何解析域名和ip主机值的同学，那么说明你有仓库了，建议直接去vervel同步github仓库部署，怎么解析上面都写了。</p>
 </blockquote>
 <p>12-github和gitee和vercel都可以静态托管。</p>
 <blockquote>
@@ -567,6 +567,8 @@
 </blockquote>
 <blockquote>
 <p>vercel弥补了github的速度慢的缺点，亲测很快。（2024.02.22；当然未来也可能被不可抗力因素限制）</p>
+<p>而且vercel可以多个域名指向一个项目。</p>
+<p>建议解析的时候，A记录值填为76.223.126.88；cname值填为cname-china.vercel-dns.com；（因为官方推荐那个是国外的，国内被墙很卡）</p>
 <p>一招快速解决Vercel站点在国内无法访问的问题<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/660865097">https://zhuanlan.zhihu.com/p/660865097</a></p>
 <p>部署教程：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/675688020">https://zhuanlan.zhihu.com/p/675688020</a></p>
 <p>【Vercel部署个人博客-CSDN博客】<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/kuizuo12/article/details/124716488">https://blog.csdn.net/kuizuo12/article/details/124716488</a></p>
@@ -588,6 +590,7 @@
 <p>亲测小飞兔非常不错<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.xftsoft.com/product/">https://www.xftsoft.com/product/</a></p>
 <p>一般只用于保存自己的站点，记得把nginx限速和其他各类限速先关闭，不然会爬取失败。</p>
 </blockquote>
+<p>15-dns解析中@代表无任何前缀部署，如x.com；*才表示的泛解析。</p>
 
                 
             </div>
@@ -1146,7 +1149,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">224.8k</span>&nbsp;字
+                class="white-color">226.3k</span>&nbsp;字
             
             
             
