@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-28
+                    2024-03-28
                 </div>
                 
 
@@ -514,15 +514,15 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="webpack基本使用详解"><a href="#webpack基本使用详解" class="headerlink" title="webpack基本使用详解"></a>webpack基本使用详解</h1><p>我们现在只学webpack的基本使用，在后续webpack高级中，coderwhy老师还会教手写loader这些，面向25k开发的。</p>
-<h2 id="webpack依赖图"><a href="#webpack依赖图" class="headerlink" title="webpack依赖图"></a>webpack依赖图</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1053.png" alt="1053"></p>
+<h2 id="webpack依赖图"><a href="#webpack依赖图" class="headerlink" title="webpack依赖图"></a>webpack依赖图</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1053.png" alt="1053"></p>
 <p>webpack打包的时候，会先找那个入口文件（默认index.js，找不到就报错，我们可以用命令或者在webpack.conig.js配置文件中指定入口文件），然后打包入口文件，发现入口文件又导入了其他模块，就又会打包其他模块，最终生成浏览器可以识别的静态代码。</p>
 <p>tips：默认webpack只打包js的，那些css等文件需要使用对应的loader</p>
 <p>比如vue框架，webpack本身是打包不了.vue文件的，但是现在大家都是用webpack打包，那么vue的开发者就需要写一个vue的loder出来供webpack使用识别.vue文件</p>
-<h2 id="css-loader的使用"><a href="#css-loader的使用" class="headerlink" title="css-loader的使用"></a>css-loader的使用</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1054.png" alt="1054"></p>
+<h2 id="css-loader的使用"><a href="#css-loader的使用" class="headerlink" title="css-loader的使用"></a>css-loader的使用</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1054.png" alt="1054"></p>
 <p>内联式和cli方式</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1055.png" alt="1055"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1055.png" alt="1055"></p>
 <p><strong>方式三常用</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1056.png" alt="1056"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1056.png" alt="1056"></p>
 <p>我们要使用loder，就必须安装loader，命令npm install css-loader -D (因为是开发环境，所以-D)</p>
 <p>然后我们在配置文件webpack.config.js文件中添加</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">module<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
@@ -540,10 +540,10 @@
 
 <p>但是我们发现，虽然能打包了，但是css不生效，因为css-loader只解析css，但是不会把css插入到html</p>
 <p>我们还需要一个style-loader,照样是先安装后写入配置，主要use数组里面的loader是从下面往上面执行（如果是缩写，就从右向左），所以得先css-loader解析，后style-loader插入。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1057.png" alt="1057"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1057.png" alt="1057"></p>
 <p>我们loader有简写方法，但是不建议。</p>
 <p>全称如use是一个数组，里面的没一个loader都是一个对象，但是如果我们不需要对这个loader配置，可以不写loader对象，直接写名称。不过当你要配置又要改回全称，还不如起初就全称。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1058.png" alt="1058"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1058.png" alt="1058"></p>
 <p>这些css和less如果直接引入对应的解析和插入loader确实可以生效，但是是通过内联式，也就是插入在index.html的style标签中生效的，如果需要单独生成一个css文件，需要做高级配置。</p>
 <p>less文件的解析同理，安装一个less-loader即可。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>
@@ -608,13 +608,13 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 <p>如果把这段代码写在webpack.confog.js中绝的各种配置太繁琐太难管理的话，可以单独抽取到一个postcss-config.js中（webpack的config中找不到，它会自动再寻找postcss-config.js）</p>
 <p>好处：我们postcss不一定就css使用，less中也可能要使用，那么在less匹配的loader中也就要加配置代码，抽取到单独文件中，就避免了这一操作。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1059.png" alt="1059"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1059.png" alt="1059"></p>
 <p>单独配置文件的代码格式又和在webpack配置中写的格式不同，这都是loader的开发者自己定义的，我们记住就好了，其实也不需要记，因为我们现在是为了方便了解webpack的工作流程，所以学习这些东西，实际开发中这些配置脚手架都会帮我们配好。</p>
 <p><strong>问题：</strong>为什么建立了postcss.config.js，webpack中的loader就会来找这个文件读取配置，是如何绑定的？</p>
 <p>它就是这样设置的，在这个loader被开发出来就写了这个逻辑，应该是通过名字绑定loader和配置文件js，如postcss-loader对应的就是postcss.config.js，通过前面那个单词来绑定。</p>
 <p>然后通过commonjs模块化导出配置</p>
 <p><strong>postcss-preset-env预设</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1060.png" alt="1060"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1060.png" alt="1060"></p>
 <p>它除了可以代替autoprefixer的加前缀功能，还能把浏览器不支持的，但是我们开发代码中有的新特性css写法，转换为浏览器支持的代码。</p>
 <h2 id="webpack打包图片"><a href="#webpack打包图片" class="headerlink" title="webpack打包图片"></a>webpack打包图片</h2><p>图片怎么导入到依赖图中，从而让webpack打包？</p>
 <p>我们直接import xxx（随便起个名字） from “图片路径”即可，因为在webpack中任意文件其实都可以被看做一个模块。</p>
@@ -627,9 +627,9 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 
 
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1061.png" alt="1061"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1061.png" alt="1061"></p>
 <p>比如打包图片等文件，其实webpack5已经给我们内置了与loader相似的功能，但是webpack默认是打包js，虽然它有打包图片的功能，我们需要在webpack.config.js中配置如下</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1062.png" alt="1062"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1062.png" alt="1062"></p>
 <p>我们先匹配结尾为这些名称的文件，然后type:“asset”</p>
 <p><strong>tips：</strong>webpack.config.js是我们自己创造的文件，你随便写成什么名字开头都可以，比如demo.config.js</p>
 <p>但是你在执行webpack命令的时候得带上，如npx webpack  –config demo.config.js就是此次打包webpack运用那个js文件的配置。 为了方便我们通常在package.json中写一个script来包含这个命令</p>
@@ -725,7 +725,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如上的代码中的60*1024就是64kb的意思</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1063.png" alt="1063"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1063.png" alt="1063"></p>
 <p>问题：当我们很多张图片被打包复制到了build文件中，但是build文件中的代码是hash过的名字，怎么办？</p>
 <p>我们可以使用generator属性修改</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">generator<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
@@ -738,7 +738,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 <p>我们一般也是用占位符命名，不会写死，因为当有多张图片，不可能叫一样的名字，这样照样无法识别。</p>
 <p>img/的作用是在bulid中生成一个img的文件夹来保存这些被打包的图片，否则bulid里面的东西太乱了</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1064.png" alt="1064"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1064.png" alt="1064"></p>
 <h2 id="webpack基本使用流程自我总结"><a href="#webpack基本使用流程自我总结" class="headerlink" title="webpack基本使用流程自我总结"></a>webpack基本使用流程自我总结</h2><p>1-首先npm init 生成一个package.json</p>
 <p>2-安装webpack，npm install webpack webpack cli -D (-D是开发依赖局部安装的意思)</p>
 <p>3-创造webpack.config.js文件。里面写webpack的配置，如使用哪些loder，打包输出的主js文件叫什么，webpack打包入口js是哪个等等各种配置。</p>
@@ -746,10 +746,10 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>5-在package.json设置一个script，让npx webpack –config webpack.config.js这行命令简化成一个script，当然你乐意敲可以不设置。（npx是因为模块的查找机制，当前路径是没有webpack的，因为是局部安装，环境变量中也没有webpack，所以npm会找不到，npx则会自动取node_module文件夹找）</p>
 <p>6-运行webpack，得到build文件，里面就有打包好的原生js</p>
 <h2 id="webpack对js的打包babel作用"><a href="#webpack对js的打包babel作用" class="headerlink" title="webpack对js的打包babel作用"></a>webpack对js的打包babel作用</h2><p>原先webpack一样能打包代码，但是如果我们写了es6的代码，打包后还是es6，就导致有的浏览器可能不兼容，那么如何把所有js代码转换为es5呢，就需要用到babel-loader</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1065.png" alt="1065"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1065.png" alt="1065"></p>
 <p><strong>babel命令行的使用</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1066.png" alt="1066"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1067.png" alt="1067"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1066.png" alt="1066"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1067.png" alt="1067"></p>
 <p>它本身是一个独立的工具，可以独立使用，也可以配合webpack，在webpack中写入配置使用。</p>
 <p>注意这里不是一个babel-loader就把代码的箭头函数和const声明方式转换了，而是用了两个插件</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
@@ -782,19 +782,19 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>babel的预设</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1068.png" alt="1068"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1068.png" alt="1068"></p>
 <p>有了这个预设，箭头函数和声明方式就不需要两个插件了，只需要一个预设</p>
 <p>上面的命令是工具单独使用，我们一般不用的，我们都是在webpack中添加配置文件，配合babel使用，代码在上面写过了。</p>
 <p><strong>babel的常见预设有三个</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1069.png" alt="1069"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1069.png" alt="1069"></p>
 <p>其中env就environment环境的意思。</p>
 <p><em>babel的更加详细的使用和原理在工程化高级里面coderwhy老师会讲，这里我们知道有这个东西就好了。</em></p>
 <h2 id="对vue文件处理打包"><a href="#对vue文件处理打包" class="headerlink" title="对vue文件处理打包"></a>对vue文件处理打包</h2><p>我们开发vue，自然要npm install vue，注意这里不要加-D因为vue在生产和开发中都要用到，不像webpack只在我们开发的时候用到，但是这里也是局部安装，只存在于安装的这个文件内，全局安装是要-g的（vue也不会全局安装，因为不同项目用的版本不同）。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1070.png" alt="1070"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1070.png" alt="1070"></p>
 <p>vue比较特殊，安装了vue-loader，还必须安装一个插件  </p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1071.png" alt="1071"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1071.png" alt="1071"></p>
 <h2 id="resolve模块解析"><a href="#resolve模块解析" class="headerlink" title="resolve模块解析"></a>resolve模块解析</h2><p>它是帮助webpack从require和import中找到需要引入的模块</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1072.png" alt="1072"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1072.png" alt="1072"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> VueLoaderPlugin <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"vue-loader/dist/index"</span><span class="token punctuation">)</span>
 
@@ -823,12 +823,12 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token keyword">import</span> Hello <span class="token keyword">from</span> <span class="token string">'./vue_demo/Hello'</span>
 <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> sum <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'./utils/math'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1073.png" alt="1073"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1073.png" alt="1073"></p>
 <p>如果是一个文件，带了后缀名，就会直接打包</p>
 <p>不带后缀名的话，就会webpack底层就会通过resolve.extensions自动为我们的文件添加后缀名。</p>
 <p>怎么自动找到我的文件应该是什么后缀？不同的代码有不同的特点，webpack有自己的识别办法。</p>
 <p><strong>extensions是可以自己配置的</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1074.png" alt="1074"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1074.png" alt="1074"></p>
 <p>我们可以自己配置，把需要自动加后缀名的后面加到resolve对象的extensions数组里面</p>
 <p>所以如果我们不配置这个extensions那么直接import Vue文件的话，就会识别不到，然后报错无法找到import文件，所以必须自己写上.vue后缀，如hello.vue</p>
 <blockquote>
@@ -836,7 +836,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </blockquote>
 <p><em>我认为根本没必要配，页面import或者require引入的时候，全部老老实实写个后缀还容易区分点</em></p>
 <p><strong>alias</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1075.png" alt="1075"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1075.png" alt="1075"></p>
 <p>当我们的层级很深（项目中很容易遇到），那么引入写相对路径的话，就需要写好多个../非常不容易识别，所以我们经常在webpack.config.js内给它配置一个alias</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//这里是webpack.config.js</span>
 resolve<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
@@ -848,8 +848,8 @@ resolve<span class="token operator">:</span> <span class="token punctuation">&#1
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1076.png" alt="1076"></p>
-<h2 id="webpack的常见插件和模式"><a href="#webpack的常见插件和模式" class="headerlink" title="webpack的常见插件和模式"></a>webpack的常见插件和模式</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1077.png" alt="1077"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1076.png" alt="1076"></p>
+<h2 id="webpack的常见插件和模式"><a href="#webpack的常见插件和模式" class="headerlink" title="webpack的常见插件和模式"></a>webpack的常见插件和模式</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1077.png" alt="1077"></p>
 <p>loader就是把各种各样后缀的代码，变成浏览器可以看得懂的三剑客代码</p>
 <p>plugin可以做loader外的各种事情。优化打包，资源管理（管理文件等），环境变量注入等等各种拓展功能。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>
@@ -950,13 +950,13 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>有的插件比如下面的插件，你需要在plugin里面new 实例化东西，就必须引入了</p>
 <p>引入的方式不同插件也不同，看插件作者怎么写的，如cleanwebpackplugin需要解构，但是htmlwebpackplugin又不需要解构</p>
 <p><strong>cleanWebpackPlugin</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1078.png" alt="1078"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1078.png" alt="1078"></p>
 <p>dist文件夹就是打包后默认生成的文件夹，我们原先自己在webpack.config.js 的output中配置了文件夹名称为build，不配置默认是dist</p>
 <p>tips：我们可以不用这个插件，在最新的webpack里面，配置中有一个output.clean可以和这个插件有相同的效果。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1083.png" alt="1083"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1083.png" alt="1083"></p>
 <p>文档<a target="_blank" rel="noopener external nofollow noreferrer" href="https://webpack.docschina.org/concepts/">https://webpack.docschina.org/concepts/</a></p>
 <p><strong>html-wepack-plugin</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1079.png" alt="1079"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1079.png" alt="1079"></p>
 <p>1-意思就是说，webpack打包后，不会自动生成index.html在dist里面，这个插件可以自动生成一个html，这个html模板可以在node_modules里面的此插件的包的lib/default_index.js修改，或者在template指定模板。</p>
 <p>2-默认生成title为WebpackAPP，我们可以在new的时候就修改</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -969,7 +969,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p><em>3-其实我感觉这些都是鸡肋，我还不如自己建一个index.html，花里胡哨的全是配置恶心死了。</em></p>
 <p><strong>DefinePlugin</strong></p>
 <p>它是webpack内置的插件</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1080.png" alt="1080"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1080.png" alt="1080"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">&#123;</span> DefinePlugin <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"webpack"</span><span class="token punctuation">)</span>
 
     <span class="token keyword">new</span> <span class="token class-name">DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
@@ -981,27 +981,27 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>1-它的作用就是注入一个变量，如上代码写在webpack.config.js中，就把当前项目注入了三个变量，比如在其他地方页面是可以直接使用coderwhy这个变量表示why字符串的</p>
 <p>2-它默认注入了一个process.env.NODE_ENV，里面记录了当前的模式</p>
 <p><strong>Mode模式配置</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1081.png" alt="1081"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1082.png" alt="1082"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1081.png" alt="1081"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1082.png" alt="1082"></p>
 <p>1-通俗点就是写上production意思是生成的代码用于生产环境，不是在开发中，就又很多模块会去混淆压缩代码什么的，然后代码都在一行很难看懂</p>
 <p>2-写development就是告诉webpack当前是在开发阶段，那么打包的代码，就能被开发者看懂。</p>
-<h2 id="webpack打包本地服务器"><a href="#webpack打包本地服务器" class="headerlink" title="webpack打包本地服务器"></a>webpack打包本地服务器</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1084.png" alt="1084"></p>
+<h2 id="webpack打包本地服务器"><a href="#webpack打包本地服务器" class="headerlink" title="webpack打包本地服务器"></a>webpack打包本地服务器</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1084.png" alt="1084"></p>
 <p>打包需要开启本地服务器服务才能执行，以前我们是通过live server插件来打开的，有一个弊端</p>
 <p>每次我们修改了代码，都需要重新打包。特别麻烦</p>
 <p>webpack搭建的本地服务器去执行的话，就可以实时编译，我们写的代码一变，浏览器页面也可以更着变化。</p>
-<h3 id="开启本地服务器"><a href="#开启本地服务器" class="headerlink" title="开启本地服务器"></a>开启本地服务器</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1085.png" alt="1085"></p>
+<h3 id="开启本地服务器"><a href="#开启本地服务器" class="headerlink" title="开启本地服务器"></a>开启本地服务器</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1085.png" alt="1085"></p>
 <p>1-安装这个包</p>
 <p>2-在webpack.config.js中的script中添加”serve”:“webpack serve –config wk.config.js”</p>
 <p>3-npm run serve或者npx webpack serve –config wk.config.js</p>
 <p>注意不能直接写npx webpcak -serve 因为如果你不指定配置，有的设置不存在，会报错的。</p>
-<h3 id="HMR热模块替换"><a href="#HMR热模块替换" class="headerlink" title="HMR热模块替换"></a>HMR热模块替换</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1086.png" alt="1086"></p>
+<h3 id="HMR热模块替换"><a href="#HMR热模块替换" class="headerlink" title="HMR热模块替换"></a>HMR热模块替换</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1086.png" alt="1086"></p>
 <p>热模块更新，就是我们只改了一个东西，比如把console.log(‘1’)改成了console.log(‘2’)</p>
 <p>我们不应该重新刷新整个页面，而是只改变这个console.log</p>
 <p>在webpack-dev-server中其实内置了hmr热模块更新，也是默认打开的，所以下图中的hot:true可写可不写</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1087.png" alt="1087"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1087.png" alt="1087"></p>
 <p>虽然直接支持也默认开启了，但是我们需要在打包入口文件.js中指定哪些模块发生更新时，进行HMR</p>
 <p>问题：这玩意也太麻烦了，一个一个判断引入，我不如让它页面直接全部刷新呢，真是鸡肋！</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1088.png" alt="1088"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1088.png" alt="1088"></p>
 <blockquote>
 <p>事实上这些是不需要我们自己配置的，在vue-loader中，这些东西都帮我们配置好了，我们这里学它只是了解有这个东西。</p>
 </blockquote>
@@ -1016,14 +1016,14 @@ module<span class="token punctuation">.</span>exports <span class="token operato
    <span class="token comment">// compress: true</span>
  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1089.png" alt="1089"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1089.png" alt="1089"></p>
 <p>host写成0.0.0.0的话，如我们本地ip地址为192.168.1.90，那么在学校机房，同一个局域网内，我的同学是192.168.1.91，同学也是可以在浏览器中通过192.168.1.90：8080访问到我们的页面 的</p>
 <h3 id="开发和生成环境"><a href="#开发和生成环境" class="headerlink" title="开发和生成环境"></a>开发和生成环境</h3><p><strong>如何区分生产和开发环境</strong></p>
 <p>以前我们把所有的配置都写在webpack.config.js中，其实不同插件是运用于不同开发环境的，比如devServer插件是用于生产环境，而cleanWebpackPlungun是用于在开发环境帮我们删文件的。</p>
 <p>如果它们都配置在webpack.config.js同一个地方，在运行的时候就会浪费一些性能，比如我们在开发的时候，就不需要devServer插件再去运行一下子了</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1090.png" alt="1090"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1090.png" alt="1090"></p>
 <p><strong>入口entry文件解析</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1091.png" alt="1091"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1091.png" alt="1091"></p>
 <p>我们一般不修改content，就让它默认就好了</p>
 <p>这里只需要知道，即使webpack.dev.config.js文件在config文件夹内，也就是多进去了一层，entry还是写./src/main.js的，而不是../src/main.js</p>
 <p><strong>webpack配置文件抽取公共部分</strong></p>

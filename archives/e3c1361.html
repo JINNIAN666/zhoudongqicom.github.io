@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2024-03-28
                 </div>
                 
 
@@ -515,11 +515,11 @@
             <div id="articleContent">
                 <h2 id="深入对象"><a href="#深入对象" class="headerlink" title="深入对象"></a>深入对象</h2><p>注意<!doctype html> ,这里的感叹号和doctype间不要加空格。</p>
 <h3 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h3><p>注意对象里面得用单引号把字符包起来</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/836.png" alt="836"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/836.png" alt="836"></p>
 <p>第一种就是我们常用的字面量创造对象</p>
 <p>第二种是new Object创造对象，其中我们可以直接在括号内添加对象</p>
 <p>第三种就是构造函数，其实用newObject（）也是一种构造函数，只是官方固定了写法</p>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/837.png" alt="837"></p>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/837.png" alt="837"></p>
 <p>1-构造函数是一个特殊的函数，它的作用是初始化对象，通过它可以快速生成多个有相同属性类似的对象。</p>
 <p>2-行业约定，构造函数名称首字母大写，必须用new操作符来执行。 </p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
@@ -532,7 +532,7 @@
 
 <p>this.name =name,后面那个是形参，前面那个是对象的属性，其中this谁调用就是谁。这里是创造对象，所以这个this就是创造的那个对象。</p>
 <p>这个name随便你命名的，属性和参数一般写成一样，便于使用区分</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/838.png" alt="838"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/838.png" alt="838"></p>
 <p>构造函数里面不要写return返回值，写了也无效，因为<strong>构造函数默认返回生成的对象。</strong></p>
 <p>当构造函数没有参数，小括号可以省略，一般不省</p>
 <p>new关键字调用函数的行为就叫做实例化</p>
@@ -549,7 +549,7 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="实例化执行过程"><a href="#实例化执行过程" class="headerlink" title="实例化执行过程"></a>实例化执行过程</h3><p>为什么this就是那个生成的对象？用上面的代码做讲解</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/839.png" alt="839"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/839.png" alt="839"></p>
 <p>1-我们起初写了一个构造函数</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Goods</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> count</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
             <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
@@ -570,8 +570,8 @@
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Goods<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">10</span> 
 Goods<span class="token punctuation">.</span><span class="token function-variable function">sayhi</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/840.png" alt="840"></p>
-<h2 id="内置的构造函数"><a href="#内置的构造函数" class="headerlink" title="内置的构造函数"></a>内置的构造函数</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/841.png" alt="841"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/840.png" alt="840"></p>
+<h2 id="内置的构造函数"><a href="#内置的构造函数" class="headerlink" title="内置的构造函数"></a>内置的构造函数</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/841.png" alt="841"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'pink'</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
 <span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token number">12</span>
@@ -607,9 +607,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>构造函数方法</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/842.png" alt="842"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/842.png" alt="842"></p>
 <p>其中这个forEach究竟是上面玩意呢，在高级第一天还是没搞清楚</p>
-<img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/843.png" alt="843" style="zoom:80%;" />
+<img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/843.png" alt="843" style="zoom:80%;" />
 
 <p>其实它就是在底层封装了一个for循环在forEach里面，然后我们调用这个方法，写的参数也是一个函数（一般就写找一个，也有其他参数），函数里面规定了三个变量，分别是项值，索引，数组（就是原数组，forEach不返回数组但是改变原数组）。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
@@ -622,11 +622,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/844.png" alt="844" style="zoom:50%;" />
+<img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/844.png" alt="844" style="zoom:50%;" />
 
 <p><strong>arr.reduce()方法</strong></p>
 <p>累计求和用reduce</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/845.png" alt="845"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/845.png" alt="845"></p>
 <p>函数内的索引号和源数组可以不写，累计值和当前元素必须写，你写了其实就等于声明了一个函数变量，这个函数变量会被reduce方法的底层运行机制赋值，你可以操作这个函数变量。</p>
 <p><strong>问题</strong></p>
 <p>不是说map和reduce有返回值，合着还需要我自己在参数函数中写个返回语句？</p>
@@ -647,11 +647,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <p>这一段代码，结果就是1+2+2+2+2+2+2=11   </p>
 <p>因为没有写起始值所以起始值是数组第一个为1（因为已经取到数组中的第一个值了，所以循环会少一次），后面因为我们写的是 return sum+2，所以每次+2</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/847.png" alt="847"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/847.png" alt="847"></p>
 <p>2-map方法的原理就是每次把你自己在方法参数那个回调函数中写的语句最终的返回值全部赋予到一个数组，然后这个方法就返回这个新数组。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/848.png" alt="848"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/848.png" alt="848"></p>
 <p><strong>案例</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/846.png" alt="846"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/846.png" alt="846"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
         <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
             name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
@@ -679,7 +679,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <p><strong>数组的常见方法</strong></p>
 <p>常用方法有很多，不可能全部精通，不会的话查mdn文档即可</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/849.png" alt="849"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/849.png" alt="849"></p>
 <p><strong>数组的find方法</strong></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
         name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
@@ -747,7 +747,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>liss<span class="token punctuation">)</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="string的常用方法"><a href="#string的常用方法" class="headerlink" title="string的常用方法"></a>string的常用方法</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/850.png" alt="850"></p>
+<h3 id="string的常用方法"><a href="#string的常用方法" class="headerlink" title="string的常用方法"></a>string的常用方法</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/850.png" alt="850"></p>
 <p><strong>split</strong></p>
 <p>str.split()是把字符串转换伪数组，arry.join()是把数组转化为字符串</p>
 <p>怎么记忆呢，把数组项一个个组合到一起，加入join到一起就形成了字符串</p>
@@ -798,7 +798,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'TO BE'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>案例</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/851.png" alt="851"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/851.png" alt="851"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
    <span class="token keyword">const</span> gift <span class="token operator">=</span> <span class="token string">'50g的茶叶,清洗球'</span>
    <span class="token comment">// 1. 把字符串拆分为数组</span>
@@ -821,7 +821,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/852.png" alt="852"></p>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/852.png" alt="852"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">></span>
 <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
 

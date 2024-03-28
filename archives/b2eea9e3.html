@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-11
+                    2024-03-28
                 </div>
                 
 
@@ -516,23 +516,23 @@
                 <h1 id="HTML5-amp-CSS3-移动端day03"><a href="#HTML5-amp-CSS3-移动端day03" class="headerlink" title="HTML5&amp;CSS3_移动端day03"></a>HTML5&amp;CSS3_移动端day03</h1><h2 id="pc端与手机端区别"><a href="#pc端与手机端区别" class="headerlink" title="pc端与手机端区别"></a>pc端与手机端区别</h2><p>电脑一般是版心居中，不是全屏，有留白。</p>
 <p>手机端一般是全屏，网页宽度多数为100%。占据手机整个页面。</p>
 <p>手机端也是网页，但是域名与电脑端的不同，是分开的，如pc端京东域名：jd.com，手机端一般是一个子域名m.jd.com</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/220.png" alt="220"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/220.png" alt="220"></p>
 <h3 id="调试手机端代码"><a href="#调试手机端代码" class="headerlink" title="调试手机端代码"></a>调试手机端代码</h3><p>使用谷歌游览器，选择你想要的手机就行，如果没有，点击edit添加</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/221.png" alt="221"></p>
-<h3 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/222.png" alt="222"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/221.png" alt="221"></p>
+<h3 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/222.png" alt="222"></p>
 <p>手机一般说多少寸的屏幕，是对角线的长度。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/223.png" alt="223"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/223.png" alt="223"></p>
 <p>分辨率1920*1080表示在显示上，长为1920个像素点，宽为1080个像素点。</p>
 <p>显示分辨率（屏幕分辨率）是屏幕图像的精密度，是指显示器所能显示的像素有多少。由于屏幕上的点、线和面都是由像素组成的，显示器可显示的像素越多，画面就越精细，同样的屏幕区域内能显示的信息也越多，所以分辨率是个非常重要的性能指标之一。</p>
 <p>可以把整个图像想象成是一个大型的棋盘，而分辨率的表示方式就是所有经线和纬线交叉点的数目。显示分辨率一定的情况下，显示屏越小图像越清晰，反之，显示屏大小固定时，显示分辨率越高图像越清晰。</p>
 <p><strong>布局放大150%后，就会把桌面的图标，页面等放大1.5倍。</strong></p>
-<p> <img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/224.png" alt="224"></p>
+<p> <img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/224.png" alt="224"></p>
 <p>一种是物理分辨率，一出厂就固定了，也叫硬件分辨率，是此屏幕的最大分辨率</p>
 <p>一种是逻辑分辨率，又我们用户自己可以设置，如推荐的放大150%，分辨率就变小了，成为了1920/1.5和1080/1.5</p>
 <p><strong>写代码参考的是逻辑分辨率</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/225.png" alt="225"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/225.png" alt="225"></p>
 <p>但是我这个页面分辨率为什么和默认的不同呢？</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/226.png" alt="226"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/226.png" alt="226"></p>
 <p>因为网页并不知道你是什么设备，你的分辨率是多少也不知道，默认为<strong>980像素</strong>的宽。</p>
 <p> <strong>那么我每个手机的每个型号都要重复写代码，让它们适应，从而美观吗？</strong></p>
 <p>不需要，我们只需要添加meta视口（viewport）代码，让网页大小自动取设备的大小。</p>
@@ -542,53 +542,53 @@
 <h3 id="二倍图"><a href="#二倍图" class="headerlink" title="二倍图"></a>二倍图</h3><p><strong>不是说分辨率越大，屏幕就越大，而是显示的更清晰，如同样10寸一样大的两块屏幕，他们的分辨率可以是不同的，分辨率越大，说明同等大小屏幕的像素点越多，越清晰。</strong></p>
 <p><strong>大分辨率的图片放到小分辨率的屏幕上，然后取图片宽度为100%，屏幕的所有像素点都被沾满，自然清晰</strong></p>
 <p><strong>小分辨率的图片，放到大分辨率的屏幕，就会留白，因为用不到那么多像素点。为了不留白，我们通常把img图片的大小宽度写为100%，但是这样虽然不留白了，但是小分辨率图片原本一个像素点的颜色，宽度扩大后在我们屏幕上强制占了好几个像素点，就会出现马赛克一样的效果。</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/227.png" alt="227"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/227.png" alt="227"></p>
 <p>设计师妹妹做图一般会依照iphone678的宽度来给，即750x1334，那么为什么不用375x667呢，就是为了防止图片分辨率太小，在用户手机上显示的像马赛克。</p>
 <p><strong>750x1334像素的图就叫做二倍图</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/228.png" alt="228"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/228.png" alt="228"></p>
 <p><strong>在我们拿到设计图的二倍图后，编写的时候，需要在像素大厨选择二倍图模式</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/229.png" alt="229"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/229.png" alt="229"></p>
 <p>为什么呢，因为在我们测试代码的时候，使用的是iphone678，他的逻辑像素是375，如果我们用二倍图的像素值来写，这个时候我们写的是页面，就会超出手机范围，而不是增加了图片的清晰度。</p>
 <p>简而言之：图片的清晰度还是750，只是我们写的是页面，我们游览器模拟的是375像素的屏幕，所以大小以375来写。</p>
 <h3 id="百分比布局"><a href="#百分比布局" class="headerlink" title="百分比布局"></a>百分比布局</h3><p>百分比布局也叫做流式布局，宽度自适应，高度固定，在很久以前使用</p>
 <p>现在除了宽度要自适应，高度也要自适应。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/230.png" alt="230"></p>
-<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/231.png" alt="231"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/232.png" alt="232"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/230.png" alt="230"></p>
+<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/231.png" alt="231"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/232.png" alt="232"></p>
 <p>当我们布局几个盒子，让盒子浮动后脱标，那么当它们的父级没有设置高度，脱标后的元素就无法支撑起高度，父元素就没了高度。这个时候就需要用单标签法/伪元素法/overflow：hidden等来清除浮动，太过于麻烦。</p>
 <p>那么怎么办呢，使用flex布局。</p>
 <p><strong>flex布局不脱标</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/233.png" alt="233"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/234.png" alt="234"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/233.png" alt="233"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/234.png" alt="234"></p>
 <p>flex布局是浏览器推荐的布局方式，渲染更快，以前用的浮动布局虽然可以达到效果，但是很麻烦，而且最初是用于图文环绕浮动。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/234.png" alt="234"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/234.png" alt="234"></p>
 <p>注意这里的父类必须是亲爹，不像子绝父相，父亲爷爷祖先都行。</p>
 <p>默认主轴是横轴，交叉轴（侧轴）是竖轴</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/236.png" alt="236"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/236.png" alt="236"></p>
 <p>为什么弹性盒子水平排成了一排，因为主轴是水平的，flex后跟着主轴排（主轴的方向可更改）</p>
 <h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>在浮动中，我们一般使用margin等来调节盒子与盒子间的距离，在flex布局中我们常用justify-content调节主轴的对齐方式。</p>
 <p>justify使每行排齐，使齐行。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/237.png" alt="237"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/237.png" alt="237"></p>
 <p>注意space-evenly与space-around的区别，一个是间距全部相等，一个是间距加在盒子两侧，两盒子间的间距比靠墙的间距宽二倍。</p>
 <p>space-around</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/238.png" alt="238"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/238.png" alt="238"></p>
 <p>space-evenly</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/239.png" alt="239"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/239.png" alt="239"></p>
 <p>space-between</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/240.png" alt="240"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/240.png" alt="240"></p>
 <p>center</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/241.png" alt="241"></p>
-<h3 id="侧轴对齐方式"><a href="#侧轴对齐方式" class="headerlink" title="侧轴对齐方式"></a>侧轴对齐方式</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/242.png" alt="242"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/241.png" alt="241"></p>
+<h3 id="侧轴对齐方式"><a href="#侧轴对齐方式" class="headerlink" title="侧轴对齐方式"></a>侧轴对齐方式</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/242.png" alt="242"></p>
 <p>stretch是默认值，将盒子拉伸，如果设置了高度则拉伸不了（设置了display：flex才有这个弹性盒子的特性）</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/243.png" alt="243"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/243.png" alt="243"></p>
 <p>这里都是给三个盒子的父级添加css属性，那么我只想其中一个受到影响，怎么办呢？</p>
 <p>答案：使用align-self</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/244.png" alt="244"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/244.png" alt="244"></p>
 <p>其中的align-self直接加给要生效的盒子即可，不要加给它的父级，注意不能写出align-items，不会生效。</p>
-<h3 id="flex取值"><a href="#flex取值" class="headerlink" title="flex取值"></a>flex取值</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/245.png" alt="245"></p>
+<h3 id="flex取值"><a href="#flex取值" class="headerlink" title="flex取值"></a>flex取值</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/245.png" alt="245"></p>
 <p>因为盒子2与3设置了flex:3和flex:1，而盒子1没设置，它们的宽度就是父级的总宽度减去一的宽度，然后分成3+1=4份，盒子2占3份，盒子3占一份。</p>
 <p>好处是如果直接设置宽度，就无法通过用户机型大小的自动兼容，这里的父级即可取用户设备大小，从而让元素自动调整。</p>
-<h3 id="小兔仙订单页面"><a href="#小兔仙订单页面" class="headerlink" title="小兔仙订单页面"></a>小兔仙订单页面</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/246.png" alt="246"></p>
+<h3 id="小兔仙订单页面"><a href="#小兔仙订单页面" class="headerlink" title="小兔仙订单页面"></a>小兔仙订单页面</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/246.png" alt="246"></p>
 <p>首先要准备四个文件夹，单独的css（里面必备默认清除margin等base基础样式），images（网页常用的固定图片，如logo），lib文件夹（一些需要引入的文件，如字体和框架等），uploads文件夹（不固定的图片，如电商产品图，是需要更改的图）</p>
 <p><strong>其中顶部的填写订单和返回按钮不需要自己写，因为返回按钮是手机自带的，填写订单就是head里面的title</strong></p>
 <p> 注意所有的数据，最好使用单独的标签，因为后续数据改变必须用到标签</p>

@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2024-03-28
                 </div>
                 
 
@@ -527,7 +527,7 @@
 
 <p>直接的复制会出现问题，如上把obj对象赋予o对象，其实给o对象的是obj的地址，当我们修改o后，obj也会跟着变，这是不行的。</p>
 <p><strong>浅拷贝</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/872.png" alt="872"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/872.png" alt="872"></p>
 <p>对象的浅拷贝可以用展开运算符或者assign方法，数组的浅拷贝也可以用展开运算符或者concat方法。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//const o = &#123; ...obj &#125;</span>
 <span class="token comment">//Object.assign(o, obj)</span>
@@ -559,14 +559,14 @@
 
 <p>当obj对象里面又有对象或者数组这些引用形数据，那么里面的数据，还是和直接复制一样被改变。</p>
 <p>所以说浅拷贝，只能将外层的数据重新生成一个新地址去储存，内层数据还是同一个地址。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/873.png" alt="873"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/873.png" alt="873"></p>
 <p>直接赋值一个对象，就是把对象的地址给另一个变量，自然一变就多变</p>
 <p>浅拷贝是把老对象的数据赋予新对象，生成了新地址内存去存储，所以一般不会一变多变，但是当老对象里面还有对象（也就是里面还有引用型数据），那么在浅拷贝中这个’内对象‘只是和直接赋值一样把地址给了新对象，所以还是会一变多变。</p>
 <p><strong>深拷贝</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/874.png" alt="874"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/874.png" alt="874"></p>
 <p>深浅拷贝都只针对引用类型数据，因为简单数据类型直接赋值就好了，也用不到它们。</p>
 <p><strong>递归深拷贝</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/875.png" alt="875"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/875.png" alt="875"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span>
    <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -699,14 +699,14 @@
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>异常处理是指预估在代码执行过程中可能发生的错误，然后最大程度避免错误的发生导致整个程序无法继续运行。</p>
-<h3 id="throw抛出异常"><a href="#throw抛出异常" class="headerlink" title="throw抛出异常"></a>throw抛出异常</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/876.png" alt="876"></p>
+<h3 id="throw抛出异常"><a href="#throw抛出异常" class="headerlink" title="throw抛出异常"></a>throw抛出异常</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/876.png" alt="876"></p>
 <p>这里需要自己判断哪里会出错，设置出错条件，然后自己抛出异常，从而提示自己。如上的没有传递进参数就是一个错误。</p>
 <p>抛出错误后，程序会中断</p>
 <h3 id="try-catch捕获异常"><a href="#try-catch捕获异常" class="headerlink" title="try/catch捕获异常"></a>try/catch捕获异常</h3><p>1-try/catch是捕获浏览器中发现的错误信息，如果 发现错误则执行catch中的代码（一般catch中代码会写return中断函数，因为发生了错误再运行下去可能发生更多错误），没有错误就继续运行。</p>
 <p>2-finally中的代码不管有没有发生错误都会执行。</p>
 <p>3-catch(error)中有一个参数error，它随便你命名，里面包含了错误的信息，一般我们会在catch中打印出error.message</p>
 <p>4-try中写可能发生错误的代码</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/877.png" alt="877"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/877.png" alt="877"></p>
 <h3 id="debugger"><a href="#debugger" class="headerlink" title="debugger"></a>debugger</h3><p>1-debugger是程序员在调试代码的时候用到，当我们在代码中写一个debugger，在f12控制台中调试代码的时候，就会自动跳转到这里，不再需要我们自己设置断点。</p>
 <p>2-debugger只是方便跳转到需要调试的代码断点处，并不会中断代码执行。</p>
 <h2 id="this处理"><a href="#this处理" class="headerlink" title="this处理"></a>this处理</h2><h3 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h3><p><strong>普通函数this指向</strong></p>
@@ -734,24 +734,24 @@
 
 <p>2-如果写了’use srtict‘在严格模式下，我们写fn()，则会被认为没有调用者，输出undefined</p>
 <p>只有我们写window.fn()，才会获取到window</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/878.png" alt="878"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/878.png" alt="878"></p>
 <p><strong>箭头函数的指向</strong></p>
 <p>箭头函数本身是没有this的，会通过外层作用域一层一层的查找有this定义来给自己。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/879.png" alt="879"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/879.png" alt="879"></p>
 <p>1-在监听事件中，不建议写箭头函数，如上如果用了箭头函数，那么这个事件执行程序就不能再用this了，因为这个thi是外一层的this，也就是window、</p>
 <p>2-<strong>构造函数和原型对象的this都指向它们的实例</strong></p>
 <p>构造函数和原型对象中一般也不用箭头函数 </p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/880.png" alt="880"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/880.png" alt="880"></p>
 <p>如上在原型对象中，我添加了严格walk方法，但是我需要在方法内写代码用this指向实例p1的</p>
 <p>如果你用了箭头函数，那么this指向window，就不能再使用this操作实例p1了</p>
 <h3 id="this改变"><a href="#this改变" class="headerlink" title="this改变"></a>this改变</h3><p>this的指向是可以改变的</p>
 <p><strong>call方法</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/881.png" alt="881"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/881.png" alt="881"></p>
 <p>  <script><br>    const obj = {<br>      uname: 'pink'<br>    }<br>    function fn(x, y) {<br>      console.log(this)<br>      console.log(x + y)<br>    }<br>    // 1. 调用函数  <br>    // 2. 改变 this 指向<br>    fn.call(obj, 1, 2)  //本来指向window，现在就会指向obj<br>  </script></p>
 <p>call方法不常用，了解即可，它的第一个参数可以指定this值，剩余的参数就是正常的给函数传参的作用。</p>
 <p><strong>apply方法</strong></p>
 <p>apply的第二个参数必须是数组，但是传入函数接的时候，还是一个一个数字接。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/882.png" alt="882"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/882.png" alt="882"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
   <span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
     age<span class="token operator">:</span> <span class="token number">18</span>
@@ -779,7 +779,7 @@
 
 <p>求数组最大值，可以用for循环去比较，也可以用展开运算符就是那三个点，也可以用今天学的apply</p>
 <p><strong>bind方法与应用</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/883.png" alt="883"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/883.png" alt="883"></p>
 <p>bind的参数传递和call一样，但是bind不会调用函数，只改变this指向</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
     age<span class="token operator">:</span> <span class="token number">18</span>
@@ -807,8 +807,8 @@
      <span class="token punctuation">&#125;</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>   <span class="token comment">// 这里的this 和 btn 一样</span>
    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/884.png" alt="884"></p>
-<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/885.png" alt="885"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/884.png" alt="884"></p>
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/885.png" alt="885"></p>
 <p>throttle掐死，勒死，节流阀。</p>
 <p><strong>什么叫节流，就是在一定事件内，不管触发多少次事件，都只执行一次执行函数。</strong></p>
 <p>如上的轮播图手动鼠标切换，如果没有节流，我们一秒钟点个七八次，轮播图直接乱了停不下来</p>
@@ -870,7 +870,7 @@
 <blockquote>
 <p>  // throttle(mouseMove, 500) === function () { 代码 }</p>
 </blockquote>
-<h2 id="防抖debounce"><a href="#防抖debounce" class="headerlink" title="防抖debounce"></a>防抖debounce</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/886.png" alt="886"></p>
+<h2 id="防抖debounce"><a href="#防抖debounce" class="headerlink" title="防抖debounce"></a>防抖debounce</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/886.png" alt="886"></p>
 <p>防抖和节流差不多，差别就是比如设置500ms，如果我一直触发这个事件，那么节流会在500ms后再次执行函数</p>
 <p>防抖的话，因为如果中n s内又触发事件，会重新计算函数执行事件，当一直触发这个事件，就永远不会再触发。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
@@ -921,7 +921,7 @@
 <p><strong>我的方法和黑马方法的区别</strong></p>
 <p>黑马定时器的方法是触发事件后，指定时间内不再触发时间，再执行函数</p>
 <p>我的方法是触发事件立即执行一次，指定时间内不再触发，再触发事件才会再执行函数</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/887.png" alt="887"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/887.png" alt="887"></p>
 <p>如上防抖一般使用场景是搜索框输入，肯定是触发事件后一段时间再发送请求，而不是用户刚打一个字母就里面请求，所以黑马的定时器方法 防抖更好，大家公认的也是这种。</p>
 <p><strong>lodash防抖节流</strong></p>
 <p>lodash是一个js库，里面提供了节流防抖方法</p>
@@ -943,12 +943,12 @@
  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>节流综合案例</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/888.png" alt="888"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/888.png" alt="888"></p>
 <p>当我们看视频到一个时间，如果刷新页面就会从头播放，怎么记录原先播放的时间点呢？</p>
 <p>两个事件</p>
 <p> ontimeupdate时间变化 ，当前视频播放位置发生改变时触发，触发较快，一秒钟好几次</p>
 <p>onloadeddata数据加载因为视频比较特殊，还是用老的on来监听事件，而不是addEventListener </p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/889.png" alt="889"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/889.png" alt="889"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"header"</span><span class="token operator">></span>

@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-12
+                    2024-03-28
                 </div>
                 
 
@@ -515,23 +515,23 @@
             <div id="articleContent">
                 <h2 id="非父子通信"><a href="#非父子通信" class="headerlink" title="非父子通信"></a>非父子通信</h2><h3 id="Provide和Inject注入"><a href="#Provide和Inject注入" class="headerlink" title="Provide和Inject注入"></a>Provide和Inject注入</h3><p>provide：提供；inject：注入</p>
 <p>应用场景：</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1226.png" alt="1226"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1226.png" alt="1226"></p>
 <p>当有上图中这么多组件，加入要app传给banner，或者banner传给list，需要怎么办呢？</p>
 <p>1-通过父子通信一个一个传递，可行但是非常麻烦，而且很难维护管理，因为这个组件树可能很深。</p>
 <p>2-专门的状态管理库，如vuex/pinna，这个后面几天会学</p>
 <p>3-就是现在所学的，provide/inject</p>
 <p>4-事件总线</p>
 <p><strong>了解provide/inject（实际开发用的较少，一般都是通过vuex和pinna）</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1227.png" alt="1227"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1228.png" alt="1228"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1227.png" alt="1227"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1228.png" alt="1228"></p>
 <p>基本使用就是在父亲组件（只要在使用者的上层即可）写入provide，在使用者也就是子组件中写入inject即可。</p>
 <p>缺点：数据是写死的，实际上一般数据是从服务器到达data内，然后再到达provide</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1229.png" alt="1229"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1229.png" alt="1229"></p>
 <p>所以我们需要函数写法，让provide能取到data中的数据</p>
 <blockquote>
 <p>如果是对象写法，this是取不到data的数据的，函数写法可以因为vue底层和给methods一样给provide函数做了this指向修改绑定。</p>
 </blockquote>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1230.png" alt="1230"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1230.png" alt="1230"></p>
 <p>这个响应式数据的意思就是，当父级的provide给子级的数据发生变化，子级里面使用到这个数据的地方会不会自动改变。（你直接修改代码发现变了只是因为浏览器刷新了一遍，你需要在不刷新的情况下通过事件变化数据来验证）</p>
 <p>1-为什么computed用箭头函数，因为只有箭头函数沿用上一级的this，才能取到names</p>
 <p>2-如上如果让子组件中接收数据的length（这个length已经是开辟了新的空间）发生变化，父组件provide中的数据是不变化的，因为改的不是同一个变量。</p>
@@ -539,7 +539,7 @@
 <p>为什么需要事件总线？</p>
 <p>因为provide和inject只能实现有祖先层级关系的组件中通信，属于最上图的app传给banner，如果是banner传给list，就需要事件总线（当然状态管理库vuex/pinna也可以）</p>
 <p>事件总线在最基本的父子通信中也可以使用，看起来写法似乎更简单，但是不推荐，因为不利于维护管理，一般只有跨层级较多间的组件通信才使用。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1231.png" alt="1231"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1231.png" alt="1231"></p>
 <p>coderwhy老师在高级中教了自己怎么封装了事件总线的库，我看的是pink老师的高级，所以没学。</p>
 <p>在这里我只学习hy-event-store库中事件总线的使用。</p>
 <p>步骤：</p>
@@ -603,7 +603,7 @@
 <p>this.whyEventHandler就是事件监听后会执行的函数，在eventBus.off销毁的时候，需要指明销毁函数。</p>
 <p>（这个东西是王红元老师封装好的库，和mitt（很久没维护了）这些常用的事件总线库是一样的，我们只需要知道怎么用，它要求的语法是怎么写，我们就怎么写记住就好）</p>
 <p><strong>组件化知识补充</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1232.png" alt="1232"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1232.png" alt="1232"></p>
 <p>最重要的也是必须会的是组件的生命周期和组件中的ref引用，其他的了解即可。</p>
 <p>tips：相对路径符号</p>
 <p>/代表整个电脑或者服务器的根目录</p>
@@ -612,12 +612,12 @@
 <p>@为src文件下(vue官方设置的别名)</p>
 <p>那么上上层如何取到呢？</p>
 <p>答：  ../../即可，上上上层就是../../../</p>
-<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1233.png" alt="1233"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1234.png" alt="1234"></p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1233.png" alt="1233"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1234.png" alt="1234"></p>
 <p>重要，必须理解，不然你根本无法判断什么时候在做什么。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1235.png" alt="1235"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1235.png" alt="1235"></p>
 <h2 id="refs的使用"><a href="#refs的使用" class="headerlink" title="$refs的使用"></a>$refs的使用</h2><p>refs:References引用的意思</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1236.png" alt="1236"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1236.png" alt="1236"></p>
 <p>应用场景：当我们在一些特殊情况，需要拿到元素dom对象或者子组件实例</p>
 <p>注意：因为vue是声明式编程框架，我们千万不要在vue中去出现原生的js的dom操作语句，比如queryselector什么的，虽然也是可编译执行的，但是那就违背了框架的初衷。</p>
 <p>那么实在要拿到这个dom对象或者子组件实例怎么办呢？又不能写原生dom语句。</p>
@@ -683,12 +683,12 @@
 <p>1-给需要获取的元素或者组件加上属性ref</p>
 <p>2-vue会把所有有ref属性的dom放到一个$refs的对象里面</p>
 <p>3-获取的如果是组件，那么就是一个代理实例对象</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1237.png" alt="1237"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1237.png" alt="1237"></p>
 <p>4-所以我们可以通过这个实例对象去调用子组件拥有的方法</p>
 <p><strong>$parent和$root了解即可</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1238.png" alt="1238"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1238.png" alt="1238"></p>
 <h2 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h2><p>需求：点击tab栏实现组件显示的切换</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1239.png" alt="1239"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1239.png" alt="1239"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>template<span class="token operator">></span>
   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"tabs"</span><span class="token operator">></span>
@@ -824,7 +824,7 @@
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>keep-alive的一些属性</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1241.png" alt="1241"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1241.png" alt="1241"></p>
 <p>include就是需要存活的，exclude就是里面写了的不存活其他的存活。 </p>
 <p><strong>需求补充：</strong></p>
 <p>当我们保持存活后，home到about或者其他组件等动作就无法提供生命周期的created和unmounted函数监听到了，那么怎么办呢?</p>
@@ -838,22 +838,22 @@
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"home deactivated"</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1242.png" alt="1242"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1242.png" alt="1242"></p>
 <h2 id="Webpack代码分包"><a href="#Webpack代码分包" class="headerlink" title="Webpack代码分包"></a>Webpack代码分包</h2><p>一般npm run build即npm vue-cli-service bulid会通过webpack给代码打包，然后生成dist文件夹，然后我们再把dist部署到服务器供用户使用。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1243.png" alt="1243"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1243.png" alt="1243"></p>
 <p>map文件是一种映射文件，给我们线上调试告诉我们哪一行代码出错的，现在先忽略，后续深入工程讲webpack高级会学习。</p>
 <p><strong>为什么学习这个东西？为了首屏渲染速度</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1244.png" alt="1244"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1244.png" alt="1244"></p>
 <p>如上，chunk就是组块分包的意思，vendors就是供应商，所以chunk.vendors就是保存了我们第三方库的js如vue.js和原先使用的第三方事件总线库hy-event-store.js；  app.xxxx就是我们自己写的js</p>
 <p><strong>为什么有首屏渲染速度的问题？</strong></p>
 <p>cw老师说后续ssr渲染课程也会学到（我先学完vue3找个实习后面再学这个），这里大概意思就是：</p>
 <p>像上面的动态组件案例，当我们写了home，about，category很多组件，用户可以通过tab栏进行切换，但是用户在第一次加载的时候，只加载home页面，那么因为webpack把所有代码打包为了app.xx.js，用户就需要下载很多home页用不到的js代码，影响了加载速度。     所以我们需要分包。</p>
 <p><strong>如何分包？</strong></p>
 <p>工厂函数：专门生成某种对象的函数。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1245.png" alt="1245"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1245.png" alt="1245"></p>
 <p>在导入的时候通过import函数导入即可，它可以异步导入还可以让webpack进行分包处理（这个函数返回的是一个promise对象）</p>
 <p><strong>那么在普通的组件内是如何进行分包的呢？</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1246.png" alt="1246"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1246.png" alt="1246"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">工厂写法：
 <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> defineAsyncComponent <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
 
@@ -868,7 +868,7 @@
 <p>2-通过这个方法声明异步组件（import函数导入返回一个promise对象）</p>
 <p>3-注册组件</p>
 <p>对象写法（少见，了解即可）</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1247.png" alt="1247"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1247.png" alt="1247"></p>
 <h2 id="v-model的本质"><a href="#v-model的本质" class="headerlink" title="v-model的本质"></a>v-model的本质</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html">app.vue
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -981,14 +981,14 @@
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1248.png" alt="1248"></p>
-<h2 id="认识Mixin（vue2常用，vue3已经不用）"><a href="#认识Mixin（vue2常用，vue3已经不用）" class="headerlink" title="认识Mixin（vue2常用，vue3已经不用）"></a>认识Mixin（vue2常用，vue3已经不用）</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1249.png" alt="1249"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1248.png" alt="1248"></p>
+<h2 id="认识Mixin（vue2常用，vue3已经不用）"><a href="#认识Mixin（vue2常用，vue3已经不用）" class="headerlink" title="认识Mixin（vue2常用，vue3已经不用）"></a>认识Mixin（vue2常用，vue3已经不用）</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1249.png" alt="1249"></p>
 <p>应用场景: 如很多个组件有相同的optionsapi，那么就可以把相同的代码抽取到一个mixins.js文件内，然后复用即可。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1250.png" alt="1250"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1250.png" alt="1250"></p>
 <p>如上，通过mixins:[xxxxx]，就导入了mixin里面的js，但是当混入的js中有data（）等，自己组件又写了data（）等会怎么样呢？</p>
 <p>它们会合并，如果有命名冲突，则保留组件内的</p>
 <p><strong>全局混入：所有组件都需要使用混入的js</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1251.png" alt="1251"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1251.png" alt="1251"></p>
 
                 
             </div>

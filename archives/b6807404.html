@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2024-03-28
                 </div>
                 
 
@@ -515,7 +515,7 @@
             <div id="articleContent">
                 <p>今天的课程主要是理解什么是面向对象的编程思想，还有写一个案例。</p>
 <h2 id="wpi考试错点"><a href="#wpi考试错点" class="headerlink" title="wpi考试错点"></a>wpi考试错点</h2><p>1-当css中写了!important，那么它的优先级最高，在如下js中也无法改变它，因为这个下面的js的本质是修改style即css。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/853.png" alt="853"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/853.png" alt="853"></p>
 <p>2-捕获类型事件，只能通过addEventListener注册，传统注册方法只能是事件冒泡。</p>
 <p>3-事件对象e.preventDefault（）可以阻止默认事件，e.stopPropagation()可以阻止冒泡和捕获。</p>
 <p>propagation传播; 扩展; 宣传; 培养;</p>
@@ -559,16 +559,16 @@
 <p>在构造函数生成对象的时候，当不同对象有一个相同的方法，如上的dream方法，那么zdq.dream和tyl.dream的方法是存储中不同的地址的，每次new都又生成了方法。</p>
 <p>所以说这样就极大的浪费了内存，这个方法其实共用就行了。怎么实现共用呢？</p>
 <p>使用原型prototype</p>
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/854.png" alt="854"></p>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/854.png" alt="854"></p>
 <p>prototype是构造函数的一个属性，指向一个对象，如你打印Awesome.prototype，输出的也是一个对象。</p>
 <p>问题：函数就是函数，咋函数也有属性了？</p>
 <p><em>函数是一种特殊类型的对象。</em>您自己编写的代码并不是实际的函数。 该函数是具有属性的对象,此属性是可调用的。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>Awesome<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/855.png" alt="855"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/855.png" alt="855"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span><span class="token class-name">Awesome</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/856.png" alt="856"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/856.png" alt="856"></p>
 <p>也就是说只有是相同构造函数生成的不同对象，如果通过 构造函数名.prototype.方法名=function(){}的话</p>
 <p>就可以共用这一个方法，这个方法被赋予给每一个此构造函数生成的对象，但是它们调用的话，就是调用同一个方法，避免了内存浪费。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
@@ -584,7 +584,7 @@
    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>案例</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/857.png" alt="857"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/857.png" alt="857"></p>
 <p>分析：这里的需求就是在实例化数组的构造函数上加一个对象prototype的方法即可。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
        <span class="token comment">// const arr = [1,2,3]</span>
@@ -599,7 +599,7 @@
 <p>这里为什么写…this？this指向的就是调用者，调用者就是那个arr，三个点在数组里面就是展开运算符。</p>
 <h3 id="constructor属性"><a href="#constructor属性" class="headerlink" title="constructor属性"></a>constructor属性</h3><p>const恒定的，不变的；construct制造</p>
 <p>constructor建造者，制造者，也就构造函数</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/858.png" alt="858"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/858.png" alt="858"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Star</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Star<span class="token punctuation">)</span>  <span class="token comment">//true</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>也就是说在原型对象prototype里面有一个constructor属性，这个属性就是整个构造函数的代码</p>
@@ -609,21 +609,21 @@
 <span class="token comment">//&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>那我搞个这东西干嘛呢？吃饭没事干？</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/859.png" alt="859"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/859.png" alt="859"></p>
 <p>应用：</p>
 <p>我们都知道prototype对象可以为构造函数挂载公共方法，但是一个一个添加太麻烦了，所以我们经常直接为prototype对象赋值，那么就会覆盖掉原有的对象内容，原有自带的constructor就会消失，所以需要手动再添加一个constructor属性指向构造函数</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/860.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/860.png"></p>
 <p>问题：</p>
 <p>我手动添加constructor的话，就代表已经知道构造函数是谁了，为什么还要用constructor来知道构造函数是谁？？？</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/carayq/article/details/120453930">https://blog.csdn.net/carayq/article/details/120453930</a></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://wangdoc.com/javascript/oop/object.html#objectprototype__proto">https://wangdoc.com/javascript/oop/object.html#objectprototype__proto</a>__</p>
 <p>我们并不需要写 构造函数.prototype.constructor来获取，只需要通过对象.–proto–.constructor，当生成了很多个对象，就这个通过这个constructor快速知道此对象是由哪个构造函数生成。</p>
 <p><strong>思考</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/861.png" alt="861"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/862.png" alt="862"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/861.png" alt="861"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/862.png" alt="862"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">因为生成的每个对象都有一个属性__proto__指向原型对象，所以可以共用挂载的函数方法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/863.png" alt="863"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/863.png" alt="863"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">这里注意
 1-prototype是原型对象，是一个对象
 2-  __proto__是一个对象原型，它指向这个对象的原型对象，它是每个构造函数生成的对象的一个属性，所以
@@ -643,11 +643,11 @@
 
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/864.png" alt="864"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/864.png" alt="864"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor和prototype<span class="token punctuation">.</span>constructor的关系
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/865.png" alt="865"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/865.png" alt="865"></p>
 <h2 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h2><p>原型继承就是写一个对象，然后赋予给构造函数的prototype原型对象</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">></span>
 <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
@@ -708,7 +708,7 @@
 
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/866.png" alt="866"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/866.png" alt="866"></p>
 <p>为什么会这样呢？</p>
 <p>因为男人女人两个构造函数引用赋予的prototype都是Person对象，这个对象赋予过去的是一个地址，指向同一片内存，一个通过操作改变如添加吸烟方法，另一个自然也改变。</p>
 <p><strong>怎么办？</strong></p>
@@ -726,14 +726,14 @@
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>1-只要是对象，就都有–proto–，它指向生成这个对象的构造函数的原型对象prototype</p>
 <p>2-1中的原型对象也是对象，它自然也有–proto–，指向更上一层的prototype</p>
 <p>3-只要是原型对象，就有constructor</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/868.png" alt="868"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/868.png" alt="868"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">demo<span class="token punctuation">.</span>constructor <span class="token operator">===</span> demo<span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/867.png" alt="867"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/867.png" alt="867"></p>
 <p>为什么如上会相等？</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/869.png" alt="869"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/869.png" alt="869"></p>
 <p>因为有原型链的线路存在，demo.constructor === demo.<strong>proto</strong>.constructor找到的东西是一样的。</p>
 <p>如arry.prototype.map()，如果在arry对象中没有map方法，事实上也确实没有，就会去array的prototype中寻找，就像我们自己定义的构造函数一样，如果再没有就会再查找上一层（事实上map方法就挂载在array.prototype）</p>
 <p><strong>instanceof运算符</strong></p>
@@ -756,9 +756,9 @@
    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">//true 万物皆对象哈哈</span>
  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/870.png" alt="870"></p>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/870.png" alt="870"></p>
 <p>面向过程的话，非常简单，只需要获取dom，然后设置事件就好了。但是我们这里需要联系面向对象，用构造函数实现。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/871.png" alt="871"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/871.png" alt="871"></p>
 <p>什么意思呢</p>
 <p>1-就是定义一个modal函数，它的作用是创造对象，也就是那些按钮的对象，如上的删除和登入</p>
 <p>2-这个构造函数上面挂载上open和close方法。</p>

@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-29
+                    2024-03-28
                 </div>
                 
 
@@ -520,12 +520,12 @@
 <p>tips:只有先npm init 生成了package.json，然后install webpack才会生成node_modules文件夹。 </p>
 <p>一般来说通过npm安装包后，在控制台目录输入命令如webpack，它会</p>
 <p>在当前目录找有没有webpack可执行程序，没有的话就会去全局环境变量找。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/976.png" alt="976"></p>
-<p>也就是说如果我没有全局安装，而只是局部安装在一个项目中，我们必须在.node_module/.bin文件中的终端中才能使用webpack（其他包同理）命令。<img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/977.png" alt="977"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/976.png" alt="976"></p>
+<p>也就是说如果我没有全局安装，而只是局部安装在一个项目中，我们必须在.node_module/.bin文件中的终端中才能使用webpack（其他包同理）命令。<img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/977.png" alt="977"></p>
 <p>这样非常麻烦，所以就有了npx，它在安装npm的时候就已经被安装好了。</p>
 <p>用npx webpack -v等命令就会优先去node_module整个里面去寻找</p>
 <p>因为每次都要写npx，如果你觉得麻烦，可以在package.json中写一个scripts（scripts中如下执行要npm run bulid）</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/975.png" alt="975"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/975.png" alt="975"></p>
 <p>scripts里面可以写webpack也可以写npx webpack，因为scripts里面的脚本命令默认先从node_module中找可执行文件。</p>
 <p>tips:webpack可以把代码打包生成一个dist（<em>distribution</em>）文件，就相当于混淆压缩一下，代码的变量等会被改变缩减都被删除，但是作用和逻辑不变。</p>
 <p><strong>问题：</strong></p>
@@ -537,42 +537,42 @@
 <p>总结：</p>
 <p>也就是说，库只是让我们更方便的操作dom，框架是声明式开发，我们主要是写一些逻辑和数据绑定。</p>
 <p>比如砍柴，库就是一把斧子，让我们可以把一棵树更方便的砍成小节来烧，但本质是需要我们来砍的；但是框架就像一个机器，我们把树丢进去，出来就是小木柴，怎么让一颗树变成木柴的过程我们是看不到的，也不需要我们操作，但是它有一个限制。必须放指定大小的树放到指定的位置，这就是框架的约束。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/978.png" alt="978"><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/979.png" alt="979"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/978.png" alt="978"><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/979.png" alt="979"></p>
 <p>登入后在cd到要发布的文件夹下，输入npm publish即可</p>
 <p>在测试的时候，我们一般把代码通过webpack打包后再在html页面中通过script引入dist中的js，如果不打包直接引入原始js的话，必须把esmodule这些模块化工具的引入地址import xxx from xxx 写绝对地址，比较麻烦。 </p>
 <p>tips：修改代码后重新发布，必须修改版本号。</p>
 <h2 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h2><p>npm/yarn/cnpm的通病：比如电脑有一百个项目，这些项目都要用相同的包，但是每个项目都要重复安装，很占空间。</p>
 <p>tips：原先说的lock-package缓存机制只是相当于共用一个压缩安装包，不需要再从npm仓库去下载，安装照样是分开的。</p>
 <p>performant （性能好的）npm</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/980.png" alt="980"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/980.png" alt="980"></p>
 <p><strong>软连接和硬链接</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/981.png" alt="981"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/982.png" alt="982"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/981.png" alt="981"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/982.png" alt="982"></p>
 <p>通俗说，拷贝是复制原文件开辟了新的data；</p>
 <p>软连接其实就相当于一个快捷方式，一个文件包含了另一个文件的地址；</p>
 <p>硬链接是两个不同名字的文件，但是指向同一片内存，一个文件修改另一个跟着也会变。</p>
 <p><strong>pnmp的运行机制</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/983.png" alt="983"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/983.png" alt="983"></p>
 <p>很明显pnpm运用了硬链接，pnpm只保存不同内容的包，不同项目使用相同的包，都通过硬链接指向同一片内存数据（就是那个包）。大大的节省了内存和磁盘空间。</p>
 <p>1-假设现在安装acxios，那么它就会被硬链接保存在store文件中，每当有其他项目需要acxios，就会通过store里面的硬链接来知道已经有了这个包，就再建立一个硬链接到那个项目。</p>
 <p>2-硬链接不能跨磁盘，比如电脑自带的固态和一个外接的机械，是无法建立硬链接的。</p>
 <p><strong>pnpm非扁平化的node_modules</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/984.png" alt="984"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/984.png" alt="984"></p>
 <p>非扁平化的好处就是无法让源码访问不属于当前项目设定的依赖包。</p>
 <p>如下为npm和yarm的node_modules</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/985.png" alt="985"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/985.png" alt="985"></p>
 <p>我其实就安装了一个webpack和axios，但是它们两个包又依赖了许多其他的包，所以这些包都扁平化的呈现在node_modules里面，是同等级的，就导致了我没有安装的包也可以被源码使用（有益也有害，如果我在源码使用了如上的acorn，那万一我把webpack卸载了，acorn也没就失效了）</p>
 <p>非扁平化就避免了这种情况</p>
 <h2 id="pnpm的安装和使用"><a href="#pnpm的安装和使用" class="headerlink" title="pnpm的安装和使用"></a>pnpm的安装和使用</h2><p>官网pnmp.io</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/986.png" alt="986"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/986.png" alt="986"></p>
 <p><strong>存储位置</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/987.png" alt="987"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/987.png" alt="987"></p>
 <p>它也存在问题，比如pnpm-store文件会越来越大，就算你那个项目不使用了，直接删了，那个项目用的包的硬链接还是存在于pnpm-store文件夹中，不像npm和yarm整个项目文件删了包也一起删了。</p>
 <p>虽然pnpm-store中相同的包只存一份，但是也是会越来越大的，当我们有的包不使用了需要删除，可以通过pnpm store prune </p>
 <p>tips：这个命令不需要频繁执行，因为pnpm的速度优势，就是可以让多个项目共用一个包，等于说免了其他项目，包的安装，如果清除了，下一次等于又要下载安装，那pnmp就毫无意义了。</p>
 <p>prune修剪，裁剪</p>
 <h2 id="邂逅Webpack和打包过程"><a href="#邂逅Webpack和打包过程" class="headerlink" title="邂逅Webpack和打包过程"></a>邂逅Webpack和打包过程</h2><p><strong>项目开发流程</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/988.png" alt="988"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/988.png" alt="988"></p>
 <p>tips：什么叫脚手架？比如用webpack和vue，它是需要我们搭建架构什么的，特别麻烦，但是脚手架就帮我们完成了这些架构基本配置的搭建。（现在开发一个vue，我们直接vue create my-app即可，不需要搭建webpack的脚手架，因为vue直接内置了，但是如果我们有一些特殊要求，就需要自己懂webpack的底层配置了）</p>
 <p>1-现在公司开发都用框架，不是说上去自己建一个index.html然后手写几个css和js完成项目的。</p>
 <p>因为同样一个需求，原生的三剑客和ajax等等你得写几百行，但是框架可能只需要几行。（也可能纯原生开发，运行效率更高，但是开发的很慢）</p>
@@ -581,7 +581,7 @@
 <p>所以我们需要打包工具，它可以将vue文件解析成浏览器可以识别的三剑客代码（如果是原生代码，打包会混淆压缩它们）</p>
 <p>4-打包工具有gulp，rolluo，webpack和新出现的vite，现在还是webpack为主，这些工具底层也都是js代码，但是不是我们学的那些操作dombom的js，而是操作文件的js。</p>
 <p>5-因为打包工具底层是操作文件的js，所以它要基于一个环境，也就是node环境。</p>
-<h3 id="内置模块path"><a href="#内置模块path" class="headerlink" title="内置模块path"></a>内置模块path</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/989.png" alt="989"></p>
+<h3 id="内置模块path"><a href="#内置模块path" class="headerlink" title="内置模块path"></a>内置模块path</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/989.png" alt="989"></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> filepath <span class="token operator">=</span> <span class="token string">"C://abc/cba/nba.txt"</span>
@@ -608,24 +608,24 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/990.png" alt="990"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/990.png" alt="990"></p>
 <p>path.resolve当遇到/就默认为绝对路径，遇到./或者../继续往左边解析</p>
 <p><strong>为什么学这玩意？</strong></p>
 <p>因为在webpack中有的地方必须用到绝对路径。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/991.png" alt="991"></p>
-<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><h3 id="认识webpack"><a href="#认识webpack" class="headerlink" title="认识webpack"></a>认识webpack</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/992.png" alt="992"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/993.png" alt="993"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/994.png" alt="994"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/991.png" alt="991"></p>
+<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><h3 id="认识webpack"><a href="#认识webpack" class="headerlink" title="认识webpack"></a>认识webpack</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/992.png" alt="992"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/993.png" alt="993"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/994.png" alt="994"></p>
 <p>一句话，webpack可以把浏览器不认识的东西打包成认识的，比如它支持各自模块化module如esmodule和commonjs，这些模块化导入导出什么的操作代码浏览器都是不认识的，webpack可以统一打包生成三剑客代码。</p>
 <h3 id="webpack使用"><a href="#webpack使用" class="headerlink" title="webpack使用"></a>webpack使用</h3><p><strong>webpack底层是js，是依赖与node环境的。</strong></p>
 <p>webpack.docschina.org</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/995.png" alt="995"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/995.png" alt="995"></p>
 <p>现在安装webpack必须安装webpack-cli，因为我们控制台敲命令的时候，事实上是去找了bin文件下的webpack可执行程序，这个程序又依赖webpack-cli的函数</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/996.png" alt="996"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/996.png" alt="996"></p>
 <p>webpack最好局部安装，因为我们不同项目比如vue2和vue3项目，事实上使用到的webpack版本一般是不同的。</p>
 <p>又因为webpack只是开发时依赖，只在我们写代码的时候使用，浏览器渲染不需要用到它了，所以放在Devdependencies，安装的时候加 -D</p>
 <p><strong>打包的注意</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/997.png" alt="997"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/997.png" alt="997"></p>
 <p>1-打包的时候默认会去找src文件夹中的index.js为入口，如果没有index.js会报错，我们可以在输入命令的时候就指定入口如 npx webpack –entry ./src/main.js</p>
 <p>2-每次修改代码都要打包？太麻烦了，后续会有一个插件自动化感应代码改变就打包</p>
 <p>3-为什么用npx？因为上面写过了，用npm只会去当前文件夹查找包，找不到去环境变量，再找不到就报错没有此包了。用npx的话就会去node_modules里面找</p>
@@ -636,7 +636,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><strong>问题</strong></p>
 <p>你这也太麻烦了，这么长的命令让我敲，所以就有了配置文件（用的commonjs模块）</p>
 <p>我们先手动创建webpack.config.js文件夹</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/998.png" alt="998"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/998.png" alt="998"></p>
 <p>可以看到报错了，因为这个path路径必须要绝对路径，这就需要用到原先的path内置模块中的path.resolve()方法</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
@@ -649,11 +649,11 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 
 
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/999.png" alt="999"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/999.png" alt="999"></p>
 <p>配置文件夹的名字也可以更改的，但是在命令的时候需要指定配置文件路径（直接npx webpack就默认去找webpack.confog.js,如果配置文件都没有就完全默认，输出文件为main.js，文件夹为dist，也必须有index.js的入口）</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1000.png" alt="1000"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1000.png" alt="1000"></p>
 <p>这每次改配置文件名称也难敲，所以可以在package.json的scripts中添加一个脚本也行。（最简单的方法就是写默认的配置文件名称，这里只是演示一种修改方法）</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1001.png" alt="1001"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1001.png" alt="1001"></p>
 <p>然后直接npx run build就行了。</p>
 
                 

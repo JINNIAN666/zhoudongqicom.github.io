@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-14
+                    2024-03-28
                 </div>
                 
 
@@ -516,13 +516,13 @@
                 <h2 id="Composition-API"><a href="#Composition-API" class="headerlink" title="Composition API"></a>Composition API</h2><p>以后开发不再用options api 而是composition api，这个api其实就是setup函数</p>
 <p>compositionAPI：组合API</p>
 <p>optionsAPI：选项API</p>
-<h3 id="options和composition对比"><a href="#options和composition对比" class="headerlink" title="options和composition对比"></a>options和composition对比</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1252.png" alt="1252"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1253.png" alt="1253"></p>
+<h3 id="options和composition对比"><a href="#options和composition对比" class="headerlink" title="options和composition对比"></a>options和composition对比</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1252.png" alt="1252"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1253.png" alt="1253"></p>
 <p>1-如上optionsAPI实际上就是在操控data中的数据，但是对它的操作遍布于各种api中，如methods，computed，watch等等。 弊端就是太分散了不利于分析代码等。</p>
 <p>2-compositionAPI就是把对同个内容的操作全部写到一个函数内，然后这个函数还可以被很简单的抽取出进行复用。</p>
-<h2 id="认识compositionApi"><a href="#认识compositionApi" class="headerlink" title="认识compositionApi"></a>认识compositionApi</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1254.png" alt="1254">            </p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1255.png" alt="1255"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/1256.png" alt="1256"></p>
+<h2 id="认识compositionApi"><a href="#认识compositionApi" class="headerlink" title="认识compositionApi"></a>认识compositionApi</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1254.png" alt="1254">            </p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1255.png" alt="1255"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/1256.png" alt="1256"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
 <span class="token comment">&lt;!-- template中ref对象自动解包 --></span>
  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>数字:&#123;&#123; counter &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>

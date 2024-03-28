@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-28
+                    2024-03-28
                 </div>
                 
 
@@ -516,10 +516,10 @@
                 <p><strong>coderwhy老师讲的细，内容多，更有利于我们的学习职业发展，而不是单纯整一个流水线开发程序员出来。</strong></p>
 <p>commonjs只在node中可以实现，在浏览器中是不行的，比如让同一个页面的不同区域模块化。</p>
 <p><strong>浏览器如何支持esmodule？</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/946.png" alt="946"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/946.png" alt="946"></p>
 <p>方法一就是这个浏览器支持esmodule</p>
 <p>方法二就是使用webpack打包工具，使用了webpack后我们甚至可以commomjs和esmodule混用，因为最后webpack会把这些我们写的代码解析整合为普通的js代码（就是没有使用模块化），这样不管浏览器支持与否，都能使用了。</p>
-<h2 id="认识ESModule"><a href="#认识ESModule" class="headerlink" title="认识ESModule"></a>认识ESModule</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/947.png" alt="947"></p>
+<h2 id="认识ESModule"><a href="#认识ESModule" class="headerlink" title="认识ESModule"></a>认识ESModule</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/947.png" alt="947"></p>
 <p>注意esmodule中的导出export是没有s的，commomjs中的导出module.exports有s</p>
 <p>esmodule会自动采用代码严格模式use strict</p>
 <p><strong>方法一ESModule的基本使用</strong></p>
@@ -575,7 +575,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>这里引入js的时候必须写type=“module”只有这样浏览器才知道它是一个模块化的js，有自己独立的作用域，否则会变量冲突（如foo.js和main.js定义同一个名字变量）。</p>
 <p><strong>注意</strong></p>
 <p>打开index.html必须开启一个服务，也就是open with live server（vscode里面的live sever插件），不能用open in default browser</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/948.png" alt="948"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/948.png" alt="948"></p>
 <p>因为模块化的js导入的时候，存在一个cors跨域问题，不支持本地的file请求，必须开启一个服务用http等协议。</p>
 <p>“<em>Cors的英文全称是Cross-origin Resource Sharing</em>,意思是跨域资源共享</p>
 <p><strong>其他导出方式</strong></p>
@@ -679,27 +679,27 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>tips:路径是不允许去+拼接的</p>
 <p>1-导入语句只能写在代码顶层，不能放在任意的代码语句内，如if条件成立再import导入</p>
 <p>因为js引擎解析执行的时候设定的就是先扫描有没有import，如果有就导入后再执行后续代码，你在后续代码里面写个import会直接报错的</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/949.png" alt="949"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/949.png" alt="949"></p>
 <p><em>如果我就是要语句成立再导入呢？不然我没用到也导入不是浪费性能？</em></p>
 <p>那我们可以使用import函数，以前的写法是import声明。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/950.png" alt="950"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/950.png" alt="950"></p>
 <p>import meta</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/951.png" alt="951"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/951.png" alt="951"></p>
 <p>不怎么用，也就是说哪个js中import了其他模块，这个js中就有一个import.meta属性，可以打印出来，里面记录的引入的模块变量来自哪个url地址路径</p>
 <p><strong>ESModule的解析过程</strong></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">http://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/</a></p>
 <p>了解即可，coderwhy的2022系统课面向25k，内容确实细。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/952.png" alt="952"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/953.png" alt="953"></p>
-<h2 id="npm的介绍和基本使用"><a href="#npm的介绍和基本使用" class="headerlink" title="npm的介绍和基本使用"></a>npm的介绍和基本使用</h2><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/954.png" alt="954"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/952.png" alt="952"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/953.png" alt="953"></p>
+<h2 id="npm的介绍和基本使用"><a href="#npm的介绍和基本使用" class="headerlink" title="npm的介绍和基本使用"></a>npm的介绍和基本使用</h2><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/954.png" alt="954"></p>
 <p>比如尤雨溪开发了vue框架</p>
 <p>1-如果我们开发者要使用，可以通过vue官网或者github尤雨溪的主页去下载vue.js等文件，然后放到我们项目的lib中，然后再script引入，这样太麻烦了，如果我们要更换版本还得重新下载引入。</p>
 <p>2-尤雨溪把vue.js放在了npm registry ，那么我们只需要通过npm就可以快速下载引入。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/955.png" alt="955"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/955.png" alt="955"></p>
 <h3 id="npm包管理工具"><a href="#npm包管理工具" class="headerlink" title="npm包管理工具"></a>npm包管理工具</h3><p>官网npmjs.org</p>
 <p>tips:“.org”域名是互联网的通用顶级域之一,英文<em>全称</em>“<em>organization</em>”,意思为“组织”,适用于各类型组织机构,包括非盈利团体,是组织机构的首选。</p>
 <p>npm就是node package manager，刚开始是主要管理node包的，现在在前端项目中也都可以使用。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/956.png" alt="956"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/956.png" alt="956"></p>
 <p>当我们在vscode控制台，进入指定目录，输入命令如node install vue  ，那么对应目录就会自动生成一个node_modules文件夹，vue的源码就会被下载到这里。</p>
 <p>同时在当前目录还会生成package.json和package-lock.json</p>
 <h3 id="package配置文件"><a href="#package配置文件" class="headerlink" title="package配置文件"></a>package配置文件</h3><p>json的几种格式<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/weixin_48185778/article/details/109822965">https://blog.csdn.net/weixin_48185778/article/details/109822965</a></p>
@@ -708,41 +708,41 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>1-手动创建，缺点：写的太麻烦</p>
 <p>2-在控制台输入npm init 命令自动生成只需要我们自己填写一些信息。如果所以信息默认可以输入命令</p>
 <p>npm init-y</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/957.png" alt="957"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/957.png" alt="957"></p>
 <p>3-通过脚手架CLI快速创建项目，会自动生成package.json</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/958.png" alt="958"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/958.png" alt="958"></p>
 <p><strong>常见的属性</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/960.png" alt="960"></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/959.png" alt="959"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/960.png" alt="960"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/959.png" alt="959"></p>
 <p>在很多项目中，我们通过require(day)引入后，其中day的目录中是没有index.js的，所以commomjs的自动寻找机制就找不到，main属性就可以设置这个入口，让require去找mian属性值的文件。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/965.png" alt="965"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/965.png" alt="965"></p>
 <p><em><strong>scripts</strong></em> </p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/961.png" alt="961"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/961.png" alt="961"></p>
 <p>当我们要经常运行一段命令行，可以直接把它写入scripts字段内，然后通过npm run的方式运行。</p>
 <p><strong>dependencies字段</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/962.png" alt="962"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/962.png" alt="962"></p>
 <p>1-当我们的同事需要在我们项目的基础上写代码什么的，我们传给同事项目一般会把node_modules删掉再压缩发给他们，因为node_modules里面通常有很多包入axios，vue等等等非常大。</p>
 <p>2-那么同事拿到我们的代码，要想跑项目，必须再重新下载以上依赖包，dependencies就能告诉他以及node，这个项目需要哪些包，他可以自己一个一个下载，也可以在node终端执行node install命令会自动下载当前项目所需所有包。</p>
 <p><strong>devDependencies字段</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/963.png" alt="963"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/963.png" alt="963"></p>
 <p>1-也就是说在开发的时候需要用到，生产product的时候不需要用到的包，放到devDependencies字段中，如webpack就是一个在开发的时候打包的，后续在浏览器等生成页面的时候不需要用到它。</p>
 <p>2-安装webpack的时候我们要写npm install webpack –sava -dev命令或者这段命令的缩写npm install webpack -D，就可以自动添加devDependencies字段中</p>
 <p><strong>peerDependencies</strong></p>
 <p>当一个库必须依赖另一个库才能使用跑起来，就需要把另一个库写入到peerDependencies字段</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/964.png" alt="964"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/964.png" alt="964"></p>
 <p>如上图的element-plus这个库，它是基于vue3的，你想使用element-plus，必须当前环境中也有vue3</p>
 <p><strong>版本号</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/966.png" alt="966"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/966.png" alt="966"></p>
 <p>如vue3无法再写vue2的一些语法，不兼容了就是主版本号</p>
 <p> 只是新加了一个功能，就是次版本号</p>
 <p>修复了一些bug，优化一下，就是z修订号。</p>
 <p><strong>了解</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/967.png" alt="967"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/967.png" alt="967"></p>
 <h3 id="npm-install原理"><a href="#npm-install原理" class="headerlink" title="npm install原理"></a>npm install原理</h3><p>1-npm和node和java等等在cmd命令行的命令，都需要配置环境变量，当我们输入了命令，会通过环境变量去找到对应的程序执行，也就是说你也可以配置一个qq的环境变量，然后在cmd中输入qq自动启动。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/968.png" alt="968"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/968.png" alt="968"></p>
 <p>1-那些我们所有项目都要用到的工具包，比如webpack就全局安装，那些只在当前项目使用的包如day.js就局部安装即可（安装到当前安装路径下）</p>
 <p>2-并不是你全局安装了包，比如全局安装了dayjs和axios，就能每个项目都能使用了，这种包必须局部安装到项目文件夹内。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/969.png" alt="969"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/969.png" alt="969"></p>
 <p>1-上面说过了开发依赖就是我们程序员写程序的时候需要用到的包，浏览器等平台渲染的时候用不到，如webpack</p>
 <p>2-生产开发依赖就是，开发的时候和浏览器渲染的时候都要用到这个包，比如vue</p>
 <p><strong>缓存共用开发包</strong></p>
@@ -756,22 +756,22 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </blockquote>
 <p>也就是说package.json里面的依赖，npm install通过这个去下载，只会保证大版本一样，后面的小版本是可能改变的（自动下载最新），如果是package-lock.json就指定什么版本就是什么版本，不会改变。</p>
 <p>如果多个项目，都用axios而且版本一样，那么npm就不会去请求仓库地址，而是先看本地有没有这个包，如果有就直接安装，没有再去请求下载。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/970.png" alt="970"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/970.png" alt="970"></p>
 <p>resolved字段代表了当前包从哪个url下载下来的</p>
 <p>requires字段和dependencies是一样的作用，指当前包依赖哪些包才能正常运行使用</p>
 <p>integrity是当前包的一个标识，缓存包就是通过它来识别的。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/971.png" alt="971"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/971.png" alt="971"></p>
 <p>1-也就是说如果这个项目有lock，比如下载那么执行npm install就会通过lock去找需要的包，然后再判断一下现在这个包的所需依赖和以前是不是一样，如axios以前只依赖redirect，现在又加了form-data，一样的话就去缓存查找有没有这个axios的缓存，然后安装，没有缓存的话就要去仓库下载。</p>
 <p>2-如果这个项目我们拿到没有lock的话，就只能去仓库下载，然后会自动构建一个lock包，供后续人的使用。</p>
-<h3 id="npm的其他命令"><a href="#npm的其他命令" class="headerlink" title="npm的其他命令"></a>npm的其他命令</h3><p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/972.png" alt="972"></p>
+<h3 id="npm的其他命令"><a href="#npm的其他命令" class="headerlink" title="npm的其他命令"></a>npm的其他命令</h3><p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/972.png" alt="972"></p>
 <h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>以前npm不好用，各大厂如谷歌脸书就一起推出了一个js包管理工具yarn，后续npm5改进了很多小问题，它们两个的用户就分庭抗礼了。</p>
 <p>想安装yarn，用npm下载即可,因为工具包一般每个项目都要使用，所有得-g全局</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install yarn <span class="token operator">-</span>g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>yarn的命令与作用和npm基本上一样的，就是把npm改成yarn</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/973.png" alt="973"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/973.png" alt="973"></p>
 <p><strong>cnpm</strong></p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/974.png" alt="974"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/974.png" alt="974"></p>
 <p>cnpm其实就是npm的中国版，完全一样的东西，就是命令把npm改成cnpm</p>
 <p>作用：</p>
 <p>npm里面可能有的包服务器在国外，你不科学魔法上网上不去，这个时候有三个解决办法</p>

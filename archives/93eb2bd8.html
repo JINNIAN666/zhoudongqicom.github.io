@@ -476,7 +476,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2024-03-28
                 </div>
                 
 
@@ -520,7 +520,7 @@
 <p>reflect反映反射表达</p>
 <h3 id="监听一个对象属性的所有操作"><a href="#监听一个对象属性的所有操作" class="headerlink" title="监听一个对象属性的所有操作"></a>监听一个对象属性的所有操作</h3><p>如获取一个属性，赋值一个属性。</p>
 <h2 id="Promise详解"><a href="#Promise详解" class="headerlink" title="Promise详解"></a>Promise详解</h2><p>Promise承诺，这个不学，后面代码没法写。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/941.png" alt="941"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/941.png" alt="941"></p>
 <p><strong>作用</strong></p>
 <p>1-如上图，现在的需求就是一个函数execCode里面要执行一系列操作，但是这个操作（上图是定时函数，在实际中可能是一个网络请求）要等一会时间才能完成，完成后如何告诉外界这个操作完成了？</p>
 <p>2-就相当于很多人去点餐，做菜需要时间，如何告诉点餐人他的菜做好了？</p>
@@ -556,7 +556,7 @@
 
 <p>这里的100就是要执行的东西，上面代码是判断这个100是否满足条件，实际开发中也许是判断一个请求是否连接成功。</p>
 <h3 id="异步代码的困境"><a href="#异步代码的困境" class="headerlink" title="异步代码的困境"></a>异步代码的困境</h3><p>es5如上上面思想方法解决，但是如上代码我们定义了三个参数，其他人使用的时候，参数顺序传错了怎么办呢？和模块化esmodule一样，官方也制定了相应标准来规范，就是promise</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/942.png" alt="942"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/942.png" alt="942"></p>
 <p>如上代码，我们不再需要传入两个回调函数去告诉外界是执行失败还是成功，只需要返回一个bbj对象，相当于点餐后做完菜有一个广播会喊多少号来取餐。</p>
 <p>外界可以通过调用bbj对象的属性是成功（红灯）还是失败（黄灯）来做出响应。</p>
 <blockquote>
@@ -621,7 +621,7 @@
 <p>主要new Promise要大写p</p>
 <h3 id="promise的状态变化"><a href="#promise的状态变化" class="headerlink" title="promise的状态变化"></a>promise的状态变化</h3><p>promise的状态一旦确定，就不会再更改，也不会再执行其他回调函数。</p>
 <p>也就是说调用了resolve()那么后续的代码一样会执行，但是再调用reject()是不会被执行的。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/943.png" alt="943"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/943.png" alt="943"></p>
 <p>问题：下面代码是个什么写法？你咋又调用then()后面又跟个.catch？</p>
 <pre><code>execCode(255).then(value =&gt; &#123;
   console.log(&quot;成功:&quot;, value)
@@ -631,10 +631,10 @@
 </code></pre>
 <p>因为这是链式调用，execCode(255).then(value =&gt; {<br>  console.log(“成功:”, value)<br>})执行后，返回的还是promise，所以可以继续.catch</p>
 <p>为什么返回的还是promise，因为我们在封装execCode的时候就返回return了promise的时候，可以在上面代码看到。</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/944.png" alt="944"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/944.png" alt="944"></p>
 <p>其实promise的简单应用很简单，就是内置的一个promise构造函数，我们先构造一个promise，这个构造函数的参数是一个匿名函数，函数内写自己的一些代码条件，然后如果调用了resolve()方法就会在外面执行promise.then(),如果内部调用了rejecte()，就会执行外面的catch()</p>
 <p>为什么会这样执行？因为内置的代码就是这样的，我们直接用就好了，或者手写研究下promise的底层</p>
-<p><img src="https://www.zhoudongqi.com/picture/new/HTML_CSS/945.png" alt="945"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/new/HTML_CSS/945.png" alt="945"></p>
 <h3 id="手写promise和细节问题和迭代器生成器"><a href="#手写promise和细节问题和迭代器生成器" class="headerlink" title="手写promise和细节问题和迭代器生成器"></a>手写promise和细节问题和迭代器生成器</h3><p>coderwhy39day</p>
 <p>await和async40day有时间再看</p>
 <p>迭代器个和生成器如果要熟练用react的某个库，学了很有帮助，学vue的话用不太到</p>
